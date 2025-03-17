@@ -86,11 +86,11 @@ end
 function get_new_parameters(prob, varied_idx, value)
     # make type-stable: FD.Dual or Float
     if hasfield(typeof(prob.p), :tunable)
-        rest = map(filter(x -> x != :tunable, propertynames(prob.p))) do prop
-            getproperty(prob.p, prop)
-        end
+        # rest = map(filter(x -> x != :tunable, propertynames(prob.p))) do prop
+        #     getproperty(prob.p, prop)
+        # end
 
-        all(isempty.(rest)) || error("Only tunable parameters are supported")
+        # all(isempty.(rest)) || error("Only tunable parameters are supported")
 
         old_parameters_values = prob.p.tunable
         parameter_values = eltype(old_parameters_values)[
