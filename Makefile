@@ -12,7 +12,8 @@ changelog:
 	${JULIA} -e 'using Changelog; Changelog.generate(Changelog.CommonMark(), "CHANGELOG.md"; repo = "NonlinearOscillations/HarmonicBalance.jl")'
 
 test:
-	${JULIA} --project -e 'using Pkg; Pkg.resolve(); Pkg.test()'
+	${JULIA} --project=test -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.update()'
+	${JULIA} --project=test test/runtests.jl
 
 docs:
 	${JULIA} --project=docs -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'

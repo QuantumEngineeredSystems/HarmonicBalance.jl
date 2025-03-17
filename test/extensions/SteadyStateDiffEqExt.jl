@@ -3,7 +3,8 @@ using HarmonicBalance,
     SteadyStateDiffEq,
     OrdinaryDiffEqRosenbrock,
     LinearAlgebra,
-    NonlinearSolve
+    NonlinearSolve,
+    Test
 
 @testset "Steady state sweeps" begin
     @testset "one variable ODE" begin
@@ -27,6 +28,8 @@ using HarmonicBalance,
         swept = steady_state_sweep(
             prob_np, prob_ss, NewtonRaphson(), DynamicSS(Rodas5()); varied=varied
         )
+        @test swept isa Vector{Vector{Float64}}
+        @test length(swept) == 100
     end
 
     @testset "two variable ODE (duffing)" begin
