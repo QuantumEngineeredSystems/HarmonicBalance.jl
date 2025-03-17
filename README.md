@@ -1,6 +1,6 @@
 <img src="./logo.png" width="750" align="top">
 
-[![docs](https://img.shields.io/badge/docs-online-blue.svg)](https://QuantumEngineeredSystems.github.io/HarmonicBalance.jl/)
+[![docs](https://img.shields.io/badge/docs-online-blue.svg)](https://quantumengineeredsystems.github.io/HarmonicBalance.jl/)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=http%3A%2F%2Fjuliapkgstats.com%2Fapi%2Fv1%2Ftotal_downloads%2FHarmonicBalance&query=total_requests&label=Downloads)](https://juliapkgstats.com/pkg/HarmonicBalance)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=http%3A%2F%2Fjuliapkgstats.com%2Fapi%2Fv1%2Fmonthly_downloads%2FHarmonicBalance&query=total_requests&suffix=%2Fmonth&label=Downloads)](https://juliapkgstats.com/pkg/HarmonicBalance)
 
@@ -9,7 +9,7 @@
 [![JET](https://img.shields.io/badge/%E2%9C%88%EF%B8%8F%20tested%20with%20-%20JET.jl%20-%20red)](https://github.com/aviatesk/JET.jl)
 
 
-**HarmonicBalance.jl** is a Julia package for solving periodic differential equations using the method of harmonic balance.
+**HarmonicBalance.jl** is a Julia package for solving periodic, nonlinear differential equations using the method of harmonic balance.
 
 ## Installation
 
@@ -21,12 +21,12 @@ Pkg.add("HarmonicBalance")
 
 ## Documentation
 
-For a detailed description of the package and examples, see the [documentation](https://QuantumEngineeredSystems.github.io/HarmonicBalance.jl).
+For a detailed description of the package and examples, see the [documentation](https://quantumengineeredsystems.github.io/HarmonicBalance.jl).
 
-[This repo](https://github.com/QuantumEngineeredSystems/HarmonicBalance-notebooks) contains a collection of example notebooks.
+[This repo](https://github.com/quantumengineeredsystems/HarmonicBalance-notebooks) contains a collection of example notebooks.
 
-## [Simple example](https://QuantumEngineeredSystems.github.io/HarmonicBalance.jl/dev/tutorials/steady_states)
-Let's find the steady states of a driven Duffing oscillator with nonlinear damping, its equation of motion is:
+## [Example: steady states of a nonlinear resonator](https://quantumengineeredsystems.github.io/HarmonicBalance.jl/dev/tutorials/steady_states)
+Let's find the steady states of a driven Duffing resonator with nonlinear damping, with equation of motion:
 
 <img src="/docs/images/github_readme_eq.png" width="450">
 
@@ -66,7 +66,22 @@ If you use HarmonicBalance.jl in your project, we kindly ask you to cite [this p
 Jan Košata, Javier del Pino, Toni L. Heugel, Oded Zilberberg
 SciPost Phys. Codebases 6 (2022) 
 
-## Similar software
+### BibTeX entry
 
-- [JosephsonCircuits.jl](https://github.com/kpobrien/JosephsonCircuits.jl): Performs the frequency domain behaviour with a similar Harmonic Balance method for nonlinear circuits containing Josephson junctions, capacitors, inductors, mutual inductors, and resistors.
+```bibtex
+@Article{10.21468/SciPostPhysCodeb.6,
+    title={{HarmonicBalance.jl: A Julia suite for nonlinear dynamics using harmonic balance}},
+    author={Jan Košata and Javier del Pino and Toni L. Heugel and Oded Zilberberg},
+    journal={SciPost Phys. Codebases},
+    pages={6},
+    year={2022},
+    publisher={SciPost},
+    doi={10.21468/SciPostPhysCodeb.6},
+    url={https://scipost.org/10.21468/SciPostPhysCodeb.6}
+}
+```
+
+## See also
+
+- [JosephsonCircuits.jl](https://github.com/kpobrien/JosephsonCircuits.jl): Models superconducting circuits using modified nodal analysis and harmonic balance with an analytic Jacobian.
 - [Manlab](https://manlab.lma.cnrs-mrs.fr/spip/): A similar package in Matlab also using continuation methods and using the Harmonic Balance method for periodic orbits.
