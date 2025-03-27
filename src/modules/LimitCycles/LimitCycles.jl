@@ -25,7 +25,7 @@ using HarmonicBalance:
     promote_types,
     JacobianFunction
 
-using HarmonicBalance.ExprUtils: get_all_terms
+using HarmonicBalance.QuestBase: get_all_terms
 
 include("gauge_fixing.jl")
 include("analysis.jl")

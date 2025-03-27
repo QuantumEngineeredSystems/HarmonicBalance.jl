@@ -3,10 +3,10 @@ using Symbolics
 using HarmonicBalance
 using SymbolicUtils: Fixpoint, Prewalk, PassThrough
 
-using HarmonicBalance.ExprUtils: @eqtest
+using HarmonicBalance.QuestBase: @eqtest
 
 @testset "exp(x)^n => exp(x*n)" begin
-    using HarmonicBalance.ExprUtils: expand_all, expand_exp_power
+    using HarmonicBalance.QuestBase: expand_all, expand_exp_power
     @variables a n
 
     @eqtest expand_exp_power(exp(a)^3) == exp(3 * a)
@@ -18,7 +18,7 @@ using HarmonicBalance.ExprUtils: @eqtest
 end
 
 @testset "exp(a)*exp(b) => exp(a+b)" begin
-    using HarmonicBalance.ExprUtils: simplify_exp_products
+    using HarmonicBalance.QuestBase: simplify_exp_products
     @variables a b
 
     @eqtest simplify_exp_products(exp(a) * exp(b)) == exp(a + b)
@@ -33,7 +33,7 @@ end
 end
 
 @testset "powers" begin
-    using HarmonicBalance.ExprUtils: drop_powers, max_power
+    using HarmonicBalance.QuestBase: drop_powers, max_power
     using HarmonicBalance.Symbolics: expand
 
     @variables a, b, c
@@ -48,7 +48,7 @@ end
 end
 
 @testset "trig_to_exp and trig_to_exp" begin
-    using HarmonicBalance.ExprUtils: expand_all, trig_to_exp, exp_to_trig
+    using HarmonicBalance.QuestBase: expand_all, trig_to_exp, exp_to_trig
     @variables f t
     cos_euler(x) = (exp(im * x) + exp(-im * x)) / 2
     sin_euler(x) = (exp(im * x) - exp(-im * x)) / (2 * im)
@@ -75,7 +75,7 @@ end
 end
 
 @testset "fourier" begin
-    using HarmonicBalance.ExprUtils: fourier_cos_term, fourier_sin_term
+    using HarmonicBalance.QuestBase: fourier_cos_term, fourier_sin_term
     using HarmonicBalance.Symbolics: expand
 
     @variables f t θ a b
@@ -124,7 +124,7 @@ end
 end
 
 @testset "_apply_termwise" begin
-    using HarmonicBalance.ExprUtils: _apply_termwise
+    using HarmonicBalance.QuestBase: _apply_termwise
 
     @variables a, b, c
 
@@ -134,7 +134,7 @@ end
 end
 
 @testset "simplify_complex" begin
-    using HarmonicBalance.ExprUtils: simplify_complex
+    using HarmonicBalance.QuestBase: simplify_complex
     @variables a, b, c
     z = Complex{Num}(a)
     @test simplify_complex(z) isa Num
@@ -144,7 +144,7 @@ end
 end
 
 @testset "get_all_terms" begin
-    using HarmonicBalance.ExprUtils: get_all_terms
+    using HarmonicBalance.QuestBase: get_all_terms
     @variables a, b, c
 
     @eqtest get_all_terms(a + b + c) == [a, b, c]
@@ -156,7 +156,7 @@ end
 end
 
 @testset "get_independent" begin
-    using HarmonicBalance.ExprUtils: get_independent
+    using HarmonicBalance.QuestBase: get_independent
     @variables a, b, c, t
 
     @eqtest get_independent(a + b + c, t) == a + b + c
@@ -170,13 +170,13 @@ end
 end
 
 @testset "expand_fraction" begin
-    using HarmonicBalance.ExprUtils: expand_fraction
+    using HarmonicBalance.QuestBase: expand_fraction
     @variables a, b, c
 
     @eqtest expand_fraction((a + b) / c) == a / c + b / c
 end
 @testset "count_derivatives" begin
-    using HarmonicBalance.ExprUtils: count_derivatives
+    using HarmonicBalance.QuestBase: count_derivatives
     @variables t x(t) y(t)
     @test count_derivatives(x) == 0
     @test count_derivatives(d(x, t)) == 1

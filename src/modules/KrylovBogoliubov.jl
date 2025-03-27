@@ -10,7 +10,7 @@ using HarmonicBalance
 using HarmonicBalance:
     rearrange!, flatten, _create_harmonic_variable, slow_flow, _remove_brackets
 
-using HarmonicBalance.ExprUtils:
+using HarmonicBalance.QuestBase:
     get_all_terms,
     substitute_all,
     trig_reduce,

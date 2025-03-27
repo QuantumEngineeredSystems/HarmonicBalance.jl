@@ -35,7 +35,7 @@ res1 = get_steady_states(harmonic_eq1, varied, fixed; show_progress=false);
 res2 = get_steady_states(harmonic_eq2, varied, fixed; show_progress=false);
 
 @testset "not damped" begin
-    using HarmonicBalance.ExprUtils: expand_fraction
+    using HarmonicBalance.QuestBase: expand_fraction
     using Symbolics: substitute
 
     @testset "single resonator" begin

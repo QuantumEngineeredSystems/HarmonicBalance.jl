@@ -33,8 +33,8 @@ using Symbolics:
     lower_varname
 using SymbolicUtils: SymbolicUtils
 
-include("modules/ExprUtils/ExprUtils.jl")
-using .ExprUtils: is_harmonic, substitute_all, drop_powers, count_derivatives, hasnan
+include("modules/QuestBase/QuestBase.jl")
+using .QuestBase: is_harmonic, substitute_all, drop_powers, count_derivatives, hasnan
 
 # symbolics equations
 export @variables, d

@@ -75,13 +75,13 @@ end
 ###
 
 "when HV is used for substitute, substitute its symbol"
-function ExprUtils.substitute_all(eq::Union{Num,Equation}, rules::Dict{HarmonicVariable})
+function QuestBase.substitute_all(eq::Union{Num,Equation}, rules::Dict{HarmonicVariable})
     return Symbolics.substitute(
         eq, Dict(zip(getfield.(keys(rules), :symbol), values(rules)))
     )
 end
 
-function ExprUtils.substitute_all(var::HarmonicVariable, rules)
+function QuestBase.substitute_all(var::HarmonicVariable, rules)
     sym, freq = var.symbol, var.ω
     return HarmonicVariable(
         substitute_all(sym, rules),
@@ -92,7 +92,7 @@ function ExprUtils.substitute_all(var::HarmonicVariable, rules)
     )
 end
 
-function ExprUtils.substitute_all(vars::Vector{HarmonicVariable}, rules)
+function QuestBase.substitute_all(vars::Vector{HarmonicVariable}, rules)
     return [substitute_all(var, rules) for var in vars]
 end
 

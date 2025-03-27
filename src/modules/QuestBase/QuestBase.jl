@@ -1,4 +1,4 @@
-module ExprUtils
+module QuestBase
 
 using DocStringExtensions
 using OrderedCollections: OrderedDict
@@ -34,10 +34,10 @@ using Symbolics:
     expand,
     operation
 
-include("Symbolics_utils.jl")
-include("exponentials.jl")
-include("fourier.jl")
-include("drop_powers.jl")
+include("Symbolics/Symbolics_utils.jl")
+include("Symbolics/exponentials.jl")
+include("Symbolics/fourier.jl")
+include("Symbolics/drop_powers.jl")
 
 macro eqtest(expr)
     @assert expr.head == :call && expr.args[1] in [:(==), :(!=)]
@@ -65,5 +65,6 @@ is_identity(A::Matrix{Num}) = (@eqsym A == Matrix{Num}(LinearAlgebra.I, size(A).
 hasnan(x::Matrix{Num}) = any(my_isnan, unwrap.(x))
 my_isnan(x) = isnan(x)
 my_isnan(x::BasicSymbolic) = false
+
 
 end

@@ -125,7 +125,7 @@ Check if all equations in `diff_eom` are harmonic with respect to `t`. The funct
 differential equation system `diff_eom` and a variable `t`, and returns `true` if all equations
 are harmonic with respect to `t`, otherwise it returns `false`.
 """
-ExprUtils.is_harmonic(diff_eom::DifferentialEquation, t::Num)::Bool =
+QuestBase.is_harmonic(diff_eom::DifferentialEquation, t::Num)::Bool =
     all([is_harmonic(eq, t) for eq in values(diff_eom.equations)])
 
 """
