@@ -1,7 +1,7 @@
 module QuestBase
 
 using DocStringExtensions
-using OrderedCollections: OrderedDict, OrderedSet
+using OrderedCollections: OrderedCollections, OrderedDict, OrderedSet
 using LinearAlgebra: LinearAlgebra
 
 using SymbolicUtils:
@@ -32,7 +32,8 @@ using Symbolics:
     substitute,
     term,
     expand,
-    operation
+    operation,
+    expand_derivatives
 
 include("utils.jl")
 include("Symbolics/Symbolics_utils.jl")

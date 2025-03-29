@@ -68,6 +68,11 @@ end
     @test is_harmonic(1, t)
     @test !is_harmonic(cos(f * t^2 + a), t)
     @test !is_harmonic(a + t, t)
+
+    using QuestBase: DifferentialEquation
+
+    dEOM = DifferentialEquation([a + x, t^2 + cos(t)], [x, y])
+    @test !is_harmonic(dEOM, t)
 end
 
 @testset "fourier" begin
