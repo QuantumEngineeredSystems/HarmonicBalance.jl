@@ -1,61 +1,6 @@
 """
 $(TYPEDSIGNATURES)
 
-Checks if the differential equations in `eom` are arranged in standard form, where the highest
-derivative of each variable appears isolated on the left-hand side. The default degree is 2,
-corresponding to second-order differential equations.
-"""
-function is_rearranged_standard(eom::DifferentialEquation, degree=2)
-    tvar = get_independent_variables(eom)[1]
-    D = Differential(tvar)^degree
-    return isequal(getfield.(values(eom.equations), :lhs), D.(get_variables(eom)))
-end
-
-"""
-$(TYPEDSIGNATURES)
-
-Rearranges the differential equations in `eom` to standard form, where the highest derivative
-of each variable (specified by `degree`, default 2) appears isolated on the left-hand side.
-Modifies the equations in place.
-"""
-function rearrange_standard!(eom::DifferentialEquation, degree=2)
-    tvar = get_independent_variables(eom)[1]
-    D = Differential(tvar)^degree
-    dvars = D.(get_variables(eom))
-    return rearrange!(eom, dvars)
-end
-
-"""
-$(TYPEDSIGNATURES)
-
-Rearranges the equations in `eom` such that the expressions in `new_lhs` appear isolated on
-the left-hand sides. Uses symbolic linear solving to determine the right-hand sides. Modifies
-the equations in place.
-"""
-function rearrange!(eom::DifferentialEquation, new_lhs::Vector{Num})
-    soln = Symbolics.symbolic_linear_solve(
-        get_equations(eom), new_lhs; simplify=false, check=true
-    )
-    eom.equations = OrderedDict(zip(get_variables_nums(new_lhs), new_lhs .~ soln))
-    return nothing
-end
-
-"""
-$(TYPEDSIGNATURES)
-
-Creates a new differential equation system by rearranging the equations in `eom` such that
-the expressions in `new_lhs` appear isolated on the left-hand sides. Similar to `rearrange!`
-but returns a new system instead of modifying in place.
-"""
-function rearrange(eom::DifferentialEquation, new_lhs::Vector{Num})
-    new_eom = deepcopy(eom)
-    rearrange!(new_eom, new_lhs)
-    return new_eom
-end
-
-"""
-$(TYPEDSIGNATURES)
-
 Transforms a higher-order differential equation system into an equivalent first-order system
 by introducing additional variables. Modifies the system in place. The `time` parameter
 specifies the independent variable used for differentiation.

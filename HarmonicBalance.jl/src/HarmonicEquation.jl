@@ -79,60 +79,6 @@ function slow_flow(
     return new_eq
 end
 
-"Rearrange an equation system such that the field equations is equal to the vector specified in new_lhs"
-function rearrange!(eom::HarmonicEquation, new_rhs::Vector{Num})
-    soln = Symbolics.symbolic_linear_solve(
-        eom.equations, new_rhs; simplify=false, check=true
-    )
-    eom.equations = soln .~ new_rhs
-    return nothing
-end
-
-function rearrange(eom::HarmonicEquation, new_rhs::Vector{Num})
-    new_eom = deepcopy(eom)
-    rearrange!(new_eom, new_rhs)
-    return new_eom
-end
-
-"""
-$(TYPEDSIGNATURES)
-Check if `eom` is rearranged to the standard form, such that the derivatives of the variables are on one side.
-"""
-function is_rearranged(eom::HarmonicEquation)
-    tvar = get_independent_variables(eom)[1]
-    dvar = d(get_variables(eom), tvar)
-    lhs = getfield.(eom.equations, :lhs)
-    rhs = getfield.(eom.equations, :rhs)
-
-    HB_bool = isequal(rhs, dvar)
-    hopf_bool = in("Hopf", getfield.(eom.variables, :type))
-    MF_bool =
-        !any([occursin(str1, str2) for str1 in string.(dvar) for str2 in string.(lhs)])
-
-    # Hopf-containing equations or MF equation are arranged by construstion
-    return HB_bool || hopf_bool || MF_bool
-end
-
-"""
-$(TYPEDSIGNATURES)
-Rearrange `eom` to the standard form, such that the derivatives of the variables are on one side.
-"""
-function rearrange_standard(eom::HarmonicEquation)
-    tvar = get_independent_variables(eom)[1]
-    dvars = d(get_variables(eom), tvar)
-    return rearrange(eom, dvars)
-end
-
-"""
-$(TYPEDSIGNATURES)
-Rearrange `eom` to the standard form, such that the derivatives of the variables are on one side.
-"""
-function rearrange_standard!(eom::HarmonicEquation)
-    tmp_eom = rearrange_standard(eom::HarmonicEquation)
-    eom.equations = tmp_eom.equations
-    return eom
-end
-
 ### Extending Symbolics.jl's simplify and substitute ###
 
 "Simplify the equations in HarmonicEquation."
@@ -250,23 +196,3 @@ end
 "Rearrange `eq` to have zero on the right-hand-side."
 _set_zero_rhs(eq::Equation) = eq.lhs - eq.rhs ~ 0
 _set_zero_rhs(eqs::Vector{Equation}) = [_set_zero_rhs(eq) for eq in eqs]
-
-_remove_brackets(var::Num) = declare_variable(var_name(var))
-_remove_brackets(vars::Vector{Num}) = _remove_brackets.(vars)
-_remove_brackets(hv::HarmonicVariable) = _remove_brackets(hv.symbol)
-
-"Returns the equation system in `eom`, dropping all argument brackets (i.e., u(T) becomes u)."
-function _remove_brackets(eom::HarmonicEquation)
-    variable_rules = [var => _remove_brackets(var) for var in get_variables(eom)]
-    equations_lhs = Num.(getfield.(eom.equations, :lhs) - getfield.(eom.equations, :rhs))
-    return substitute_all(equations_lhs, variable_rules)
-end
-
-function _free_symbols(eom::HarmonicEquation, swept::OrderedDict)::Vector{Num}
-    return cat(declare_variables(eom), collect(keys(swept)); dims=1)
-end
-
-function declare_variables(eom::HarmonicEquation)
-    vars_orig = get_variables(eom)
-    return declare_variable.(var_name.(vars_orig))
-end

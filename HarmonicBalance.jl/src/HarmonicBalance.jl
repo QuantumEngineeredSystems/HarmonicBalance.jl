@@ -2,26 +2,36 @@ module HarmonicBalance
 
 using DocStringExtensions
 using Random: Random # for setting seed
-using QuestBase:
-    QuestBase,
-    is_harmonic,
-    substitute_all,
-    drop_powers,
-    d
+
 using QuestBase.OrderedCollections: OrderedDict
 
 using QuestBase:
     DifferentialEquation,
     HarmonicEquation,
     HarmonicVariable,
-    var_name,
     flatten,
     _create_harmonic_variable,
-    declare_variable,
-    get_variables_nums,
     get_independent_variables,
     get_equations,
-    add_harmonic!
+    add_harmonic!,
+    _remove_brackets,
+    is_rearranged,
+    is_rearranged_standard,
+    QuestBase,
+    d,
+    get_all_terms,
+    rearrange!,
+    substitute_all,
+    trig_reduce,
+    get_independent,
+    simplify_complex,
+    is_trig,
+    is_harmonic,
+    rearrange_standard,
+    rearrange_standard!,
+    declare_variables
+
+using QuestBase: QuestBase, is_harmonic, substitute_all, drop_powers, d
 
 using Symbolics:
     Symbolics,
@@ -35,10 +45,10 @@ using Symbolics:
     diff2term,
     var_from_nested_derivative,
     lower_varname
-using SymbolicUtils: SymbolicUtils
+
+using SymbolicUtils: SymbolicUtils, BasicSymbolic, isdiv
 
 # src code
-include("utils.jl")
 include("DifferentialEquation.jl")
 include("Jacobian.jl")
 include("HarmonicEquation.jl")

@@ -11,3 +11,5 @@ function show_fields(object)
         display(getfield(object, field))
     end
 end
+
+_symidx(sym::Num, args...) = findfirst(x -> isequal(x, sym), _free_symbols(args...))

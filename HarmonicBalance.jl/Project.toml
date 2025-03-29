@@ -1,7 +1,7 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
 authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
-version = "0.14.3"
+version = "0.15.0"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
@@ -34,6 +34,7 @@ Documenter = "1.4"
 
 [extras]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
 ExplicitImports = "7d51a73a-1435-4ff3-83d9-f097790105c7"
@@ -44,4 +45,4 @@ Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 
 [targets]
-test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit","Documenter"]
+test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit","Documenter", "QuestBase"]

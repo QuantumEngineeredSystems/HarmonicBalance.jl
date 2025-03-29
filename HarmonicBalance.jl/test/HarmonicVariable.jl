@@ -1,5 +1,6 @@
 using Test
 using HarmonicBalance
+using QuestBase
 @variables α ω ω0 F γ η t x(t); # declare constant variables and a function x(t)
 
 diff_eq = DifferentialEquation(
@@ -10,5 +11,5 @@ harmonic_eq = get_harmonic_equations(diff_eq)
 
 @testset "default variable names" begin
     vars = get_variables(harmonic_eq)
-    @test HarmonicBalance.var_name.(vars) == ["u1", "v1"]
+    @test QuestBase.var_name.(vars) == ["u1", "v1"]
 end

@@ -4,15 +4,18 @@ using DocStringExtensions
 
 export ODESystem, ODEProblem, SteadyStateProblem, NonlinearProblem
 
-using HarmonicBalance:
-    HarmonicEquation,
+using QuestBase:
     is_rearranged,
     rearrange_standard,
+    rearrange_standard!,
+     is_rearranged_standard
+
+using HarmonicBalance:
+    HarmonicEquation,
     get_variables,
     DifferentialEquation,
     get_independent_variables
-using HarmonicBalance:
-    rearrange_standard!, is_rearranged_standard, first_order_transform!
+using HarmonicBalance: first_order_transform!
 using Symbolics:
     simplify, Equation, substitute, Num, @variables, expand, unwrap, arguments, wrap
 using ModelingToolkit:
