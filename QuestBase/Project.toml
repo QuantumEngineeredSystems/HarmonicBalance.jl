@@ -1,0 +1,38 @@
+name = "QuestBase"
+uuid = "7e80f742-43d6-403d-a9ea-981410111d43"
+authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
+version = "0.1.0"
+
+[deps]
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
+SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+
+[compat]
+DocStringExtensions = "0.9.3"
+SymbolicUtils = "3.11"
+Symbolics = "6.23"
+julia = "1.10.0"
+Random = "1.10.0"
+LinearAlgebra = "1.10.0"
+Test = "1.10.0"
+OrderedCollections = "1.6"
+Aqua = "0.8"
+ExplicitImports = "1.6"
+JET = "0.9.9"
+CheckConcreteStructs = "0.1.0"
+
+[extras]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+CheckConcreteStructs = "73c92db5-9da6-4938-911a-6443a7e94a58"
+ExplicitImports = "7d51a73a-1435-4ff3-83d9-f097790105c7"
+JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
+SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "CheckConcreteStructs", "Test", "Random"]
