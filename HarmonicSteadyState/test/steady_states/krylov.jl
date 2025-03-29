@@ -1,5 +1,6 @@
-using HarmonicBalance;
-HB = HarmonicBalance;
+using HarmonicSteadyState;
+using HarmonicSteadyState: QuestBase
+HB = HarmonicSteadyState;
 using Test
 # using BenchmarkTools
 
@@ -24,7 +25,7 @@ harmonic_eq2 = get_krylov_equations(diff_eom; order=2)
 # @profview get_krylov_equations(diff_eom; order=2)
 
 @testset "show method" begin
-    print_variable = HB._show_ansatz(harmonic_eq1)
+    print_variable = HB.QuestBase._show_ansatz(harmonic_eq1)
     @test !(occursin("xˍt(t)", print_variable))
 end
 
@@ -35,7 +36,7 @@ res1 = get_steady_states(harmonic_eq1, varied, fixed; show_progress=false);
 res2 = get_steady_states(harmonic_eq2, varied, fixed; show_progress=false);
 
 @testset "not damped" begin
-    using HarmonicBalance.QuestBase: expand_fraction
+    using HarmonicSteadyState.QuestBase: expand_fraction
     using Symbolics: substitute
 
     @testset "single resonator" begin
@@ -46,7 +47,7 @@ res2 = get_steady_states(harmonic_eq2, varied, fixed; show_progress=false);
         add_harmonic!(EOM, x, ω)
         krylov_eq = get_krylov_equations(EOM; order=1)
         harmonic_eq = get_harmonic_equations(EOM)
-        rearranged = HarmonicBalance.rearrange_standard(harmonic_eq)
+        rearranged = QuestBase.rearrange_standard(harmonic_eq)
 
         @testset for i in 1:2
             eqk = krylov_eq.equations[i].lhs
@@ -69,7 +70,7 @@ res2 = get_steady_states(harmonic_eq2, varied, fixed; show_progress=false);
         add_harmonic!(EOM, y, ω)
         krylov_eq = get_krylov_equations(EOM; order=1)
         harmonic_eq = get_harmonic_equations(EOM)
-        rearranged = HarmonicBalance.rearrange_standard(harmonic_eq)
+        rearranged = HarmonicSteadyState.rearrange_standard(harmonic_eq)
 
         @testset for i in 1:4
             eqk = krylov_eq.equations[i].lhs
@@ -99,7 +100,7 @@ res2 = get_steady_states(harmonic_eq2, varied, fixed; show_progress=false);
 
         krylov_eq = get_krylov_equations(dEOM_temp; order=1)
         harmonic_eq = get_harmonic_equations(dEOM_temp)
-        rearranged = HarmonicBalance.rearrange_standard(harmonic_eq)
+        rearranged = HarmonicSteadyState.rearrange_standard(harmonic_eq)
 
         @testset for i in 1:4
             eqk = krylov_eq.equations[i].lhs

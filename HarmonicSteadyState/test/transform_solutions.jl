@@ -1,4 +1,4 @@
-using HarmonicBalance
+using HarmonicSteadyState
 
 @variables Ω γ λ F x θ η α ω0 ω t T ψ
 @variables x(t) y(t)
@@ -21,7 +21,7 @@ transform_solutions(res, "u1^2+v1^2")
 transform_solutions(res, "√(u1^2+v1^2)"; realify=true)
 
 @testset "to_lab_frame" begin
-    using HarmonicBalance: to_lab_frame
+    using HarmonicSteadyState: to_lab_frame
     @variables z(t)
     times = 0:1:10
     @test to_lab_frame(res, x, times; index=1, branch=1) != zeros(length(times))
@@ -29,5 +29,3 @@ transform_solutions(res, "√(u1^2+v1^2)"; realify=true)
     @test all(to_lab_frame(res, z, times; index=1, branch=1) .≈ zeros(length(times)))
     @test to_lab_frame(res, d(x, t), times; index=1, branch=1) != zeros(length(times))
 end
-
-using HarmonicBalance

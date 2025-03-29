@@ -1,4 +1,5 @@
-using HarmonicBalance, OrderedCollections
+using HarmonicSteadyState
+using HarmonicSteadyState: OrderedDict
 using Test, TestExtras
 
 using HarmonicBalance: Problem
@@ -64,7 +65,7 @@ end
 
 @testset "NaNMath" begin
     # https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/issues/357
-    using HarmonicBalance
+    using HarmonicSteadyState
 
     @variables t x1(t) x2(t)
     @variables b c m γ ψ

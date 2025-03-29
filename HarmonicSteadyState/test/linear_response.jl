@@ -1,9 +1,9 @@
-using HarmonicBalance, Symbolics
+using HarmonicSteadyState, Symbolics
 using Test
-HB = HarmonicBalance
+HB = HarmonicSteadyState
 
 @testset "Lorentzian" begin
-    using HarmonicBalance.LinearResponse: Lorentzian
+    using HarmonicSteadyState.LinearResponse: Lorentzian
     Γ = Lorentzian(1.0, 0.005, 1.0)
     @test typeof(Γ).parameters[1] == Float64
     Γr′ = 2.0 * Γ
@@ -12,7 +12,7 @@ HB = HarmonicBalance
 end
 
 @testset "JacobianSpectrum" begin
-    using HarmonicBalance.LinearResponse: JacobianSpectrum, add_peak, evaluate
+    using HarmonicSteadyState.LinearResponse: JacobianSpectrum, add_peak, evaluate
     s = JacobianSpectrum{Float64}()
     p = Lorentzian(1.0, 0.005, 1.0)
     s = add_peak(s, p)
@@ -64,7 +64,7 @@ end
     result = get_steady_states(kylov_eq, varied, fixed)
 
     Ω_range = range(0.95, 1.1, 10)
-    HarmonicBalance.get_linear_response(result, x, Ω_range, 1; order=2)
+    HarmonicSteadyState.get_linear_response(result, x, Ω_range, 1; order=2)
 end
 
 @testset "eigenvalues" begin

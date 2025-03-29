@@ -1,5 +1,5 @@
 
-using HarmonicBalance
+using HarmonicSteadyState
 
 @variables ω₀ γ λ α ω t x(t)
 

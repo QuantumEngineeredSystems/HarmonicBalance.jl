@@ -1,4 +1,4 @@
-using HarmonicBalance,
+using HarmonicSteadyState,
     ModelingToolkit,
     SteadyStateDiffEq,
     OrdinaryDiffEqRosenbrock,

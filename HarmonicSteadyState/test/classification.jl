@@ -1,4 +1,4 @@
-using HarmonicBalance, Test
+using HarmonicSteadyState, Test
 
 @variables ω₀ γ λ α ω t x(t)
 

@@ -1,4 +1,4 @@
-using HarmonicBalance
+using HarmonicSteadyState
 using Test
 
 @testset "Float32" begin

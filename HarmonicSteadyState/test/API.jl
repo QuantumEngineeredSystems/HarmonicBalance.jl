@@ -1,4 +1,6 @@
 @testset "get_steady_states API" begin
+    using HarmonicSteadyState: OrderedDict
+
     @variables ξ, ω1, t, ω, F, γ, λ, x(t), y(t)
     eqs = [d(x, t, 2) + (ω1^2 - λ * cos(2 * ω * t)) * x + γ * d(x, t)]
 
@@ -19,10 +21,10 @@
     @test_throws ArgumentError get_steady_states(harmonic_eq, Dict(varied), fixed_extra)
 
     fixed = Dict(ω1 => 1.0, γ => 0.005, λ => 0.1)
-    prob = HarmonicBalance.Problem(harmonic_eq, OrderedDict(varied), OrderedDict(fixed))
+    prob = HarmonicSteadyState.Problem(harmonic_eq, OrderedDict(varied), OrderedDict(fixed))
     @test_throws MethodError get_steady_states(prob, Dict())
     @test_throws MethodError get_steady_states(prob, varied, fixed)
-    r = get_steady_states(prob, HarmonicBalance.WarmUp())
+    r = get_steady_states(prob, HarmonicSteadyState.WarmUp())
     # ^ throws a warning that no solutions found
 
 end

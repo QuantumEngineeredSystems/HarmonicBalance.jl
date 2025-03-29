@@ -1,5 +1,5 @@
-using HarmonicBalance, ModelingToolkit, NonlinearSolve
-using HarmonicBalance: OrderedDict
+using HarmonicSteadyState, ModelingToolkit, NonlinearSolve
+using HarmonicSteadyState: OrderedDict
 using NonlinearSolveHomotopyContinuation
 
 begin

@@ -1,4 +1,4 @@
-using HarmonicBalance, Plots
+using HarmonicSteadyState, Plots
 default(; show=false)
 #using Test #
 

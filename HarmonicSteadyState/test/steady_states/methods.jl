@@ -1,4 +1,5 @@
-using HarmonicBalance
+using HarmonicSteadyState
+using HarmonicSteadyState: OrderedDict
 using Test
 
 @testset "WarmUp" begin
@@ -32,11 +33,11 @@ using Test
         add_harmonic!(diff_eq, x, ω) #
         harmonic_eq = get_harmonic_equations(diff_eq)
 
-        fixed = HarmonicBalance.OrderedDict((α => 1.0, ω0 => 1.1, λ => 0.01, γ => 0.01))
-        varied = HarmonicBalance.OrderedDict((ω => range(0.9, 1.1, 20),))
-        prob = HarmonicBalance.Problem(harmonic_eq, varied, fixed)
+        fixed = OrderedDict((α => 1.0, ω0 => 1.1, λ => 0.01, γ => 0.01))
+        varied = OrderedDict((ω => range(0.9, 1.1, 20),))
+        prob = HarmonicSteadyState.Problem(harmonic_eq, varied, fixed)
 
-        unique_fixed, input_array = HarmonicBalance._prepare_input_params(
+        unique_fixed, input_array = HarmonicSteadyState._prepare_input_params(
             prob, varied, fixed
         )
         @test length.(input_array) == fill(5, 20)
@@ -59,8 +60,8 @@ end
         add_harmonic!(diff_eq, x, ω) #
         harmonic_eq = get_harmonic_equations(diff_eq)
 
-        fixed = HarmonicBalance.OrderedDict((α => 1.0, ω0 => 1.1, λ => 0.001, γ => 0.01))
-        varied = HarmonicBalance.OrderedDict((ω => range(0.9, 1.1, 10),))
+        fixed = OrderedDict((α => 1.0, ω0 => 1.1, λ => 0.001, γ => 0.01))
+        varied = OrderedDict((ω => range(0.9, 1.1, 10),))
         result = get_steady_states(
             harmonic_eq,
             Polyhedral(; only_non_zero=true),

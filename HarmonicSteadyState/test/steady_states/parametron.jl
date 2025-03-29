@@ -1,5 +1,5 @@
-using HarmonicBalance
-using HarmonicBalance: OrderedDict
+using HarmonicSteadyState
+using HarmonicSteadyState: OrderedDict
 using Symbolics
 #using Test # do not use Test as this file is used for precompilation
 
@@ -17,7 +17,7 @@ dEOM = DifferentialEquation(natural_equation + forces, x)
 add_harmonic!(dEOM, x, ω)
 harmonic_eq = get_harmonic_equations(dEOM; slow_time=T, fast_time=t);
 
-method = HarmonicBalance.WarmUp(; seed=SEED)
+method = HarmonicSteadyState.WarmUp(; seed=SEED)
 
 @testset "undriven parametron" begin
     fixed = OrderedDict(
@@ -29,7 +29,7 @@ method = HarmonicBalance.WarmUp(; seed=SEED)
     ) isa Number
 
     @testset "Problem" begin
-        prob = HarmonicBalance.Problem(harmonic_eq, OrderedDict(varied), OrderedDict(fixed))
+        prob = HarmonicSteadyState.Problem(harmonic_eq, OrderedDict(varied), OrderedDict(fixed))
 
         @test length(harmonic_eq.equations) == 2
         @test length(prob.variables) == 2
@@ -58,7 +58,7 @@ method = HarmonicBalance.WarmUp(; seed=SEED)
 
     @testset "implicit jacobian" begin
         harmonic_eq = get_harmonic_equations(dEOM; jacobian=false)
-        p = HarmonicBalance.Problem(harmonic_eq, varied, fixed)
+        p = HarmonicSteadyState.Problem(harmonic_eq, varied, fixed)
         @test round.(real.(p.jacobian(zeros(3)))) == [-98.0 0.0; 0.0 -102.0]
         res = get_steady_states(p, method; show_progress=false)
     end
@@ -99,7 +99,7 @@ end
         (2//1) * ω * Differential(T)(u1) - γ * ω * u1 - (1//4) * η * ω * (u1^3) -
         (1//4) * η * ω * (v1^2) * u1
 
-    averaged = HarmonicBalance._remove_brackets(harmonic_eq)
+    averaged = HarmonicSteadyState._remove_brackets(harmonic_eq)
     @test isequal(simplify(expand(averaged[1] - ref1)), 0)
     @test isequal(simplify(expand(averaged[2] - ref2)), 0)
 end
