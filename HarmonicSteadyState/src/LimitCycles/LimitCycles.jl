@@ -2,7 +2,6 @@ module LimitCycles
 
 using QuestBase:
     HarmonicBalanceMethod,
-    _symidx,
     get_all_terms,
     substitute_all,
     DifferentialEquation,
@@ -35,6 +34,7 @@ using HarmonicSteadyState:
 
 using HarmonicSteadyState:
     HarmonicSteadyState, Result, Problem
+
 
 include("gauge_fixing.jl")
 include("analysis.jl")

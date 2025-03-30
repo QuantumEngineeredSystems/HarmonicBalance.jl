@@ -26,7 +26,8 @@ using QuestBase:
     DifferentialEquation,
     get_independent_variables,
     var_name,
-    substitute_all
+    substitute_all,
+    get_Jacobian
 
 include("types.jl")
 include("utils.jl")

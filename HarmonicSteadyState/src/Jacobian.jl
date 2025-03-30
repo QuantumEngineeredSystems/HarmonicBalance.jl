@@ -41,7 +41,8 @@ function compute_and_compile_Jacobian(
     fixed::AbstractDict,
 )::JacobianFunction(soltype)
     subs = Num[variables..., keys(swept)...]
-    jac = Symbolics.jacobian(equations, variables)
+    # jac = Symbolics.jacobian(equations, variables)
+    jac = get_Jacobian(equations, variables)
     return JacobianFunction(soltype)(compile_matrix(jac, subs; rules=fixed))
 end
 
@@ -65,7 +66,8 @@ function _get_J_matrix(eom::HarmonicEquation; order=0)
 
     vars_simp = Dict([var => _remove_brackets(var) for var in get_variables(eom)])
     T = get_independent_variables(eom)[1]
-    J = Symbolics.jacobian(eom.equations, d(get_variables(eom), T, order))
+    # J = Symbolics.jacobian(eom.equations, d(get_variables(eom), T, order))
+    J = get_Jacobian(eom.equations, d(get_variables(eom), T, order))
 
     return Symbolics.expand_derivatives.(substitute_all(J, vars_simp)) # a symbolic matrix to be compiled
 end

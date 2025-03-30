@@ -29,7 +29,8 @@ using QuestBase:
     is_harmonic,
     rearrange_standard,
     rearrange_standard!,
-    declare_variables
+    declare_variables,
+    get_Jacobian
 
 using QuestBase: QuestBase, is_harmonic, substitute_all, drop_powers, d
 

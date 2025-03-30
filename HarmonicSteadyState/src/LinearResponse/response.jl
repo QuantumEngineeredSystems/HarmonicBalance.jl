@@ -214,14 +214,7 @@ end
 
 """
     eigenvectors(res::Result, branch; class=["physical"])
-
-Calculate the eigenvectors of the Jacobian matrix of the harmonic equations of a `branch`
-for a one dimensional sweep in the [Result](@ref) struct.
-
-
-# Arguments
-- `res::Result`: Result object containing solutions and jacobian information
-- `branch`: Index of the solution branch to analyze
+get_Jacobiannch to analyze
 - `class=["physical"]`: Filter for solution classes to include, defaults to physical solutions
 
 # Returns
@@ -277,9 +270,11 @@ function get_response_matrix(diff_eq::DifferentialEquation, freq::Num; order=2):
     eom = HarmonicBalance.fourier_transform(eom, time)
 
     # get the response matrix by summing the orders
-    M = Symbolics.jacobian(eom.equations, get_variables(eom))
+    # M = Symbolics.jacobian(eom.equations, get_variables(eom))
+    M = get_Jacobian(eom.equations, get_variables(eom))
     for n in 1:order
-        M += (im * freq)^n * Symbolics.jacobian(eom.equations, d(get_variables(eom), T, n))
+        # M += (im * freq)^n * Symbolics.jacobian(eom.equations, d(get_variables(eom), T, n))
+        M += (im * freq)^n * get_Jacobian(eom.equations, d(get_variables(eom), T, n))
     end
     M = substitute_all(
         M, [var => declare_variable(var_name(var)) for var in get_variables(eom)]

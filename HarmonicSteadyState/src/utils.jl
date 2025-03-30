@@ -62,6 +62,7 @@ _str_to_vec(s::Vector) = s
 _str_to_vec(s) = [s]
 
 _parse_expression(x::Expr)::Num =  Symbolics.parse_expr_to_symbolic(x, @__MODULE__)
+_parse_expression(x::Symbol)::Num =  Symbolics.parse_expr_to_symbolic(x, @__MODULE__)
 _parse_expression(x::String)::Num = _parse_expression(Meta.parse(x))
 
 tuple_to_vector(t::Tuple) = [i for i in t]

@@ -70,7 +70,7 @@ res2 = get_steady_states(harmonic_eq2, varied, fixed; show_progress=false);
         add_harmonic!(EOM, y, ω)
         krylov_eq = get_krylov_equations(EOM; order=1)
         harmonic_eq = get_harmonic_equations(EOM)
-        rearranged = HarmonicSteadyState.rearrange_standard(harmonic_eq)
+        rearranged = QuestBase.rearrange_standard(harmonic_eq)
 
         @testset for i in 1:4
             eqk = krylov_eq.equations[i].lhs
@@ -100,7 +100,7 @@ res2 = get_steady_states(harmonic_eq2, varied, fixed; show_progress=false);
 
         krylov_eq = get_krylov_equations(dEOM_temp; order=1)
         harmonic_eq = get_harmonic_equations(dEOM_temp)
-        rearranged = HarmonicSteadyState.rearrange_standard(harmonic_eq)
+        rearranged = QuestBase.rearrange_standard(harmonic_eq)
 
         @testset for i in 1:4
             eqk = krylov_eq.equations[i].lhs

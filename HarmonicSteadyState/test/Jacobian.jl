@@ -1,8 +1,8 @@
 using HarmonicSteadyState
-using HarmonicSteadyState: OrderedDict
+using HarmonicSteadyState.QuestBase: substitute_all
+using HarmonicSteadyState: OrderedDict, Problem, _free_symbols
 using Test, TestExtras
 
-using HarmonicBalance: Problem
 
 @variables α, ω, ω0, F, γ, t, x(t);
 diff_eq = DifferentialEquation(
@@ -18,7 +18,6 @@ prob = Problem(eom, varied, fixed)
 @testset "Jacobian FunctionWrapper" begin
     using FunctionWrappers: FunctionWrapper
     using Symbolics: build_function
-    using HarmonicBalance: _free_symbols, substitute_all
 
     complex_vars = [1.0 + 0im, 1.0 + 0im, 1.0 + 0im]
     float_vars = [1.0, 1.0, 1.0]

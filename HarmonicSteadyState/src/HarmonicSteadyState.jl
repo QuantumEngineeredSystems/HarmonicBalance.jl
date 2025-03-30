@@ -11,9 +11,8 @@ using QuestBase:
     substitute_all,
     get_independent_variables,
     d,
-    _remove_brackets
-    # get_Jacobian,
-    # _get_J_matrix
+    _remove_brackets,
+    get_Jacobian
 
 # default global settings
 IM_TOL::Float64 = 1e-6
@@ -57,28 +56,47 @@ using .LinearResponse
 include("LimitCycles/LimitCycles.jl")
 using .LimitCycles
 
+# methods
+export WarmUp
+export TotalDegree
+export Polyhedral
+
 # handle solutions
 export get_steady_states
 export classify_solutions!
 export get_class
 export filter_result!
 export get_single_solution
-export transform_solutions
-export IM_TOL
-
-# methods
-export WarmUp
-export TotalDegree
-export Polyhedral
-
-export get_steady_states
-export classify_solutions!
-export get_class
-export filter_result!
-export get_single_solution
+export get_solutions
 export transform_solutions
 export IM_TOL
 export set_imaginary_tolerance
+
+# Result
+export swept_parameter, swept_parameters
+export get_solutions
+export attractors
+export phase_diagram
+
+# Limit cycles
+export get_cycle_variables, get_limit_cycles, add_pairs!
+
+# LinearResponse
+export get_Jacobian
+export eigenvalues, eigenvectors
+
+# plotting
+export plot_linear_response
+export plot_phase_diagram
+export plot_rotframe_jacobian_response
+export plot_eigenvalues
+export plot_spaghetti
+
+# extension functions
+export AdiabaticSweep
+export steady_state_sweep
+export plot_1D_solutions_branch
+export follow_branch
 
 # Error hint for extensions stubs
 function __init__()

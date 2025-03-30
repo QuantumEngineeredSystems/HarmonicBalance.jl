@@ -48,7 +48,7 @@ end
 @testset "second order" begin
     response_matrix = HB.LinearResponse.ResponseMatrix(result)
     M = response_matrix.matrix
-    @test M[1](ones(4)) isa ComplexF64
+    @test M[1](ones(4)) isa Complex
 
     plot_linear_response(result, x, 1; Ω_range=range(0.9, 1.1, 10), order=2, logscale=true)
 end

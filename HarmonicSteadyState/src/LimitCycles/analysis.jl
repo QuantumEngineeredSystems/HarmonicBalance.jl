@@ -12,6 +12,8 @@ function classify_unique!(res::Result, Δω; class_name="unique_cycle")
     return res.classes[class_name] = map(.*, c1, c2)
 end
 
+_symidx(sym::Num, args...) = findfirst(x -> isequal(x, sym), _free_symbols(args...))
+
 # if abs(ω_lc) < tol, set all classifications to false
 # TOLERANCE HARDCODED FOR NOW
 function _classify_limit_cycles!(res::Result, ω_lc::Num)
