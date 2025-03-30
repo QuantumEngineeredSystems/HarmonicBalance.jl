@@ -133,7 +133,9 @@ function transform_solutions(
 end
 """ Parse `expr` into a Symbolics.jl expression, substitute with `rules` and build a function taking free_symbols """
 function _build_substituted(expr::String, rules, free_symbols)
-    subbed = substitute_all(_parse_expression(expr), rules)
+    declare_variable.(string.(free_symbols))
+    expr = _parse_expression(expr)
+    subbed = substitute_all(expr, rules)
     comp_func = Symbolics.build_function(subbed, free_symbols)
 
     return eval(comp_func)
@@ -145,7 +147,7 @@ function _build_substituted(expr, res::Result; rules=Dict())
 
     # define variables in rules in this namespace
     new_keys = declare_variable.(string.(keys(Dict(rules))))
-    fixed_subs = merge(res.fixed_parameters, Dict(zip(new_keys, values(Dict(rules)))))
+    fixed_subs = merge(res.fixed_parameters, Dict(zip(new_keys, values(Dict(rules))))) # type unstable
 
     return _build_substituted(expr, fixed_subs, _free_symbols(res))
 end

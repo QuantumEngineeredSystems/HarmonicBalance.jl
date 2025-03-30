@@ -67,7 +67,7 @@ function _get_J_matrix(eom::HarmonicEquation; order=0)
     T = get_independent_variables(eom)[1]
     J = Symbolics.jacobian(eom.equations, d(get_variables(eom), T, order))
 
-    return expand_derivatives.(substitute_all(J, vars_simp)) # a symbolic matrix to be compiled
+    return Symbolics.expand_derivatives.(substitute_all(J, vars_simp)) # a symbolic matrix to be compiled
 end
 
 # # TODO COMPILE THIS?

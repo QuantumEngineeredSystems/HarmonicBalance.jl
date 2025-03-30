@@ -1,4 +1,5 @@
 using HarmonicSteadyState
+using HarmonicBalance
 using HarmonicSteadyState: OrderedDict
 using Symbolics
 #using Test # do not use Test as this file is used for precompilation

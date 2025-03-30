@@ -1,4 +1,4 @@
-
+module HC_wrapper
 using QuestBase: var_name, HarmonicEquation
 
 using DocStringExtensions
@@ -44,4 +44,6 @@ function HomotopyContinuation.ModelKit.System(eqs::Vector{Num}, vars::Vector{Num
     return S = HomotopyContinuation.System(
         parse_equations(eqs); variables=conv_vars, parameters=conv_para
     )
+end
+
 end

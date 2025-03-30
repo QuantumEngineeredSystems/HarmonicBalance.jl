@@ -9,7 +9,8 @@ using QuestBase:
     HarmonicEquation,
     HarmonicVariable,
     get_independent_variables,
-    declare_variable
+    declare_variable,
+    _remove_brackets
 
 using DocStringExtensions
 
@@ -23,7 +24,6 @@ using HarmonicSteadyState:
     get_steady_states,
     order_branches!,
     find_branch_order,
-    _remove_brackets,
     classify_solutions,
     _is_physical,
     var_name,

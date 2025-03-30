@@ -10,7 +10,8 @@ using QuestBase:
     hasnan,
     substitute_all,
     get_independent_variables,
-    d
+    d,
+    _remove_brackets
     # get_Jacobian,
     # _get_J_matrix
 
@@ -29,12 +30,14 @@ using Random: Random # for setting seed
 using Distances: Distances
 using BijectiveHilbert: BijectiveHilbert, Simple2D, decode_hilbert!, encode_hilbert
 using HomotopyContinuation: HomotopyContinuation
-using Symbolics: Symbolics, unwrap, wrap, Num
+using Symbolics: Symbolics, unwrap, wrap, Num, get_variables
 const HC = HomotopyContinuation
 import FunctionWrappers: FunctionWrapper
 
 include("extension_functions.jl")
+
 include("HC_wrapper.jl")
+using .HC_wrapper
 
 include("types.jl")
 include("utils.jl")
