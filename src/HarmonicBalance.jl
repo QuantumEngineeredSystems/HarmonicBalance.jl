@@ -28,9 +28,7 @@ using QuestBase:
     is_trig,
     is_harmonic,
     rearrange_standard,
-    rearrange_standard!,
-    declare_variables,
-    get_Jacobian
+    rearrange_standard!
 
 using QuestBase: QuestBase, is_harmonic, substitute_all, drop_powers, d
 
