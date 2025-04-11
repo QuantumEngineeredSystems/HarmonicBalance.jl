@@ -46,8 +46,9 @@ function add_peak(s1::JacobianSpectrum, s2::JacobianSpectrum)
 end
 
 "Gives the numerical value of a peak at ω."
-evaluate(peak::Lorentzian{T}, ω::T) where {T<:Real} =
+function evaluate(peak::Lorentzian{T}, ω::T) where {T<:Real}
     peak.A / sqrt(((peak.ω0 - ω)^2 + (peak.Γ)^2))
+end
 
 "Gives the numerical value of a JacobianSpectrum at ω"
 function evaluate(s::JacobianSpectrum{T}, ω::T) where {T<:Real}

@@ -12,8 +12,9 @@ using HomotopyContinuation
 using HomotopyContinuation: Variable, System
 
 "Conversion from Symbolics.jl types to HomotopyContinuation types."
-HomotopyContinuation.Variable(var::Num) =
+function HomotopyContinuation.Variable(var::Num)
     isterm(var.val) ? Variable(string(var.val.f)) : Variable(string(var_name(var)))
+end
 
 "Converts a Num into Variable in the active namespace."
 function Num_to_Variable(x::Num)
@@ -23,8 +24,9 @@ function Num_to_Variable(x::Num)
 end
 
 "Converts a Num dictionary into a Variable dictionary."
-Num_to_Variable(dict::Dict{Num,T}) where {T<:Number} =
-    Dict{Variable,T}([[Variable(key), dict[key]] for key in keys(dict)]) # for the parameter assignments
+function Num_to_Variable(dict::Dict{Num,T}) where {T<:Number}
+    Dict{Variable,T}([[Variable(key), dict[key]] for key in keys(dict)])
+end # for the parameter assignments
 
 "Parse symbolic expressions as the Expression type in HomotopyContinuation."
 function parse_equations(eqs::Vector{Num})
