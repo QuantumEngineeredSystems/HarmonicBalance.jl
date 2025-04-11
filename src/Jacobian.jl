@@ -39,7 +39,7 @@ function get_Jacobian(eqs::Vector{Num}, vars::Vector{Num})::Matrix{Num}
         M[idx] = expand_derivatives(d(eqs[idx[1]], vars[idx[2]]))
     end
     return M
-end # should replace with Symbolics.jacobian
+end # TODO should replace with Symbolics.jacobian
 
 function get_Jacobian(eqs::Vector{Equation}, vars::Vector{Num})::Matrix{Num}
     expr = Num[getfield(eq, :lhs) - getfield(eq, :rhs) for eq in eqs]
