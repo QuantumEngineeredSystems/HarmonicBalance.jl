@@ -37,7 +37,7 @@ function OrdinaryDiffEqTsit5.ODEProblem(
             unwrap.([
                 substitute(eq, Dict(zip(keys(sweep), [sweep[p](T) for p in keys(sweep)])))
                 for eq in eqs(v)
-            ])
+            ]),
         )
     end
 
