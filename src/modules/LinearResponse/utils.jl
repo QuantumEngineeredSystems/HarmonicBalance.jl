@@ -6,8 +6,8 @@ function _get_uv_pairs(hvars::Vector{HarmonicVariable})
         j = findall(
             x ->
                 isequal(x.ω, hvars[i].ω) &&
-                    x.type == "v" &&
-                    isequal(hvars[i].natural_variable, x.natural_variable),
+                x.type == "v" &&
+                isequal(hvars[i].natural_variable, x.natural_variable),
             hvars,
         )
         j = length(j) != 1 && error("no v coordinate found for ", hvars[i]) || j[1]

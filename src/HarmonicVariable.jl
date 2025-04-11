@@ -97,13 +97,15 @@ function ExprUtils.substitute_all(vars::Vector{HarmonicVariable}, rules)
 end
 
 "Returns the symbols of a `HarmonicVariable`."
-get_variables_nums(vars::Vector{Num}) =
+function get_variables_nums(vars::Vector{Num})
     unique(flatten([Num.(get_variables(x)) for x in vars]))
+end
 
 Symbolics.get_variables(var::HarmonicVariable)::Num = Num(first(get_variables(var.symbol)))
 
-Base.isequal(v1::HarmonicVariable, v2::HarmonicVariable)::Bool =
-    isequal(v1.symbol, v2.symbol)
+Base.isequal(v1::HarmonicVariable, v2::HarmonicVariable)::Bool = isequal(
+    v1.symbol, v2.symbol
+)
 
 "The derivative of f w.r.t. x of degree deg"
 function d(f::Num, x::Num, deg=1)::Num

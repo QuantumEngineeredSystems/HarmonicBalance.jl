@@ -49,9 +49,9 @@ function replace_to_reals(eqs::Vector{String}, ops_av::Vector{String}, conjugate
         conj_replace = map(eachindex(pair)) do i
             op = ops_av[pair[i]] # ∨ f(i) contains "+" or "-"
             op => if is_real
-                "((" * op_r * ") / √(2))"       #=prefactor * " " *=#
+                "((" * op_r * ") / √(2))"
             else
-                "((" * op_r * " $(f(i)) im*" * op_i * ") / √(2))"                #=prefactor *=#
+                "((" * op_r * " $(f(i)) im*" * op_i * ") / √(2))"
             end
         end
         if isequal(pair...)
