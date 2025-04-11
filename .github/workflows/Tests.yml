@@ -4,10 +4,10 @@ on:
     tags:
       - '*'
     branches:
-      - 'main'
+      - 'master'
   pull_request:
     branches:
-      - 'main'
+      - 'master'
 concurrency:
   # Skip intermediate builds: always.
   # Cancel intermediate builds: only if it is a pull request build.
