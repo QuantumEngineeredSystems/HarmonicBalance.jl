@@ -26,5 +26,5 @@ plot(::OrdinaryDiffEqTsit5.ODESolution, ::Any, ::HarmonicEquation)
 Using a time-dependent simulation can verify solution stability in cases where the Jacobian is too expensive to compute.
 
 ```@docs; canonical=false
-HarmonicBalance.is_stable
+HarmonicSteadyState.is_stable
 ```

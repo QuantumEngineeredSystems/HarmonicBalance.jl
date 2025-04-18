@@ -7,9 +7,9 @@
 ## System objects and types
 
 ```@docs
-HarmonicBalance.d
+d
 DifferentialEquation
-HarmonicVariable
+QuestBase.HarmonicVariable
 HarmonicEquation
 ```
 
@@ -84,13 +84,13 @@ add_pairs!
 ## Linear Response
 
 ```@autodocs
-Modules = [HarmonicBalance.LinearResponse]
+Modules = [HarmonicSteadyState.LinearResponse]
 Private = false
 Order = [:function]
 ```
 
 ```@docs
-get_Jacobian
+HarmonicBalance.get_Jacobian
 ```
 
 ## Extensions
@@ -104,7 +104,7 @@ plot_1D_solutions_branch
 ```
 
 ```@autodocs; canonical=false
-Modules = [Base.get_extension(HarmonicBalance, :TimeEvolution)]
+Modules = [Base.get_extension(HarmonicSteadyState, :TimeEvolution)]
 Private = false
 Order = [:function]
 ```

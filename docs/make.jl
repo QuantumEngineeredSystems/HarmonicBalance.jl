@@ -1,6 +1,8 @@
 CI = get(ENV, "CI", nothing) == "true" || get(ENV, "GITHUB_TOKEN", nothing) !== nothing
 
 using HarmonicBalance
+using HarmonicSteadyState
+using QuestBase
 
 using Documenter
 using DocumenterVitepress
@@ -11,9 +13,9 @@ using ModelingToolkit
 using OrdinaryDiffEqTsit5
 using SteadyStateDiffEq
 
-TimeEvolution = Base.get_extension(HarmonicBalance, :TimeEvolution)
+TimeEvolution = Base.get_extension(HarmonicSteadyState, :TimeEvolution)
 ModelingToolkitExt = Base.get_extension(HarmonicBalance, :ModelingToolkitExt)
-SteadyStateDiffEqExt = Base.get_extension(HarmonicBalance, :SteadyStateDiffEqExt)
+SteadyStateDiffEqExt = Base.get_extension(HarmonicSteadyState, :SteadyStateDiffEqExt)
 
 bib = CitationBibliography(
     joinpath(@__DIR__, "src", "refs.bib");
@@ -21,7 +23,7 @@ bib = CitationBibliography(
 )
 
 using Plots
-PlotsExt = Base.get_extension(HarmonicBalance, :PlotsExt)
+PlotsExt = Base.get_extension(HarmonicSteadyState, :PlotsExt)
 default(; fmt=:png)
 # Gotta set this environment variable when using the GR run-time on CI machines.
 # This happens as examples will use Plots.jl to make plots and movies.
@@ -37,10 +39,12 @@ makedocs(;
     authors="Quest group",
     modules=[
         HarmonicBalance,
+        QuestBase,
+        HarmonicSteadyState,
         TimeEvolution,
         ModelingToolkitExt,
         SteadyStateDiffEqExt,
-        HarmonicBalance.LinearResponse,
+        HarmonicSteadyState.LinearResponse,
         PlotsExt,
     ],
     format=DocumenterVitepress.MarkdownVitepress(;
@@ -58,7 +62,7 @@ makedocs(;
     else
         [:linkcheck, :cross_references, :missing_docs, :docs_block]
     end,
-    doctest=false,  # We test it in the CI, no need to run it here
+    doctest=false, # We test it in the CI, no need to run it here
     plugins=[bib],
 )
 
