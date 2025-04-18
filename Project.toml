@@ -36,7 +36,7 @@ SteadyStateDiffEqExt = "SteadyStateDiffEq"
 TimeEvolution = "OrdinaryDiffEqTsit5"
 
 [compat]
-BijectiveHilbert = "0.3.0"
+BijectiveHilbert = "0.3.0, 0.5"
 Distances = "0.10.11"
 DocStringExtensions = "0.9.3"
 FunctionWrappers = "1.1.3"
