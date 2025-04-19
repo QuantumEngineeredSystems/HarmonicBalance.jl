@@ -48,8 +48,9 @@ plot(time_soln.t, norm.(time_soln.u))
 # ## using follow_branch
 
 followed_branch, Ys = follow_branch(1, result_HB; y="√(u1^2+v1^2)")
-Y_followed_gr =
-    real.([Ys[param_idx][branch] for (param_idx, branch) in enumerate(followed_branch)]);
+Y_followed_gr = real.([
+    Ys[param_idx][branch] for (param_idx, branch) in enumerate(followed_branch)
+]);
 
 plot(result_HB, "sqrt(u1^2+v1^2)")
 plot!(ω_range, Y_followed_gr; c=:gray, ls=:dash)
@@ -64,8 +65,9 @@ plot!(ω_range, Y_followed_gr; c=:gray, ls=:dash)
 
 @btime begin
     followed_branch, Ys = follow_branch(1, result_HB; y="√(u1^2+v1^2)")
-    Y_followed_gr =
-        real.([Ys[param_idx][branch] for (param_idx, branch) in enumerate(followed_branch)])
+    Y_followed_gr = real.([
+        Ys[param_idx][branch] for (param_idx, branch) in enumerate(followed_branch)
+    ])
 end
 
 # Plotting them together gives:

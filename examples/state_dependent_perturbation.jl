@@ -205,12 +205,9 @@ prob = HarmonicSteadyState.HomotopyContinuationProblem(harmonic_tmp, varied, fix
 # We will sweep over the $\omega-\lambda$ plane and substitute the non-zero amplitude solution of the antisymmetric mode into the coupled equations of thesymmetric mode.
 
 all_keys = cat(collect(keys(varied)), collect(keys(fixed)); dims=1)
-permutation =
-    first.(
-        filter(
-            !isempty, [findall(x -> isequal(x, par), all_keys) for par in prob.parameters]
-        )
-    )
+permutation = first.(
+    filter(!isempty, [findall(x -> isequal(x, par), all_keys) for par in prob.parameters])
+)
 
 param_ranges = collect(values(varied))
 input_array = collect(Iterators.product(param_ranges..., values(fixed)...))
