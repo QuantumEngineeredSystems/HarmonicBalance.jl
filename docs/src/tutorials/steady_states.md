@@ -1,4 +1,4 @@
-# [Finding the staedy states of a Duffing oscillator](@id Duffing)
+# [Finding the steady states of a Duffing oscillator](@id Duffing)
 
 Here we show the workflow of HarmonicBalance.jl on a simple example - the driven Duffing oscillator. The equation of motion for the displacement $x(t)$ reads
 
