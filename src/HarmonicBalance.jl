@@ -53,6 +53,9 @@ include("Jacobian.jl")
 include("HarmonicEquation.jl")
 include("krylov-bogoliubov.jl")
 
+using Reexport: @reexport
+@reexport using HarmonicSteadyState
+
 # Precompilation setup
 using PrecompileTools: @setup_workload, @compile_workload
 # @setup_workload begin

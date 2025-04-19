@@ -5,9 +5,11 @@ version = "0.15.0"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+HarmonicSteadyState = "1158f75c-a779-4b85-8bfb-8fcf6bf02ced"
 PrecompileTools = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
 QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 
@@ -18,31 +20,33 @@ ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
 ModelingToolkitExt = "ModelingToolkit"
 
 [compat]
+Aqua = "0.8.11"
+DocStringExtensions = "0.9.4"
+Documenter = "1.4"
+ExplicitImports = "1.6"
+HarmonicSteadyState = "0.2.0"
+JET = "0.9.18"
+ModelingToolkit = "9.60"
 PrecompileTools = "1.2"
 QuestBase = "0.3.0"
+Random = "1.10.0"
+Reexport = "1.2.2"
 SymbolicUtils = "3.25"
 Symbolics = "~6.34.0"
-ModelingToolkit = "9.60"
-julia = "1.10.0"
-DocStringExtensions = "0.9.4"
-Random = "1.10.0"
 Test = "1.10.0"
-Aqua = "0.8.11"
-ExplicitImports = "1.6"
-JET = "0.9.18"
-Documenter = "1.4"
+julia = "1.10.0"
 
 [extras]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
-QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
-Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
-ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 ExplicitImports = "7d51a73a-1435-4ff3-83d9-f097790105c7"
 JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
+ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 
 [targets]
-test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit","Documenter", "QuestBase"]
+test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit", "Documenter", "QuestBase"]

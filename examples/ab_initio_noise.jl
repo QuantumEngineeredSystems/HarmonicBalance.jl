@@ -68,7 +68,9 @@ plot(freqω, psd; yscale=:log10, xlabel="Frequency", ylabel="Power")
 
 # We will perform parameter sweep to generate noise spectra across the driving frequency $\omega$. For this we use the `EnsembleProblem` API from the SciML ecosystem.
 setter! = setp(sdesystem, ω)
-prob_func(prob, i, repeat) = (prob′=remake(prob); setter!(prob′, ωrange[i]); prob′)
+prob_func(prob, i, repeat) = (prob′ = remake(prob);
+setter!(prob′, ωrange[i]);
+prob′)
 output_func(sol, i) = (outputpsd(sol), false)
 prob_ensemble = EnsembleProblem(sdeproblem; prob_func=prob_func, output_func=output_func)
 sol_ensemble = solve(
