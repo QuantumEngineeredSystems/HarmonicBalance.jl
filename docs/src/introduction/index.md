@@ -70,4 +70,9 @@ To ensure a smooth experience with our package, please follow these steps to set
    add IJulia
    ```
 
-5. Once installed, `IJulia` will automatically set up Julia as a Jupyter kernel.
+5. Once installed, we need to install a Julia Jupyter kernel:
+
+```julia
+using IJulia
+installkernel("4 threads", env=Dict("JULIA_NUM_THREADS"=>"4"))
+```
