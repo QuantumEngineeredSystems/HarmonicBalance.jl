@@ -2,7 +2,7 @@
 
 # This example demonstrates how to compute the spectra obtained from probing the system with noisy probe.
 
-using HarmonicBalance, Plots
+using HarmonicBalance, HarmonicSteadyState, Plots
 using ModelingToolkit, StaticArrays, StochasticDiffEq, DSP
 using ModelingToolkit: setp
 

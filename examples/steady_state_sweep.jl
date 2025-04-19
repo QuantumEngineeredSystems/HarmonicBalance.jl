@@ -1,7 +1,8 @@
 # # Steady state sweeps
 
-using HarmonicBalance, SteadyStateDiffEq, ModelingToolkit
-using BenchmarkTools, Plots, StaticArrays, OrdinaryDiffEq, LinearAlgebra
+using HarmonicBalance, HarmonicSteadyState
+using SteadyStateDiffEq, ModelingToolkit, OrdinaryDiffEq
+using BenchmarkTools, Plots, StaticArrays, LinearAlgebra
 using HarmonicBalance: OrderedDict
 
 @variables α ω ω0 F γ η t x(t);

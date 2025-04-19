@@ -2,7 +2,8 @@
 
 # Let us compare the higher cumulant approximations for the Kerr parametric oscillator (KPO). The KPO is a model for a cavity with a Kerr nonlinearity and a parametric drive after one applied the Rotating Wave approximation. For this we use the `QuantumCumulants` and the `QuantumCumulantsExt` module in `HarmonicBalance`.
 
-using QuantumCumulants, HarmonicBalance, Plots
+using HarmonicBalance, HarmonicSteadyState
+using QuantumCumulants, Plots
 
 # ## first order cumulant
 

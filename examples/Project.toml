@@ -2,6 +2,7 @@
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
 HarmonicBalance = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
+HarmonicSteadyState = "1158f75c-a779-4b85-8bfb-8fcf6bf02ced"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
