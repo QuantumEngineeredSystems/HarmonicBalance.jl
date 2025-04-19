@@ -25,9 +25,9 @@ The advantage of this method is that for a given parameter set, only one matrix 
 Behind the scenes, the spectra are stored using the dedicated structs `Lorentzian` and `JacobianSpectrum`.
 
 ```@docs; canonical=false
-HarmonicBalance.LinearResponse.get_jacobian_response
-HarmonicBalance.LinearResponse.JacobianSpectrum
-HarmonicBalance.LinearResponse.Lorentzian
+HarmonicSteadyState.LinearResponse.get_jacobian_response
+HarmonicSteadyState.LinearResponse.JacobianSpectrum
+HarmonicSteadyState.LinearResponse.Lorentzian
 ```
 
 ### Higher orders
@@ -35,10 +35,9 @@ HarmonicBalance.LinearResponse.Lorentzian
 Setting `order > 1` increases the accuracy of the response spectra. However, unlike for the Jacobian, here we must perform a matrix inversion for each response frequency.  
 
 ```@docs; canonical=false
-HarmonicBalance.LinearResponse.get_linear_response
-HarmonicBalance.LinearResponse.ResponseMatrix
-HarmonicBalance.LinearResponse.get_response
-HarmonicBalance.LinearResponse.get_response_matrix
+HarmonicSteadyState.LinearResponse.get_linear_response
+HarmonicSteadyState.LinearResponse.ResponseMatrix
+HarmonicSteadyState.LinearResponse.get_response
 ```
 
 ## Rotating frame
@@ -46,7 +45,7 @@ HarmonicBalance.LinearResponse.get_response_matrix
 ```@docs; canonical=false
 eigenvalues
 eigenvectors
-HarmonicBalance.LinearResponse.get_rotframe_jacobian_response
+HarmonicSteadyState.LinearResponse.get_rotframe_jacobian_response
 ```
 
 ## Plotting
