@@ -4,7 +4,7 @@
 #
 # We load the following packages into our environment:
 
-using HarmonicBalance, HarmonicSteadyState, Plots
+using HarmonicBalance, Plots
 using Plots.Measures
 using Random
 

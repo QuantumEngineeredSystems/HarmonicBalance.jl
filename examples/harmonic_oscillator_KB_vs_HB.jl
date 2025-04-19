@@ -1,6 +1,6 @@
 # Harmonic oscillator: comparison of KB and HB methods
 
-using HarmonicBalance, HarmonicSteadyState, Plots
+using HarmonicBalance, Plots
 
 @variables ω ω0 F γ t x(t)
 diff_eq = DifferentialEquation(d(x, t, 2) + ω0^2 * x + γ * d(x, t) ~ F * cos(ω * t), x)

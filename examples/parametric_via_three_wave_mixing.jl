@@ -1,6 +1,6 @@
 # # Parametric Pumping via Three-Wave Mixing
 
-using HarmonicBalance, HarmonicSteadyState, Plots
+using HarmonicBalance, Plots
 using Plots.Measures
 using Random
 

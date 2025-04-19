@@ -4,7 +4,7 @@
 
 # Let us load the following packages into our environment:
 
-using HarmonicBalance, HarmonicSteadyState, Plots;
+using HarmonicBalance, Plots;
 HB = HarmonicBalance;
 crange = (0, 9);
 
