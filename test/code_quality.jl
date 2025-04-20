@@ -13,7 +13,7 @@ end
     @test check_no_stale_explicit_imports(HarmonicBalance) == nothing
     @test check_all_explicit_imports_via_owners(HarmonicBalance) == nothing
     Aqua.test_ambiguities([HarmonicBalance])
-    Aqua.test_all(HarmonicBalance;)
+    Aqua.test_all(HarmonicBalance; persistent_tasks=false)
     for mod in [ModelingToolkitExt]
         @test check_no_stale_explicit_imports(mod) == nothing
         @test check_all_explicit_imports_via_owners(mod) == nothing
