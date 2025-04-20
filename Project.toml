@@ -1,7 +1,7 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
 authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
-version = "0.15.0"
+version = "0.15.1"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
@@ -16,6 +16,9 @@ Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 [weakdeps]
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
 
+[sources]
+HarmonicSteadyState = {url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl", rev = "lts-proper"}
+
 [extensions]
 ModelingToolkitExt = "ModelingToolkit"
 
@@ -24,17 +27,17 @@ Aqua = "0.8.11"
 DocStringExtensions = "0.9.4"
 Documenter = "1.4"
 ExplicitImports = "1.6"
-HarmonicSteadyState = "0.2.0"
+HarmonicSteadyState = "0.2.1"
 JET = "0.9.18"
 ModelingToolkit = "9.60"
 PrecompileTools = "1.2"
 QuestBase = "0.3.0"
-Random = "1.11.0"
+Random = "1.10"
 Reexport = "1.2.2"
 SymbolicUtils = "3.25"
 Symbolics = "~6.34.0"
-Test = "1.11.0"
-julia = "1.11.0"
+Test = "1.10"
+julia = "1.10"
 
 [extras]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
