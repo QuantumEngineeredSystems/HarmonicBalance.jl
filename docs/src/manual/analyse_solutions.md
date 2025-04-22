@@ -1,6 +1,6 @@
 # Extracting Solutions
 
-After computing the steady-states of the harmonic equations, you'll want to extract the solutions from the [`HarmonicBalance.Result`](@ref) struct.
+After computing the steady-states of the harmonic equations, you'll want to extract the solutions from the [`HarmonicSteadyState.Result`](@ref) struct.
 
 ## Basic Solution Extraction
 

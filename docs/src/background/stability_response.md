@@ -128,6 +128,6 @@ The above solution applies to every eigenvalue $\lambda$ of the Jacobian. It is 
 
 _Sidenote:_ As $J$ a real matrix, there is an eigenvalue $\lambda_r^*$ for each $\lambda_r$. The maximum number of peaks in the linear response is thus equal to the dimensionality of $\mathbf{u}(T)$.
 
-The linear response of the system in the state $\mathbf{u}_0$ is thus fully specified by the complex eigenvalues and eigenvectors of $J(\mathbf{u}_0)$. In HarmonicBalance.jl, the module [LinearResponse](@ref linresp_man) creates a set of plottable [`Lorentzian`](@ref HarmonicBalance.LinearResponse.Lorentzian) objects to represent this.
+The linear response of the system in the state $\mathbf{u}_0$ is thus fully specified by the complex eigenvalues and eigenvectors of $J(\mathbf{u}_0)$. In HarmonicBalance.jl, the module [LinearResponse](@ref linresp_man) creates a set of plottable [`Lorentzian`](@ref HarmonicSteadyState.LinearResponse.Lorentzian) objects to represent this.
 
 [Check out this example](@ref linresp_ex) of the linear response module of HarmonicBalance.jl

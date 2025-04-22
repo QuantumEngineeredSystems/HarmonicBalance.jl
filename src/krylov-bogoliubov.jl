@@ -1,24 +1,3 @@
-module KrylovBogoliubov
-
-using DocStringExtensions
-
-using Symbolics
-using Symbolics: unwrap, diff2term
-using SymbolicUtils: BasicSymbolic, isdiv
-
-using HarmonicBalance
-using HarmonicBalance:
-    rearrange!, flatten, _create_harmonic_variable, slow_flow, _remove_brackets
-
-using HarmonicBalance.ExprUtils:
-    get_all_terms,
-    substitute_all,
-    trig_reduce,
-    get_independent,
-    simplify_complex,
-    is_trig,
-    is_harmonic
-
 get_harmonic(var::HarmonicVariable) = var.ω
 get_harmonics(eom::HarmonicEquation) = get_harmonic.(eom.variables)
 
@@ -63,7 +42,10 @@ Harmonic equations:
 
 """
 function get_krylov_equations(
-    diff_eom::DifferentialEquation; order::Int64, fast_time=nothing, slow_time=nothing
+    diff_eom::QuestBase.DifferentialEquation;
+    order::Int64,
+    fast_time=nothing,
+    slow_time=nothing,
 )
     proper_krylov_system(diff_eom, order)
 
@@ -77,8 +59,8 @@ function get_krylov_equations(
     eom = slow_flow(eom; fast_time=fast_time, slow_time=slow_time, degree=2)
 
     rearrange!(eom, d(get_variables(eom), slow_time))
-    eom.equations = expand.(simplify.(eom.equations))
-    eom.equations = expand.(simplify.(eom.equations))
+    eom.equations = Symbolics.expand.(Symbolics.simplify.(eom.equations))
+    eom.equations = Symbolics.expand.(Symbolics.simplify.(eom.equations))
     #^ need it two times to get it completely simplified due to some weird bug in Symbolics.jl
 
     if order == 1
@@ -87,7 +69,7 @@ function get_krylov_equations(
         vars_symb = get_variables(eom)
         Fₜ = Num.(getfield.(eom.equations, :lhs))
         F₀ = Num.(getfield.(average(eom, fast_time), :lhs))
-        Fₜ′ = substitute(
+        Fₜ′ = Symbolics.substitute(
             get_Jacobian(eom), Dict(zip(_remove_brackets.(vars_symb), vars_symb))
         )
 
@@ -103,7 +85,7 @@ function get_krylov_equations(
     change_convention!(eom, slow_time)
     return eom
 end
-function proper_krylov_system(diff_eom::DifferentialEquation, order::Int)
+function proper_krylov_system(diff_eom::QuestBase.DifferentialEquation, order::Int)
     order < 1 && error("The order of the Krylov-Bogoliubov method must be at least 1!")
     order > 2 && error("Krylov-Bogoliubov implementation only supports up to second order!")
     harmonics = values(diff_eom.harmonics)
@@ -125,7 +107,7 @@ function change_convention!(eom::HarmonicEquation, slow_time)
     return nothing
 end
 
-function van_der_Pol(eom::DifferentialEquation, t::Num)
+function van_der_Pol(eom::QuestBase.DifferentialEquation, t::Num)
     dEOM = deepcopy(eom)
     first_order_transform!(dEOM, t)
 
@@ -183,8 +165,10 @@ end
 
 function take_trig_integral(x::BasicSymbolic, ω, t)
     if isdiv(x)
-        arg_num = arguments(x.num)
-        return simplify(expand(sum(take_trig_integral.(arg_num, ω, t)) * ω)) / (x.den * ω)
+        arg_num = Symbolics.arguments(x.num)
+        return Symbolics.simplify(
+            Symbolics.expand(sum(take_trig_integral.(arg_num, ω, t)) * ω)
+        ) / (x.den * ω)
     else
         all_terms = get_all_terms(Num(x))
         trigs = filter(z -> is_trig(z), all_terms)
@@ -192,8 +176,8 @@ function take_trig_integral(x::BasicSymbolic, ω, t)
 
         rules = []
         for trig in trigs
-            arg = first(arguments(trig.val))
-            type = operation(trig.val)
+            arg = first(Symbolics.arguments(trig.val))
+            type = Symbolics.operation(trig.val)
 
             term = Num((type == cos ? sin(arg) : -cos(arg)) / expand_derivatives(D(arg)))
             append!(rules, [trig => term])
@@ -206,5 +190,3 @@ take_trig_integral(x::Num, ω, t) = take_trig_integral(Symbolics.expand(unwrap(x
 
 export first_order_transform!,
     is_rearranged_standard, rearrange_standard!, get_equations, get_krylov_equations
-
-end

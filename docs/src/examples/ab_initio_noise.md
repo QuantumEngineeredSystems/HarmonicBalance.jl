@@ -2,7 +2,7 @@
 EditURL = "../../../examples/ab_initio_noise.jl"
 ```
 
-Ab Initio Noise sidebands and spectra
+# Ab Initio Noise sidebands and spectra
 
 This example demonstrates how to compute the spectra obtained from probing the system with noisy probe.
 
@@ -94,9 +94,7 @@ We will perform parameter sweep to generate noise spectra across the driving fre
 
 ````@example ab_initio_noise
 setter! = setp(sdesystem, ω)
-prob_func(prob, i, repeat) = (prob′ = remake(prob);
-setter!(prob′, ωrange[i]);
-prob′)
+prob_func(prob, i, repeat) = (prob′=remake(prob); setter!(prob′, ωrange[i]); prob′)
 output_func(sol, i) = (outputpsd(sol), false)
 prob_ensemble = EnsembleProblem(sdeproblem; prob_func=prob_func, output_func=output_func)
 sol_ensemble = solve(
