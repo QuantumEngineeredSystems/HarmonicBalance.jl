@@ -61,6 +61,8 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: QuantumEngineeredSystems/HarmonicBalance.jl
           files: lcov.info
           name: codecov-umbrella
           fail_ci_if_error: false
