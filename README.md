@@ -7,7 +7,7 @@
 [![Code Style: Blue](https://img.shields.io/badge/code%20style-blue-4495d1.svg)](https://github.com/invenia/BlueStyle)
 [![Aqua QA](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/JuliaTesting/Aqua.jl)
 [![JET](https://img.shields.io/badge/%E2%9C%88%EF%B8%8F%20tested%20with%20-%20JET.jl%20-%20red)](https://github.com/aviatesk/JET.jl)
-[![codecov](https://codecov.io/gh/QuantumEngineeredSystems/HarmonicBalance.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/QuantumEngineeredSystems/HarmonicBalance.jl)
+[![codecov](https://codecov.io/gh/QuantumEngineeredSystems/HarmonicBalance.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/QuantumEngineeredSystems/HarmonicBalance.jl)
 
 
 **HarmonicBalance.jl** is a Julia package for solving periodic, nonlinear differential equations using the method of harmonic balance.
