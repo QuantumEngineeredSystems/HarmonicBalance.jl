@@ -75,7 +75,7 @@ plot(
     ),
     plot_linear_response(
         result_harmonic, x, 1; Ω_range=range(0.1, 1.9, 200), title="Harmonic"
-    );
+    ),
     plot_linear_response(
         result_harmonic, x, 1; Ω_range=range(0.1, 1.9, 200), title="Exact", order=2
     );
