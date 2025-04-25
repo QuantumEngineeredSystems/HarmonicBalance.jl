@@ -21,6 +21,7 @@ pages = [
         "Ab Initio Noise spectrum" => "examples/ab_initio_noise.md",
         "Adiabatic sweep" => "examples/steady_state_sweep.md",
         "Quantum Cumulants" => "examples/cumulants_KPO.md",
+        "KB vs HB method" => "examples/harmonic_oscillator_KB_vs_HB.md",
         ],
     ],
     "Resources" => [
