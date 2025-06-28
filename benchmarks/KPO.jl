@@ -16,41 +16,70 @@ function benchmark_kpo!(SUITE)
 
     harmonic_eq = get_harmonic_equations(diff_eq)
 
-    SUITE["Construction"]["Harmonic Equation"]["One Frequency"] = @benchmarkable get_harmonic_equations(
-        $diff_eq
-    ) seconds = 10
+    SUITE["Construction"]["Harmonic Equation"]["One Frequency"] = @benchmarkable begin
+        get_harmonic_equations($diff_eq)
+    end seconds = 10
+
+    krylov_eq = get_krylov_equations(diff_eq; order=1)
+    krylov_eq2 = get_krylov_equations(diff_eq; order=2)
+
+    SUITE["Construction"]["Krylov Equation"]["Order 1"] = @benchmarkable begin
+        get_krylov_equations($diff_eq; order=1)
+    end seconds = 10
+    SUITE["Construction"]["Krylov Equation"]["Order 2"] = @benchmarkable begin
+        get_krylov_equations($diff_eq; order=2)
+    end seconds = 10
 
     fixed = OrderedDict(ω₀ => 1.0, γ => 1e-2, λ => 5e-2, F => 1e-3, α => 1.0, η => 0.3)
     varied = OrderedDict(ω => range(0.9, 1.1, 100))
 
-    Problem = HomotopyContinuationProblem(harmonic_eq, varied, fixed)
-    SUITE["Construction"]["Problem"]["HomotopyContinuationProblem"] = @benchmarkable HomotopyContinuationProblem(
-        $harmonic_eq, $varied, $fixed
-    ) seconds = 10
+    problem = HomotopyContinuationProblem(harmonic_eq, varied, fixed)
+    SUITE["Construction"]["Problem"]["HomotopyContinuationProblem"] = @benchmarkable begin
+        HomotopyContinuationProblem($harmonic_eq, $varied, $fixed)
+    end seconds = 10
 
     show_progress = false
     sorting = "no_sorting"
     classify_default = false
 
     method = WarmUp(; thread=true)
-    result = get_steady_states(Problem, method; show_progress, sorting, classify_default)
+    result = get_steady_states(problem, method; show_progress, sorting, classify_default)
 
-    SUITE["Steady states"]["Homotopy Problem"]["Warm up method"] = @benchmarkable get_steady_states(
-        $Problem, $method; show_progress=false, sorting="no_sorting", classify_default=false
-    ) seconds = 10
+    SUITE["Steady states"]["Homotopy Problem"]["Warm up method"] = @benchmarkable begin
+        get_steady_states(
+            $problem,
+            $method;
+            show_progress=false,
+            sorting="no_sorting",
+            classify_default=false,
+        )
+    end seconds = 10
 
     method = TotalDegree(; thread=true)
-    result = get_steady_states(Problem, method; show_progress, sorting, classify_default)
+    result = get_steady_states(problem, method; show_progress, sorting, classify_default)
 
-    SUITE["Steady states"]["Homotopy Problem"]["Total degree homotopy"] = @benchmarkable get_steady_states(
-        $Problem, $method; show_progress=false, sorting="no_sorting", classify_default=false
-    ) seconds = 10
+    SUITE["Steady states"]["Homotopy Problem"]["Total degree homotopy"] = @benchmarkable begin
+        get_steady_states(
+            $problem,
+            $method;
+            show_progress=false,
+            sorting="no_sorting",
+            classify_default=false,
+        )
+    end seconds = 10
 
     method = Polyhedral(; thread=true)
-    result = get_steady_states(Problem, method; show_progress, sorting, classify_default)
+    result = get_steady_states(problem, method; show_progress, sorting, classify_default)
 
-    SUITE["Steady states"]["Homotopy Problem"]["Polyhedral homotopy"] = @benchmarkable get_steady_states(
-        $Problem, $method; show_progress=false, sorting="no_sorting", classify_default=false
-    ) seconds = 10
+    SUITE["Steady states"]["Homotopy Problem"]["Polyhedral homotopy"] = @benchmarkable begin
+        get_steady_states(
+            $problem,
+            $method;
+            show_progress=false,
+            sorting="no_sorting",
+            classify_default=false,
+        )
+    end seconds = 10
+
     return nothing
 end
