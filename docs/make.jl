@@ -58,7 +58,7 @@ makedocs(;
     pages=pages,
     source="src",
     build="build",
-    draft=(!CI),
+    draft=true,#(!CI),
     warnonly=if CI
         [:linkcheck, :cross_references]
     else
