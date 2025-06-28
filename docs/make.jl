@@ -16,6 +16,7 @@ using SteadyStateDiffEq
 TimeEvolution = Base.get_extension(HarmonicSteadyState, :TimeEvolution)
 ModelingToolkitExt = Base.get_extension(HarmonicBalance, :ModelingToolkitExt)
 SteadyStateDiffEqExt = Base.get_extension(HarmonicSteadyState, :SteadyStateDiffEqExt)
+HarmonicBalanceExt = Base.get_extension(HarmonicSteadyState, :HarmonicBalanceExt)
 
 bib = CitationBibliography(
     joinpath(@__DIR__, "src", "refs.bib");
@@ -46,6 +47,7 @@ makedocs(;
         SteadyStateDiffEqExt,
         HarmonicSteadyState.LinearResponse,
         PlotsExt,
+        HarmonicBalanceExt,
     ],
     format=DocumenterVitepress.MarkdownVitepress(;
         repo="github.com/QuantumEngineeredSystems/HarmonicBalance.jl",

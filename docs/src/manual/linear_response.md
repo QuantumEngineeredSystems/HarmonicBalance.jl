@@ -35,7 +35,7 @@ HarmonicSteadyState.LinearResponse.Lorentzian
 Setting `order > 1` increases the accuracy of the response spectra. However, unlike for the Jacobian, here we must perform a matrix inversion for each response frequency.  
 
 ```@docs; canonical=false
-HarmonicSteadyState.LinearResponse.get_linear_response
+get_linear_response(::HarmonicSteadyState.Result, varags...)
 HarmonicSteadyState.LinearResponse.ResponseMatrix
 HarmonicSteadyState.LinearResponse.get_response
 ```

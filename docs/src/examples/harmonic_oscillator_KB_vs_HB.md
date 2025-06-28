@@ -28,9 +28,10 @@ harmonic_eq = rearrange_standard(harmonic_eq)
 ````@example harmonic_oscillator_KB_vs_HB
 varied = (ω => range(0.1, 1.9, 200)) # range of parameter values
 fixed = (ω0 => 1.0, γ => 0.05, F => 0.1) # fixed parameters
-result_krylov1 = get_steady_states(krylov_eq1, varied, fixed)
-result_krylov2 = get_steady_states(krylov_eq2, varied, fixed)
-result_harmonic = get_steady_states(harmonic_eq, varied, fixed);
+show_progress = false # show progress bar
+result_krylov1 = get_steady_states(krylov_eq1, varied, fixed; show_progress)
+result_krylov2 = get_steady_states(krylov_eq2, varied, fixed; show_progress)
+result_harmonic = get_steady_states(harmonic_eq, varied, fixed; show_progress);
 nothing #hide
 ````
 
@@ -80,9 +81,13 @@ plot(
     ),
     plot_linear_response(
         result_harmonic, x, 1; Ω_range=range(0.1, 1.9, 200), title="Harmonic"
+    ),
+    plot_linear_response(
+        result_harmonic, x, 1; Ω_range=range(0.1, 1.9, 200), title="Exact", order=2
     );
-    layout=(3, 1),
+    layout=(4, 1),
     clims=(0, 250),
+    size=(800, 600),
 )
 ````
 

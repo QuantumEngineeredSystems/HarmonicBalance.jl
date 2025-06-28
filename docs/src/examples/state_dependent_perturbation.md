@@ -11,6 +11,7 @@ Let us load the following packages into our environment:
 ````@example state_dependent_perturbation
 using HarmonicBalance, Plots;
 HB = HarmonicBalance;
+HSS = HarmonicSteadyState;
 crange = (0, 9);
 nothing #hide
 ````
@@ -19,15 +20,15 @@ Later, we will need to classify the solutions of our perturbation. To make this 
 
 ````@example state_dependent_perturbation
 function my_classify_default!(result)
-    my_classify_solutions!(result, HB.is_physical, "physical")
-    my_classify_solutions!(result, HB.is_stable, "stable")
-    return HB.order_branches!(result, ["physical", "stable"]) # shuffle the branches to have relevant
+    my_classify_solutions!(result, HSS.is_physical, "physical")
+    my_classify_solutions!(result, HSS.is_stable, "stable")
+    return HSS.order_branches!(result, ["physical", "stable"]) # shuffle the branches to have relevant
 end
-function my_classify_solutions!(res::HB.Result, f::Function, name::String)
+function my_classify_solutions!(res::HSS.Result, f::Function, name::String)
     values = my_classify_solutions(res, f)
     return res.classes[name] = values
 end
-function my_classify_solutions(res::HB.Result, f::Function)
+function my_classify_solutions(res::HSS.Result, f::Function)
     values = similar(res.solutions, BitVector)
     for (idx, soln) in enumerate(res.solutions)
         values[idx] = [
@@ -72,8 +73,8 @@ We sweep over the system where we both increase the drive frequency $\omega$ and
 
 ````@example state_dependent_perturbation
 res = 80
-fixed = HB.OrderedDict(ω0 => 1.0, α => 1.0, J => 0.005, γ => 0.005)
-varied = HB.OrderedDict((ω => range(0.99, 1.01, res), λ => range(1e-6, 0.03, res)))
+fixed = HSS.OrderedDict(ω0 => 1.0, α => 1.0, J => 0.005, γ => 0.005)
+varied = HSS.OrderedDict((ω => range(0.99, 1.01, res), λ => range(1e-6, 0.03, res)))
 method = TotalDegree()
 result_ωλ = get_steady_states(harmonic_normal, method, varied, fixed; show_progress=false);
 plot_phase_diagram(result_ωλ; class="stable")
@@ -206,7 +207,7 @@ plot_phase_diagram(result_ωλ_antisym; class=["stable", "not_zero"])
 We filter the non-zero amplitude solution and store it in a matrix $A$:
 
 ````@example state_dependent_perturbation
-branch_mat = findfirst.(HB._get_mask(result_ωλ_antisym, ["stable", "not_zero"], []))
+branch_mat = findfirst.(HSS._get_mask(result_ωλ_antisym, ["stable", "not_zero"], []))
 A = map(CartesianIndices(result_ωλ_antisym.solutions)) do idx
     branch = branch_mat[idx]
     if isnothing(branch)
@@ -242,7 +243,7 @@ permutation = first.(
 param_ranges = collect(values(varied))
 input_array = collect(Iterators.product(param_ranges..., values(fixed)...))
 input_array = getindex.(input_array, [permutation])
-input_array = HB.tuple_to_vector.(input_array)
+input_array = HSS.tuple_to_vector.(input_array)
 input_array = map(idx -> push!(input_array[idx], A[idx]...), CartesianIndices(input_array));
 nothing #hide
 ````
@@ -251,8 +252,8 @@ Solving for the steady states of the dressed symmetric mode:
 
 ````@example state_dependent_perturbation
 function solve_perturbed_system(prob, input)
-    result_full = HB.ProgressMeter.@showprogress map(input_array) do input
-        HB.HomotopyContinuation.solve(
+    result_full = HSS.ProgressMeter.@showprogress map(input_array) do input
+        HSS.HomotopyContinuation.solve(
             prob.system;
             start_system=:total_degree,
             target_parameters=input,
@@ -261,14 +262,14 @@ function solve_perturbed_system(prob, input)
         )
     end
 
-    rounded_solutions = HB.HomotopyContinuation.solutions.(result_full)
-    solutions = HB.pad_solutions(rounded_solutions)
+    rounded_solutions = HSS.HomotopyContinuation.solutions.(result_full)
+    solutions = HSS.pad_solutions(rounded_solutions)
 
     jacobian = HarmonicBalance.get_Jacobian(harmonic_tmp)
     J_variables = cat(prob.variables, collect(keys(varied)), [ua, va]; dims=1)
-    compiled_J = HB.compile_matrix(jacobian, J_variables; rules=fixed)
-    compiled_J = HB.JacobianFunction(HB.solution_type(solutions))(compiled_J)
-    result = HB.Result(
+    compiled_J = HSS.compile_matrix(jacobian, J_variables; rules=fixed)
+    compiled_J = HSS.JacobianFunction(HSS.solution_type(solutions))(compiled_J)
+    result = HSS.Result(
         solutions,
         varied,
         fixed,
@@ -276,7 +277,7 @@ function solve_perturbed_system(prob, input)
         Dict(),
         zeros(Int64, size(solutions)...),
         compiled_J,
-        HB.seed(method),
+        HSS.seed(method),
     )
 
     my_classify_default!(result)
