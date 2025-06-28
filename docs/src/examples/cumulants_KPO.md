@@ -36,7 +36,9 @@ To compute the steady states of the KPO, we use `HarmonicBalance`. We define the
 ````@example cumulants_KPO
 fixed = (U => 0.001, κ => 0.002)
 varied = (Δ => range(-0.03, 0.03, 100), G => range(1e-5, 0.02, 100))
-problem_c1 = HarmonicSteadyState.HomotopyContinuationProblem(eqs_completed_RWA, param, varied, fixed)
+problem_c1 = HarmonicSteadyState.HomotopyContinuationProblem(
+    eqs_completed_RWA, param, varied, fixed
+)
 ````
 
 This gives us the phase

@@ -6,7 +6,8 @@ EditURL = "../../../examples/steady_state_sweep.jl"
 
 ````@example steady_state_sweep
 using HarmonicBalance, SteadyStateDiffEq, ModelingToolkit
-using BenchmarkTools, Plots, StaticArrays, OrdinaryDiffEq, LinearAlgebra
+using BenchmarkTools, Plots, StaticArrays, LinearAlgebra
+using OrdinaryDiffEqRosenbrock, OrdinaryDiffEqTsit5
 using HarmonicBalance: OrderedDict
 
 @variables α ω ω0 F γ η t x(t);
