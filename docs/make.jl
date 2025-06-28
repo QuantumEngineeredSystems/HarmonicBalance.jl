@@ -16,6 +16,7 @@ using SteadyStateDiffEq
 TimeEvolution = Base.get_extension(HarmonicSteadyState, :TimeEvolution)
 ModelingToolkitExt = Base.get_extension(HarmonicBalance, :ModelingToolkitExt)
 SteadyStateDiffEqExt = Base.get_extension(HarmonicSteadyState, :SteadyStateDiffEqExt)
+HarmonicBalanceExt = Base.get_extension(HarmonicSteadyState, :HarmonicBalanceExt)
 
 bib = CitationBibliography(
     joinpath(@__DIR__, "src", "refs.bib");
@@ -34,6 +35,17 @@ include("make_md_examples.jl")
 
 include("pages.jl")
 
+# Create remotes for Documenter
+using Pkg
+remotes = Dict()
+for ext in [QuestBase, HarmonicSteadyState]
+    str = string(ext)
+    status = sprint(io -> Pkg.status(str; io=io))
+    version = match(r"(v[0-9].[0-9]+.[0-9]+)", status)[1]
+    gh_moi = Documenter.Remotes.GitHub("QuantumEngineeredSystems", str * ".jl")
+    remotes[pkgdir(ext)] = (gh_moi, version)
+end
+
 makedocs(;
     sitename="HarmonicBalance.jl",
     authors="Quest group",
@@ -46,6 +58,7 @@ makedocs(;
         SteadyStateDiffEqExt,
         HarmonicSteadyState.LinearResponse,
         PlotsExt,
+        HarmonicBalanceExt,
     ],
     format=DocumenterVitepress.MarkdownVitepress(;
         repo="github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
@@ -54,6 +67,7 @@ makedocs(;
     ),
     checkdocs=:exports,
     pages=pages,
+    remotes=remotes,
     source="src",
     build="build",
     draft=(!CI),
