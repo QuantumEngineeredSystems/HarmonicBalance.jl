@@ -70,7 +70,7 @@ makedocs(;
     remotes=remotes,
     source="src",
     build="build",
-    draft=true,#(!CI),
+    draft=(!CI),
     warnonly=if CI
         [:linkcheck, :cross_references]
     else
