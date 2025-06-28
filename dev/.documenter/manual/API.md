@@ -183,7 +183,7 @@ first_order_transform!(diff_eom::DifferentialEquation, time)
 Transforms a higher-order differential equation system into an equivalent first-order system by introducing additional variables. Modifies the system in place. The `time` parameter specifies the independent variable used for differentiation.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/DifferentialEquation.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/DifferentialEquation.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -280,7 +280,7 @@ Harmonic equations:
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/HarmonicEquation.jl#L128-L169" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/HarmonicEquation.jl#L128-L169" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -337,7 +337,7 @@ Harmonic equations:
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/krylov-bogoliubov.jl#L4" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/krylov-bogoliubov.jl#L4" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1273,21 +1273,21 @@ get_Jacobian(eom)
 Obtain the symbolic Jacobian matrix of `eom`. This is the linearised left-hand side of F(u) = du/dT.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Obtain a Jacobian from a `DifferentialEquation` by first converting it into a `HarmonicEquation`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Get the Jacobian of a set of equations `eqs` with respect to the variables `vars`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1555,7 +1555,7 @@ ODEProblem(
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/ext/ModelingToolkitExt.jl#L128" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L128" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -1612,7 +1612,7 @@ ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/ext/ModelingToolkitExt.jl#L36" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L36" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -1642,7 +1642,7 @@ ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/ext/ModelingToolkitExt.jl#L82" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L82" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1683,7 +1683,7 @@ SteadyStateProblem(harmonic_eq, [1.0, 0.0], param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/ext/ModelingToolkitExt.jl#L200" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L200" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1724,7 +1724,7 @@ NonlinearProblem(harmonic_eq, [1.0, 0.0], param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/ext/ModelingToolkitExt.jl#L173" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L173" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

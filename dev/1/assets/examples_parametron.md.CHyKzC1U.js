@@ -36,162 +36,153 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">plot!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(result, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;sqrt(u1^2 + v1^2)&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; not_class</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;large&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></div><p><img src="`+h+'" alt="" width="600px" height="400px"></p><p>Alternatively, we may visualise all underlying solutions, including complex ones,</p><div class="language-julia vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">julia</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">plot</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(result, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;sqrt(u1^2 + v1^2)&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">; class</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;all&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></div><p><img src="'+k+'" alt="" width="600px" height="400px"></p><h2 id="2D-parameters" tabindex="-1">2D parameters <a class="header-anchor" href="#2D-parameters" aria-label="Permalink to &quot;2D parameters {#2D-parameters}&quot;">​</a></h2>',12)),s("p",null,[a[49]||(a[49]=i(`The parametrically driven oscillator boasts a stability diagram called "Arnold's tongues" delineating zones where the oscillator is stable from those where it is exponentially unstable (if the nonlinearity was absence). We can retrieve this diagram by calculating the steady states as a function of external detuning `)),s("mjx-container",C,[(n(),e("svg",D,a[45]||(a[45]=[l('<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FF" d="M195 609Q195 656 227 686T302 717Q319 716 351 709T407 697T433 690Q451 682 451 662Q451 644 438 628T403 612Q382 612 348 641T288 671T249 657T235 628Q235 584 334 463Q401 379 401 292Q401 169 340 80T205 -10H198Q127 -10 83 36T36 153Q36 286 151 382Q191 413 252 434Q252 435 245 449T230 481T214 521T201 566T195 609ZM112 130Q112 83 136 55T204 27Q233 27 256 51T291 111T309 178T316 232Q316 267 309 298T295 344T269 400L259 396Q215 381 183 342T137 256T118 179T112 130Z" style="stroke-width:3;"></path></g><g data-mml-node="mo" transform="translate(721.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z" style="stroke-width:3;"></path></g><g data-mml-node="msub" transform="translate(1777.6,0)"><g data-mml-node="mi"><path data-c="1D714" d="M495 384Q495 406 514 424T555 443Q574 443 589 425T604 364Q604 334 592 278T555 155T483 38T377 -11Q297 -11 267 66Q266 68 260 61Q201 -11 125 -11Q15 -11 15 139Q15 230 56 325T123 434Q135 441 147 436Q160 429 160 418Q160 406 140 379T94 306T62 208Q61 202 61 187Q61 124 85 100T143 76Q201 76 245 129L253 137V156Q258 297 317 297Q348 297 348 261Q348 243 338 213T318 158L308 135Q309 133 310 129T318 115T334 97T358 83T393 76Q456 76 501 148T546 274Q546 305 533 325T508 357T495 384Z" style="stroke-width:3;"></path></g><g data-mml-node="mi" transform="translate(655,-150) scale(0.707)"><path data-c="1D43F" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z" style="stroke-width:3;"></path></g></g><g data-mml-node="mo" transform="translate(3186.3,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z" style="stroke-width:3;"></path></g><g data-mml-node="msub" transform="translate(4186.5,0)"><g data-mml-node="mi"><path data-c="1D714" d="M495 384Q495 406 514 424T555 443Q574 443 589 425T604 364Q604 334 592 278T555 155T483 38T377 -11Q297 -11 267 66Q266 68 260 61Q201 -11 125 -11Q15 -11 15 139Q15 230 56 325T123 434Q135 441 147 436Q160 429 160 418Q160 406 140 379T94 306T62 208Q61 202 61 187Q61 124 85 100T143 76Q201 76 245 129L253 137V156Q258 297 317 297Q348 297 348 261Q348 243 338 213T318 158L308 135Q309 133 310 129T318 115T334 97T358 83T393 76Q456 76 501 148T546 274Q546 305 533 325T508 357T495 384Z" style="stroke-width:3;"></path></g><g data-mml-node="mn" transform="translate(655,-150) scale(0.707)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" style="stroke-width:3;"></path></g></g></g></g>',1)]))),a[46]||(a[46]=s("mjx-assistive-mml",{unselectable:"on",display:"inline",style:{top:"0px",left:"0px",clip:"rect(1px, 1px, 1px, 1px)","-webkit-touch-callout":"none","-webkit-user-select":"none","-khtml-user-select":"none","-moz-user-select":"none","-ms-user-select":"none","user-select":"none",position:"absolute",padding:"1px 0px 0px 0px",border:"0px",display:"block",width:"auto",overflow:"hidden"}},[s("math",{xmlns:"http://www.w3.org/1998/Math/MathML"},[s("mi",null,"δ"),s("mo",null,"="),s("msub",null,[s("mi",null,"ω"),s("mi",null,"L")]),s("mo",null,"−"),s("msub",null,[s("mi",null,"ω"),s("mn",null,"0")])])],-1))]),a[50]||(a[50]=i(" and the parametric drive strength ")),s("mjx-container",Z,[(n(),e("svg",S,a[47]||(a[47]=[s("g",{stroke:"currentColor",fill:"currentColor","stroke-width":"0",transform:"scale(1,-1)"},[s("g",{"data-mml-node":"math"},[s("g",{"data-mml-node":"mi"},[s("path",{"data-c":"1D706",d:"M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z",style:{"stroke-width":"3"}})])])],-1)]))),a[48]||(a[48]=s("mjx-assistive-mml",{unselectable:"on",display:"inline",style:{top:"0px",left:"0px",clip:"rect(1px, 1px, 1px, 1px)","-webkit-touch-callout":"none","-webkit-user-select":"none","-khtml-user-select":"none","-moz-user-select":"none","-ms-user-select":"none","user-select":"none",position:"absolute",padding:"1px 0px 0px 0px",border:"0px",display:"block",width:"auto",overflow:"hidden"}},[s("math",{xmlns:"http://www.w3.org/1998/Math/MathML"},[s("mi",null,"λ")])],-1))]),a[51]||(a[51]=i("."))]),s("p",null,[a[56]||(a[56]=i("To perform a 2D sweep over driving frequency ")),s("mjx-container",_,[(n(),e("svg",B,a[52]||(a[52]=[s("g",{stroke:"currentColor",fill:"currentColor","stroke-width":"0",transform:"scale(1,-1)"},[s("g",{"data-mml-node":"math"},[s("g",{"data-mml-node":"mi"},[s("path",{"data-c":"1D714",d:"M495 384Q495 406 514 424T555 443Q574 443 589 425T604 364Q604 334 592 278T555 155T483 38T377 -11Q297 -11 267 66Q266 68 260 61Q201 -11 125 -11Q15 -11 15 139Q15 230 56 325T123 434Q135 441 147 436Q160 429 160 418Q160 406 140 379T94 306T62 208Q61 202 61 187Q61 124 85 100T143 76Q201 76 245 129L253 137V156Q258 297 317 297Q348 297 348 261Q348 243 338 213T318 158L308 135Q309 133 310 129T318 115T334 97T358 83T393 76Q456 76 501 148T546 274Q546 305 533 325T508 357T495 384Z",style:{"stroke-width":"3"}})])])],-1)]))),a[53]||(a[53]=s("mjx-assistive-mml",{unselectable:"on",display:"inline",style:{top:"0px",left:"0px",clip:"rect(1px, 1px, 1px, 1px)","-webkit-touch-callout":"none","-webkit-user-select":"none","-khtml-user-select":"none","-moz-user-select":"none","-ms-user-select":"none","user-select":"none",position:"absolute",padding:"1px 0px 0px 0px",border:"0px",display:"block",width:"auto",overflow:"hidden"}},[s("math",{xmlns:"http://www.w3.org/1998/Math/MathML"},[s("mi",null,"ω")])],-1))]),a[57]||(a[57]=i(" and parametric drive strength ")),s("mjx-container",j,[(n(),e("svg",q,a[54]||(a[54]=[s("g",{stroke:"currentColor",fill:"currentColor","stroke-width":"0",transform:"scale(1,-1)"},[s("g",{"data-mml-node":"math"},[s("g",{"data-mml-node":"mi"},[s("path",{"data-c":"1D706",d:"M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z",style:{"stroke-width":"3"}})])])],-1)]))),a[55]||(a[55]=s("mjx-assistive-mml",{unselectable:"on",display:"inline",style:{top:"0px",left:"0px",clip:"rect(1px, 1px, 1px, 1px)","-webkit-touch-callout":"none","-webkit-user-select":"none","-khtml-user-select":"none","-moz-user-select":"none","-ms-user-select":"none","user-select":"none",position:"absolute",padding:"1px 0px 0px 0px",border:"0px",display:"block",width:"auto",overflow:"hidden"}},[s("math",{xmlns:"http://www.w3.org/1998/Math/MathML"},[s("mi",null,"λ")])],-1))]),a[58]||(a[58]=i(", we keep ")),a[59]||(a[59]=s("code",null,"fixed",-1)),a[60]||(a[60]=i(" from before but include 2 variables in ")),a[61]||(a[61]=s("code",null,"varied",-1))]),a[70]||(a[70]=l(`<div class="language-julia vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">julia</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">fixed </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (ω₀ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, γ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1e-2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, F </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1e-3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, α </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, η </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0.3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">varied </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (ω </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.8</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1.2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">50</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">), λ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.001</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.6</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">50</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">))</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">result_2D </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> get_steady_states</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(harmonic_eq, varied, fixed);</span></span></code></pre></div><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   2%|▍                   |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 48</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 240</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   2%|▍                   |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 49</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 245</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   3%|▌                   |  ETA: 0:00:32</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 69</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 345</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   3%|▋                   |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 72</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 360</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   4%|▊                   |  ETA: 0:00:32</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 93</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 465</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   4%|▊                   |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 98</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 490</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   5%|▉                   |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 117</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 585</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   5%|█                   |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 121</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 605</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   6%|█▏                  |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 142</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 710</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   6%|█▏                  |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 143</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 715</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   6%|█▎                  |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 161</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 805</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   7%|█▍                  |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 167</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 835</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   7%|█▌                  |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 184</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 920</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   8%|█▌                  |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 190</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 950</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   8%|█▋                  |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 204</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1020</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   9%|█▊                  |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 214</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1070</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...   9%|█▉                  |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 227</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1135</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  10%|█▉                  |  ETA: 0:00:29</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 239</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1195</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  10%|██                  |  ETA: 0:00:31</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 249</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1245</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  11%|██▏                 |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 266</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1330</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  11%|██▏                 |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 272</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1360</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  12%|██▍                 |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 290</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1450</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  12%|██▍                 |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 292</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1460</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  12%|██▌                 |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 312</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1560</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  13%|██▌                 |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 315</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1575</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  13%|██▋                 |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 333</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1665</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  13%|██▊                 |  ETA: 0:00:30</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 336</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1680</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  14%|██▉                 |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 354</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1770</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  15%|██▉                 |  ETA: 0:00:29</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 363</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1815</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  15%|███                 |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 377</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1885</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  15%|███▏                |  ETA: 0:00:29</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 386</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1930</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  16%|███▏                |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 398</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 1990</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  17%|███▎                |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 413</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2065</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  17%|███▌                |  ETA: 0:00:28</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 435</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2175</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  17%|███▍                |  ETA: 0:00:27</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 422</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2110</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -199,53 +190,62 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  18%|███▋                |  ETA: 0:00:27</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 459</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2295</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 446</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2230</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  19%|███▉                |  ETA: 0:00:27</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 483</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2415</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  19%|███▊                |  ETA: 0:00:27</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 468</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2340</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  20%|████▏               |  ETA: 0:00:27</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 508</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2540</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  20%|███▉                |  ETA: 0:00:27</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 490</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2450</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  21%|████▎               |  ETA: 0:00:26</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 537</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2685</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  21%|████▏               |  ETA: 0:00:26</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 514</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2570</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  23%|████▌               |  ETA: 0:00:25</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 564</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2820</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  22%|████▍               |  ETA: 0:00:26</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 541</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2705</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  23%|████▊               |  ETA: 0:00:25</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 586</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2930</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  23%|████▌               |  ETA: 0:00:26</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 563</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2815</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  23%|████▋               |  ETA: 0:00:25</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 585</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 2925</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -253,53 +253,62 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  24%|████▉               |  ETA: 0:00:25</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 607</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3035</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 606</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3030</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  25%|█████▏              |  ETA: 0:00:24</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 637</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3185</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  25%|█████               |  ETA: 0:00:25</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 627</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3135</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  26%|█████▎              |  ETA: 0:00:24</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 659</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3295</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  26%|█████▏              |  ETA: 0:00:25</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 648</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3240</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  27%|█████▌              |  ETA: 0:00:24</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 685</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3425</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  27%|█████▍              |  ETA: 0:00:25</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 669</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3345</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  29%|█████▊              |  ETA: 0:00:23</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 714</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3570</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  28%|█████▌              |  ETA: 0:00:24</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 693</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3465</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  29%|█████▉              |  ETA: 0:00:23</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 735</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3675</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  29%|█████▊              |  ETA: 0:00:24</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 715</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3575</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  30%|█████▉              |  ETA: 0:00:24</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 740</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3700</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -307,26 +316,26 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  30%|██████▏             |  ETA: 0:00:23</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 760</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3800</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 762</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3810</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  31%|██████▎             |  ETA: 0:00:22</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 785</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3925</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  32%|██████▎             |  ETA: 0:00:23</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 789</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 3945</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  32%|██████▍             |  ETA: 0:00:22</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 802</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4010</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  33%|██████▌             |  ETA: 0:00:22</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 813</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4065</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -334,17 +343,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  33%|██████▋             |  ETA: 0:00:22</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 824</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4120</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 833</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4165</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  34%|██████▊             |  ETA: 0:00:22</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 845</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4225</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  34%|██████▉             |  ETA: 0:00:22</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 857</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4285</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -352,53 +361,44 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  35%|███████             |  ETA: 0:00:22</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 868</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4340</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 882</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4410</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  36%|███████▏            |  ETA: 0:00:21</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 889</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4445</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  36%|███████▎            |  ETA: 0:00:21</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 903</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4515</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  37%|███████▎            |  ETA: 0:00:21</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 914</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4570</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  37%|███████▍            |  ETA: 0:00:21</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 923</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4615</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  37%|███████▌            |  ETA: 0:00:21</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 937</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4685</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  38%|███████▋            |  ETA: 0:00:21</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 949</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4745</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  38%|███████▋            |  ETA: 0:00:20</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 960</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4800</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  39%|███████▉            |  ETA: 0:00:20</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 979</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4895</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  39%|███████▊            |  ETA: 0:00:20</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 971</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4855</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -406,8 +406,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  40%|████████            |  ETA: 0:00:20</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1002</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5010</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 995</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 4975</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  41%|████████▏           |  ETA: 0:00:20</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1015</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5075</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -415,17 +424,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  41%|████████▎           |  ETA: 0:00:20</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1025</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5125</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1037</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5185</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  42%|████████▍           |  ETA: 0:00:19</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1046</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5230</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  42%|████████▌           |  ETA: 0:00:19</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1055</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5275</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -433,8 +442,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  43%|████████▋           |  ETA: 0:00:19</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1072</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5360</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1081</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5405</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -442,44 +451,35 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  44%|████████▊           |  ETA: 0:00:19</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1095</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5475</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1100</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5500</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  45%|████████▉           |  ETA: 0:00:18</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1117</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5585</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  45%|█████████           |  ETA: 0:00:19</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1123</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5615</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  45%|█████████▏          |  ETA: 0:00:18</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1137</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5685</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  46%|█████████▏          |  ETA: 0:00:18</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1148</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5740</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  46%|█████████▎          |  ETA: 0:00:18</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1161</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5805</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  47%|█████████▌          |  ETA: 0:00:18</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1182</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5910</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  47%|█████████▍          |  ETA: 0:00:18</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1174</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5870</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -487,8 +487,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  48%|█████████▋          |  ETA: 0:00:17</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1205</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6025</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1197</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 5985</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -496,17 +496,26 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  49%|█████████▊          |  ETA: 0:00:17</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1226</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6130</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1218</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6090</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  50%|██████████          |  ETA: 0:00:17</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1252</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6260</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  50%|█████████▉          |  ETA: 0:00:17</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1242</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6210</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  51%|██████████▏         |  ETA: 0:00:17</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1265</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6325</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -514,26 +523,26 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  51%|██████████▎         |  ETA: 0:00:16</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1275</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6375</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1286</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6430</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  52%|██████████▍         |  ETA: 0:00:16</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1296</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6480</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  52%|██████████▌         |  ETA: 0:00:16</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1308</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6540</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  53%|██████████▌         |  ETA: 0:00:16</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1319</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6595</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  53%|██████████▋         |  ETA: 0:00:16</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1329</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6645</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -541,26 +550,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  54%|██████████▊         |  ETA: 0:00:15</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1343</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6715</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1350</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6750</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  55%|██████████▉         |  ETA: 0:00:15</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1366</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6830</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  56%|███████████▏        |  ETA: 0:00:15</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1388</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6940</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  55%|███████████         |  ETA: 0:00:15</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1376</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6880</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -568,44 +568,53 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  56%|███████████▎        |  ETA: 0:00:15</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1412</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7060</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1399</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 6995</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  57%|███████████▌        |  ETA: 0:00:14</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1435</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7175</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  57%|███████████▍        |  ETA: 0:00:15</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1417</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7085</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  58%|███████████▋        |  ETA: 0:00:14</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1457</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7285</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  58%|███████████▌        |  ETA: 0:00:14</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1439</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7195</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  59%|███████████▉        |  ETA: 0:00:14</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1479</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7395</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  59%|███████████▊        |  ETA: 0:00:14</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1464</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7320</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  60%|████████████        |  ETA: 0:00:13</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1500</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7500</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  60%|███████████▉        |  ETA: 0:00:14</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1488</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7440</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  61%|████████████▏       |  ETA: 0:00:13</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1513</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7565</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -613,8 +622,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  61%|████████████▎       |  ETA: 0:00:13</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1525</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7625</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1532</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7660</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -622,8 +631,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  62%|████████████▍       |  ETA: 0:00:13</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1546</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7730</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1553</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7765</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -631,53 +640,44 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  63%|████████████▋       |  ETA: 0:00:12</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1572</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7860</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1579</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7895</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  64%|████████████▊       |  ETA: 0:00:12</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1595</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 7975</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  64%|████████████▉       |  ETA: 0:00:12</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1608</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8040</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  65%|████████████▉       |  ETA: 0:00:12</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1617</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8085</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  65%|█████████████▏      |  ETA: 0:00:12</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1637</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8185</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  66%|█████████████▏      |  ETA: 0:00:11</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1642</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8210</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  66%|█████████████▎      |  ETA: 0:00:11</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1658</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8290</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  67%|█████████████▎      |  ETA: 0:00:11</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1664</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8320</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  68%|█████████████▌      |  ETA: 0:00:11</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1690</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8450</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  67%|█████████████▌      |  ETA: 0:00:11</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1682</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8410</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -685,8 +685,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  68%|█████████████▋      |  ETA: 0:00:11</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1708</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8540</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1709</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8545</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -694,17 +694,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  69%|█████████████▉      |  ETA: 0:00:10</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1730</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8650</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1732</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8660</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  70%|██████████████      |  ETA: 0:00:10</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1755</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8775</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  70%|██████████████▏     |  ETA: 0:00:10</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1758</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8790</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -712,8 +712,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  71%|██████████████▎     |  ETA: 0:00:10</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1777</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8885</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1778</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 8890</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -721,8 +721,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  72%|██████████████▍     |  ETA: 0:00:09</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1802</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9010</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1800</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9000</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -730,44 +730,53 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  73%|██████████████▋     |  ETA: 0:00:09</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1833</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9165</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1821</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9105</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  74%|██████████████▉     |  ETA: 0:00:09</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1855</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9275</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  74%|██████████████▊     |  ETA: 0:00:09</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1844</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9220</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  75%|███████████████     |  ETA: 0:00:08</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1880</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9400</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  75%|██████████████▉     |  ETA: 0:00:09</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1865</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9325</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  76%|███████████████▎    |  ETA: 0:00:08</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1901</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9505</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  76%|███████████████▏    |  ETA: 0:00:08</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1893</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9465</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  77%|███████████████▍    |  ETA: 0:00:08</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1923</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9615</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  77%|███████████████▎    |  ETA: 0:00:08</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1913</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9565</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  78%|███████████████▌    |  ETA: 0:00:08</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1938</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9690</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -775,17 +784,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  78%|███████████████▋    |  ETA: 0:00:07</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1948</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9740</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  79%|███████████████▊    |  ETA: 0:00:07</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1968</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9840</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1957</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9785</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -793,26 +793,26 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  79%|███████████████▉    |  ETA: 0:00:07</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1987</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9935</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 1981</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 9905</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  80%|████████████████▏   |  ETA: 0:00:07</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2008</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10040</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  80%|████████████████    |  ETA: 0:00:07</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2001</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10005</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  81%|████████████████▎   |  ETA: 0:00:06</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2033</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10165</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  81%|████████████████▏   |  ETA: 0:00:06</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2019</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10095</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -820,26 +820,35 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  82%|████████████████▍   |  ETA: 0:00:06</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2053</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10265</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2040</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10200</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  83%|████████████████▋   |  ETA: 0:00:06</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2074</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10370</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  83%|████████████████▌   |  ETA: 0:00:06</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2065</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10325</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  84%|████████████████▊   |  ETA: 0:00:05</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2099</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10495</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  83%|████████████████▊   |  ETA: 0:00:06</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2087</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10435</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  84%|████████████████▉   |  ETA: 0:00:05</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2107</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10535</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -847,8 +856,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  85%|█████████████████   |  ETA: 0:00:05</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2125</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10625</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2131</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10655</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -856,8 +865,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  86%|█████████████████▏  |  ETA: 0:00:05</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2146</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10730</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2148</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10740</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -865,8 +874,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  87%|█████████████████▍  |  ETA: 0:00:04</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2170</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10850</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2173</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10865</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -874,8 +883,8 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  88%|█████████████████▌  |  ETA: 0:00:04</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2194</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10970</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2195</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 10975</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -883,35 +892,26 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  89%|█████████████████▊  |  ETA: 0:00:04</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2217</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11085</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2221</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11105</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  89%|█████████████████▉  |  ETA: 0:00:04</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2237</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11185</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  90%|██████████████████  |  ETA: 0:00:03</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2248</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11240</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  90%|██████████████████▏ |  ETA: 0:00:03</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2259</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11295</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  91%|██████████████████▎ |  ETA: 0:00:03</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2280</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11400</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  91%|██████████████████▏ |  ETA: 0:00:03</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2265</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11325</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -919,17 +919,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  92%|██████████████████▍ |  ETA: 0:00:03</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2302</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11510</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2290</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11450</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  93%|██████████████████▋ |  ETA: 0:00:02</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2322</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11610</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  93%|██████████████████▌ |  ETA: 0:00:02</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2317</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11585</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -937,17 +937,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  94%|██████████████████▊ |  ETA: 0:00:02</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2343</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11715</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2342</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11710</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  95%|███████████████████ |  ETA: 0:00:02</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2368</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11840</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  95%|██████████████████▉ |  ETA: 0:00:02</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2365</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11825</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -955,26 +955,26 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  96%|███████████████████▏|  ETA: 0:00:01</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2395</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11975</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2390</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 11950</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  97%|███████████████████▍|  ETA: 0:00:01</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2423</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12115</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  96%|███████████████████▎|  ETA: 0:00:01</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2412</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12060</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  98%|███████████████████▋|  ETA: 0:00:01</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2452</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12260</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  98%|███████████████████▌|  ETA: 0:00:01</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2439</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12195</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
@@ -982,17 +982,17 @@ import{_ as t,c as e,o as n,j as s,ai as l,a as i}from"./chunks/framework.DRFLwK
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  99%|███████████████████▊|  ETA: 0:00:00</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2473</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12365</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2466</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12330</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K\x1B[A</span></span>
-<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  99%|████████████████████|  ETA: 0:00:00</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2496</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
-<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12480</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">Solving for 2500 parameters...  99%|███████████████████▉|  ETA: 0:00:00</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">   # parameters solved: 2485</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
+<span class="line"><span style="--shiki-light:#0366d6;--shiki-dark:#2188ff;">       # paths tracked: 12425</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[K</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">\x1B[A</span></span>
 <span class="line"></span>

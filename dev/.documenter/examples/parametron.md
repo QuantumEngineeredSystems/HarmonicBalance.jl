@@ -157,433 +157,433 @@ result_2D = get_steady_states(harmonic_eq, varied, fixed);
 
 
 ```ansi
-[32mSolving for 2500 parameters...   2%|▍                   |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 48[39m[K
-[34m       # paths tracked: 240[39m[K[A[A
+[32mSolving for 2500 parameters...   2%|▍                   |  ETA: 0:00:30[39m[K
+[34m   # parameters solved: 49[39m[K
+[34m       # paths tracked: 245[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   3%|▌                   |  ETA: 0:00:32[39m[K
-[34m   # parameters solved: 69[39m[K
-[34m       # paths tracked: 345[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...   3%|▋                   |  ETA: 0:00:31[39m[K
+[34m   # parameters solved: 72[39m[K
+[34m       # paths tracked: 360[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   4%|▊                   |  ETA: 0:00:32[39m[K
-[34m   # parameters solved: 93[39m[K
-[34m       # paths tracked: 465[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...   4%|▊                   |  ETA: 0:00:30[39m[K
+[34m   # parameters solved: 98[39m[K
+[34m       # paths tracked: 490[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   5%|▉                   |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 117[39m[K
-[34m       # paths tracked: 585[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...   5%|█                   |  ETA: 0:00:30[39m[K
+[34m   # parameters solved: 121[39m[K
+[34m       # paths tracked: 605[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   6%|█▏                  |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 142[39m[K
-[34m       # paths tracked: 710[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...   6%|█▏                  |  ETA: 0:00:30[39m[K
+[34m   # parameters solved: 143[39m[K
+[34m       # paths tracked: 715[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   6%|█▎                  |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 161[39m[K
-[34m       # paths tracked: 805[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...   7%|█▍                  |  ETA: 0:00:30[39m[K
+[34m   # parameters solved: 167[39m[K
+[34m       # paths tracked: 835[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   7%|█▌                  |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 184[39m[K
-[34m       # paths tracked: 920[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...   8%|█▌                  |  ETA: 0:00:30[39m[K
+[34m   # parameters solved: 190[39m[K
+[34m       # paths tracked: 950[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   8%|█▋                  |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 204[39m[K
-[34m       # paths tracked: 1020[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...   9%|█▊                  |  ETA: 0:00:30[39m[K
+[34m   # parameters solved: 214[39m[K
+[34m       # paths tracked: 1070[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...   9%|█▉                  |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 227[39m[K
-[34m       # paths tracked: 1135[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  10%|█▉                  |  ETA: 0:00:29[39m[K
+[34m   # parameters solved: 239[39m[K
+[34m       # paths tracked: 1195[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  10%|██                  |  ETA: 0:00:31[39m[K
-[34m   # parameters solved: 249[39m[K
-[34m       # paths tracked: 1245[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  11%|██▏                 |  ETA: 0:00:28[39m[K
+[34m   # parameters solved: 266[39m[K
+[34m       # paths tracked: 1330[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  11%|██▏                 |  ETA: 0:00:30[39m[K
-[34m   # parameters solved: 272[39m[K
-[34m       # paths tracked: 1360[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  12%|██▍                 |  ETA: 0:00:28[39m[K
+[34m   # parameters solved: 290[39m[K
+[34m       # paths tracked: 1450[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  12%|██▍                 |  ETA: 0:00:30[39m[K
-[34m   # parameters solved: 292[39m[K
-[34m       # paths tracked: 1460[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  12%|██▌                 |  ETA: 0:00:28[39m[K
+[34m   # parameters solved: 312[39m[K
+[34m       # paths tracked: 1560[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  13%|██▌                 |  ETA: 0:00:30[39m[K
-[34m   # parameters solved: 315[39m[K
-[34m       # paths tracked: 1575[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  13%|██▋                 |  ETA: 0:00:28[39m[K
+[34m   # parameters solved: 333[39m[K
+[34m       # paths tracked: 1665[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  13%|██▊                 |  ETA: 0:00:30[39m[K
-[34m   # parameters solved: 336[39m[K
-[34m       # paths tracked: 1680[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  14%|██▉                 |  ETA: 0:00:28[39m[K
+[34m   # parameters solved: 354[39m[K
+[34m       # paths tracked: 1770[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  15%|██▉                 |  ETA: 0:00:29[39m[K
-[34m   # parameters solved: 363[39m[K
-[34m       # paths tracked: 1815[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  15%|███                 |  ETA: 0:00:28[39m[K
+[34m   # parameters solved: 377[39m[K
+[34m       # paths tracked: 1885[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  15%|███▏                |  ETA: 0:00:29[39m[K
-[34m   # parameters solved: 386[39m[K
-[34m       # paths tracked: 1930[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  16%|███▏                |  ETA: 0:00:28[39m[K
+[34m   # parameters solved: 398[39m[K
+[34m       # paths tracked: 1990[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  17%|███▎                |  ETA: 0:00:28[39m[K
-[34m   # parameters solved: 413[39m[K
-[34m       # paths tracked: 2065[39m[K[A[A
-
-[K[A[K[A[32mSolving for 2500 parameters...  17%|███▌                |  ETA: 0:00:28[39m[K
-[34m   # parameters solved: 435[39m[K
-[34m       # paths tracked: 2175[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  17%|███▍                |  ETA: 0:00:27[39m[K
+[34m   # parameters solved: 422[39m[K
+[34m       # paths tracked: 2110[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  18%|███▋                |  ETA: 0:00:27[39m[K
-[34m   # parameters solved: 459[39m[K
-[34m       # paths tracked: 2295[39m[K[A[A
+[34m   # parameters solved: 446[39m[K
+[34m       # paths tracked: 2230[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  19%|███▉                |  ETA: 0:00:27[39m[K
-[34m   # parameters solved: 483[39m[K
-[34m       # paths tracked: 2415[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  19%|███▊                |  ETA: 0:00:27[39m[K
+[34m   # parameters solved: 468[39m[K
+[34m       # paths tracked: 2340[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  20%|████▏               |  ETA: 0:00:27[39m[K
-[34m   # parameters solved: 508[39m[K
-[34m       # paths tracked: 2540[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  20%|███▉                |  ETA: 0:00:27[39m[K
+[34m   # parameters solved: 490[39m[K
+[34m       # paths tracked: 2450[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  21%|████▎               |  ETA: 0:00:26[39m[K
-[34m   # parameters solved: 537[39m[K
-[34m       # paths tracked: 2685[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  21%|████▏               |  ETA: 0:00:26[39m[K
+[34m   # parameters solved: 514[39m[K
+[34m       # paths tracked: 2570[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  23%|████▌               |  ETA: 0:00:25[39m[K
-[34m   # parameters solved: 564[39m[K
-[34m       # paths tracked: 2820[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  22%|████▍               |  ETA: 0:00:26[39m[K
+[34m   # parameters solved: 541[39m[K
+[34m       # paths tracked: 2705[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  23%|████▊               |  ETA: 0:00:25[39m[K
-[34m   # parameters solved: 586[39m[K
-[34m       # paths tracked: 2930[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  23%|████▌               |  ETA: 0:00:26[39m[K
+[34m   # parameters solved: 563[39m[K
+[34m       # paths tracked: 2815[39m[K[A[A
+
+[K[A[K[A[32mSolving for 2500 parameters...  23%|████▋               |  ETA: 0:00:25[39m[K
+[34m   # parameters solved: 585[39m[K
+[34m       # paths tracked: 2925[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  24%|████▉               |  ETA: 0:00:25[39m[K
-[34m   # parameters solved: 607[39m[K
-[34m       # paths tracked: 3035[39m[K[A[A
+[34m   # parameters solved: 606[39m[K
+[34m       # paths tracked: 3030[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  25%|█████▏              |  ETA: 0:00:24[39m[K
-[34m   # parameters solved: 637[39m[K
-[34m       # paths tracked: 3185[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  25%|█████               |  ETA: 0:00:25[39m[K
+[34m   # parameters solved: 627[39m[K
+[34m       # paths tracked: 3135[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  26%|█████▎              |  ETA: 0:00:24[39m[K
-[34m   # parameters solved: 659[39m[K
-[34m       # paths tracked: 3295[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  26%|█████▏              |  ETA: 0:00:25[39m[K
+[34m   # parameters solved: 648[39m[K
+[34m       # paths tracked: 3240[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  27%|█████▌              |  ETA: 0:00:24[39m[K
-[34m   # parameters solved: 685[39m[K
-[34m       # paths tracked: 3425[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  27%|█████▍              |  ETA: 0:00:25[39m[K
+[34m   # parameters solved: 669[39m[K
+[34m       # paths tracked: 3345[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  29%|█████▊              |  ETA: 0:00:23[39m[K
-[34m   # parameters solved: 714[39m[K
-[34m       # paths tracked: 3570[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  28%|█████▌              |  ETA: 0:00:24[39m[K
+[34m   # parameters solved: 693[39m[K
+[34m       # paths tracked: 3465[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  29%|█████▉              |  ETA: 0:00:23[39m[K
-[34m   # parameters solved: 735[39m[K
-[34m       # paths tracked: 3675[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  29%|█████▊              |  ETA: 0:00:24[39m[K
+[34m   # parameters solved: 715[39m[K
+[34m       # paths tracked: 3575[39m[K[A[A
+
+[K[A[K[A[32mSolving for 2500 parameters...  30%|█████▉              |  ETA: 0:00:24[39m[K
+[34m   # parameters solved: 740[39m[K
+[34m       # paths tracked: 3700[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  30%|██████▏             |  ETA: 0:00:23[39m[K
-[34m   # parameters solved: 760[39m[K
-[34m       # paths tracked: 3800[39m[K[A[A
+[34m   # parameters solved: 762[39m[K
+[34m       # paths tracked: 3810[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  31%|██████▎             |  ETA: 0:00:22[39m[K
-[34m   # parameters solved: 785[39m[K
-[34m       # paths tracked: 3925[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  32%|██████▎             |  ETA: 0:00:23[39m[K
+[34m   # parameters solved: 789[39m[K
+[34m       # paths tracked: 3945[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  32%|██████▍             |  ETA: 0:00:22[39m[K
-[34m   # parameters solved: 802[39m[K
-[34m       # paths tracked: 4010[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  33%|██████▌             |  ETA: 0:00:22[39m[K
+[34m   # parameters solved: 813[39m[K
+[34m       # paths tracked: 4065[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  33%|██████▋             |  ETA: 0:00:22[39m[K
-[34m   # parameters solved: 824[39m[K
-[34m       # paths tracked: 4120[39m[K[A[A
+[34m   # parameters solved: 833[39m[K
+[34m       # paths tracked: 4165[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  34%|██████▊             |  ETA: 0:00:22[39m[K
-[34m   # parameters solved: 845[39m[K
-[34m       # paths tracked: 4225[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  34%|██████▉             |  ETA: 0:00:22[39m[K
+[34m   # parameters solved: 857[39m[K
+[34m       # paths tracked: 4285[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  35%|███████             |  ETA: 0:00:22[39m[K
-[34m   # parameters solved: 868[39m[K
-[34m       # paths tracked: 4340[39m[K[A[A
+[34m   # parameters solved: 882[39m[K
+[34m       # paths tracked: 4410[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  36%|███████▏            |  ETA: 0:00:21[39m[K
-[34m   # parameters solved: 889[39m[K
-[34m       # paths tracked: 4445[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  36%|███████▎            |  ETA: 0:00:21[39m[K
+[34m   # parameters solved: 903[39m[K
+[34m       # paths tracked: 4515[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  37%|███████▎            |  ETA: 0:00:21[39m[K
-[34m   # parameters solved: 914[39m[K
-[34m       # paths tracked: 4570[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  37%|███████▍            |  ETA: 0:00:21[39m[K
+[34m   # parameters solved: 923[39m[K
+[34m       # paths tracked: 4615[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  37%|███████▌            |  ETA: 0:00:21[39m[K
-[34m   # parameters solved: 937[39m[K
-[34m       # paths tracked: 4685[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  38%|███████▋            |  ETA: 0:00:21[39m[K
+[34m   # parameters solved: 949[39m[K
+[34m       # paths tracked: 4745[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  38%|███████▋            |  ETA: 0:00:20[39m[K
-[34m   # parameters solved: 960[39m[K
-[34m       # paths tracked: 4800[39m[K[A[A
-
-[K[A[K[A[32mSolving for 2500 parameters...  39%|███████▉            |  ETA: 0:00:20[39m[K
-[34m   # parameters solved: 979[39m[K
-[34m       # paths tracked: 4895[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  39%|███████▊            |  ETA: 0:00:20[39m[K
+[34m   # parameters solved: 971[39m[K
+[34m       # paths tracked: 4855[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  40%|████████            |  ETA: 0:00:20[39m[K
-[34m   # parameters solved: 1002[39m[K
-[34m       # paths tracked: 5010[39m[K[A[A
+[34m   # parameters solved: 995[39m[K
+[34m       # paths tracked: 4975[39m[K[A[A
+
+[K[A[K[A[32mSolving for 2500 parameters...  41%|████████▏           |  ETA: 0:00:20[39m[K
+[34m   # parameters solved: 1015[39m[K
+[34m       # paths tracked: 5075[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  41%|████████▎           |  ETA: 0:00:20[39m[K
-[34m   # parameters solved: 1025[39m[K
-[34m       # paths tracked: 5125[39m[K[A[A
+[34m   # parameters solved: 1037[39m[K
+[34m       # paths tracked: 5185[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  42%|████████▍           |  ETA: 0:00:19[39m[K
-[34m   # parameters solved: 1046[39m[K
-[34m       # paths tracked: 5230[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  42%|████████▌           |  ETA: 0:00:19[39m[K
+[34m   # parameters solved: 1055[39m[K
+[34m       # paths tracked: 5275[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  43%|████████▋           |  ETA: 0:00:19[39m[K
-[34m   # parameters solved: 1072[39m[K
-[34m       # paths tracked: 5360[39m[K[A[A
+[34m   # parameters solved: 1081[39m[K
+[34m       # paths tracked: 5405[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  44%|████████▊           |  ETA: 0:00:19[39m[K
-[34m   # parameters solved: 1095[39m[K
-[34m       # paths tracked: 5475[39m[K[A[A
+[34m   # parameters solved: 1100[39m[K
+[34m       # paths tracked: 5500[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  45%|████████▉           |  ETA: 0:00:18[39m[K
-[34m   # parameters solved: 1117[39m[K
-[34m       # paths tracked: 5585[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  45%|█████████           |  ETA: 0:00:19[39m[K
+[34m   # parameters solved: 1123[39m[K
+[34m       # paths tracked: 5615[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  45%|█████████▏          |  ETA: 0:00:18[39m[K
-[34m   # parameters solved: 1137[39m[K
-[34m       # paths tracked: 5685[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  46%|█████████▏          |  ETA: 0:00:18[39m[K
+[34m   # parameters solved: 1148[39m[K
+[34m       # paths tracked: 5740[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  46%|█████████▎          |  ETA: 0:00:18[39m[K
-[34m   # parameters solved: 1161[39m[K
-[34m       # paths tracked: 5805[39m[K[A[A
-
-[K[A[K[A[32mSolving for 2500 parameters...  47%|█████████▌          |  ETA: 0:00:18[39m[K
-[34m   # parameters solved: 1182[39m[K
-[34m       # paths tracked: 5910[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  47%|█████████▍          |  ETA: 0:00:18[39m[K
+[34m   # parameters solved: 1174[39m[K
+[34m       # paths tracked: 5870[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  48%|█████████▋          |  ETA: 0:00:17[39m[K
-[34m   # parameters solved: 1205[39m[K
-[34m       # paths tracked: 6025[39m[K[A[A
+[34m   # parameters solved: 1197[39m[K
+[34m       # paths tracked: 5985[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  49%|█████████▊          |  ETA: 0:00:17[39m[K
-[34m   # parameters solved: 1226[39m[K
-[34m       # paths tracked: 6130[39m[K[A[A
+[34m   # parameters solved: 1218[39m[K
+[34m       # paths tracked: 6090[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  50%|██████████          |  ETA: 0:00:17[39m[K
-[34m   # parameters solved: 1252[39m[K
-[34m       # paths tracked: 6260[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  50%|█████████▉          |  ETA: 0:00:17[39m[K
+[34m   # parameters solved: 1242[39m[K
+[34m       # paths tracked: 6210[39m[K[A[A
+
+[K[A[K[A[32mSolving for 2500 parameters...  51%|██████████▏         |  ETA: 0:00:17[39m[K
+[34m   # parameters solved: 1265[39m[K
+[34m       # paths tracked: 6325[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  51%|██████████▎         |  ETA: 0:00:16[39m[K
-[34m   # parameters solved: 1275[39m[K
-[34m       # paths tracked: 6375[39m[K[A[A
+[34m   # parameters solved: 1286[39m[K
+[34m       # paths tracked: 6430[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  52%|██████████▍         |  ETA: 0:00:16[39m[K
-[34m   # parameters solved: 1296[39m[K
-[34m       # paths tracked: 6480[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  52%|██████████▌         |  ETA: 0:00:16[39m[K
+[34m   # parameters solved: 1308[39m[K
+[34m       # paths tracked: 6540[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  53%|██████████▌         |  ETA: 0:00:16[39m[K
-[34m   # parameters solved: 1319[39m[K
-[34m       # paths tracked: 6595[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  53%|██████████▋         |  ETA: 0:00:16[39m[K
+[34m   # parameters solved: 1329[39m[K
+[34m       # paths tracked: 6645[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  54%|██████████▊         |  ETA: 0:00:15[39m[K
-[34m   # parameters solved: 1343[39m[K
-[34m       # paths tracked: 6715[39m[K[A[A
+[34m   # parameters solved: 1350[39m[K
+[34m       # paths tracked: 6750[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  55%|██████████▉         |  ETA: 0:00:15[39m[K
-[34m   # parameters solved: 1366[39m[K
-[34m       # paths tracked: 6830[39m[K[A[A
-
-[K[A[K[A[32mSolving for 2500 parameters...  56%|███████████▏        |  ETA: 0:00:15[39m[K
-[34m   # parameters solved: 1388[39m[K
-[34m       # paths tracked: 6940[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  55%|███████████         |  ETA: 0:00:15[39m[K
+[34m   # parameters solved: 1376[39m[K
+[34m       # paths tracked: 6880[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  56%|███████████▎        |  ETA: 0:00:15[39m[K
-[34m   # parameters solved: 1412[39m[K
-[34m       # paths tracked: 7060[39m[K[A[A
+[34m   # parameters solved: 1399[39m[K
+[34m       # paths tracked: 6995[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  57%|███████████▌        |  ETA: 0:00:14[39m[K
-[34m   # parameters solved: 1435[39m[K
-[34m       # paths tracked: 7175[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  57%|███████████▍        |  ETA: 0:00:15[39m[K
+[34m   # parameters solved: 1417[39m[K
+[34m       # paths tracked: 7085[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  58%|███████████▋        |  ETA: 0:00:14[39m[K
-[34m   # parameters solved: 1457[39m[K
-[34m       # paths tracked: 7285[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  58%|███████████▌        |  ETA: 0:00:14[39m[K
+[34m   # parameters solved: 1439[39m[K
+[34m       # paths tracked: 7195[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  59%|███████████▉        |  ETA: 0:00:14[39m[K
-[34m   # parameters solved: 1479[39m[K
-[34m       # paths tracked: 7395[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  59%|███████████▊        |  ETA: 0:00:14[39m[K
+[34m   # parameters solved: 1464[39m[K
+[34m       # paths tracked: 7320[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  60%|████████████        |  ETA: 0:00:13[39m[K
-[34m   # parameters solved: 1500[39m[K
-[34m       # paths tracked: 7500[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  60%|███████████▉        |  ETA: 0:00:14[39m[K
+[34m   # parameters solved: 1488[39m[K
+[34m       # paths tracked: 7440[39m[K[A[A
+
+[K[A[K[A[32mSolving for 2500 parameters...  61%|████████████▏       |  ETA: 0:00:13[39m[K
+[34m   # parameters solved: 1513[39m[K
+[34m       # paths tracked: 7565[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  61%|████████████▎       |  ETA: 0:00:13[39m[K
-[34m   # parameters solved: 1525[39m[K
-[34m       # paths tracked: 7625[39m[K[A[A
+[34m   # parameters solved: 1532[39m[K
+[34m       # paths tracked: 7660[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  62%|████████████▍       |  ETA: 0:00:13[39m[K
-[34m   # parameters solved: 1546[39m[K
-[34m       # paths tracked: 7730[39m[K[A[A
+[34m   # parameters solved: 1553[39m[K
+[34m       # paths tracked: 7765[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  63%|████████████▋       |  ETA: 0:00:12[39m[K
-[34m   # parameters solved: 1572[39m[K
-[34m       # paths tracked: 7860[39m[K[A[A
+[34m   # parameters solved: 1579[39m[K
+[34m       # paths tracked: 7895[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  64%|████████████▊       |  ETA: 0:00:12[39m[K
-[34m   # parameters solved: 1595[39m[K
-[34m       # paths tracked: 7975[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  64%|████████████▉       |  ETA: 0:00:12[39m[K
+[34m   # parameters solved: 1608[39m[K
+[34m       # paths tracked: 8040[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  65%|████████████▉       |  ETA: 0:00:12[39m[K
-[34m   # parameters solved: 1617[39m[K
-[34m       # paths tracked: 8085[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  65%|█████████████▏      |  ETA: 0:00:12[39m[K
+[34m   # parameters solved: 1637[39m[K
+[34m       # paths tracked: 8185[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  66%|█████████████▏      |  ETA: 0:00:11[39m[K
-[34m   # parameters solved: 1642[39m[K
-[34m       # paths tracked: 8210[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  66%|█████████████▎      |  ETA: 0:00:11[39m[K
+[34m   # parameters solved: 1658[39m[K
+[34m       # paths tracked: 8290[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  67%|█████████████▎      |  ETA: 0:00:11[39m[K
-[34m   # parameters solved: 1664[39m[K
-[34m       # paths tracked: 8320[39m[K[A[A
-
-[K[A[K[A[32mSolving for 2500 parameters...  68%|█████████████▌      |  ETA: 0:00:11[39m[K
-[34m   # parameters solved: 1690[39m[K
-[34m       # paths tracked: 8450[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  67%|█████████████▌      |  ETA: 0:00:11[39m[K
+[34m   # parameters solved: 1682[39m[K
+[34m       # paths tracked: 8410[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  68%|█████████████▋      |  ETA: 0:00:11[39m[K
-[34m   # parameters solved: 1708[39m[K
-[34m       # paths tracked: 8540[39m[K[A[A
+[34m   # parameters solved: 1709[39m[K
+[34m       # paths tracked: 8545[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  69%|█████████████▉      |  ETA: 0:00:10[39m[K
-[34m   # parameters solved: 1730[39m[K
-[34m       # paths tracked: 8650[39m[K[A[A
+[34m   # parameters solved: 1732[39m[K
+[34m       # paths tracked: 8660[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  70%|██████████████      |  ETA: 0:00:10[39m[K
-[34m   # parameters solved: 1755[39m[K
-[34m       # paths tracked: 8775[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  70%|██████████████▏     |  ETA: 0:00:10[39m[K
+[34m   # parameters solved: 1758[39m[K
+[34m       # paths tracked: 8790[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  71%|██████████████▎     |  ETA: 0:00:10[39m[K
-[34m   # parameters solved: 1777[39m[K
-[34m       # paths tracked: 8885[39m[K[A[A
+[34m   # parameters solved: 1778[39m[K
+[34m       # paths tracked: 8890[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  72%|██████████████▍     |  ETA: 0:00:09[39m[K
-[34m   # parameters solved: 1802[39m[K
-[34m       # paths tracked: 9010[39m[K[A[A
+[34m   # parameters solved: 1800[39m[K
+[34m       # paths tracked: 9000[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  73%|██████████████▋     |  ETA: 0:00:09[39m[K
-[34m   # parameters solved: 1833[39m[K
-[34m       # paths tracked: 9165[39m[K[A[A
+[34m   # parameters solved: 1821[39m[K
+[34m       # paths tracked: 9105[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  74%|██████████████▉     |  ETA: 0:00:09[39m[K
-[34m   # parameters solved: 1855[39m[K
-[34m       # paths tracked: 9275[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  74%|██████████████▊     |  ETA: 0:00:09[39m[K
+[34m   # parameters solved: 1844[39m[K
+[34m       # paths tracked: 9220[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  75%|███████████████     |  ETA: 0:00:08[39m[K
-[34m   # parameters solved: 1880[39m[K
-[34m       # paths tracked: 9400[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  75%|██████████████▉     |  ETA: 0:00:09[39m[K
+[34m   # parameters solved: 1865[39m[K
+[34m       # paths tracked: 9325[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  76%|███████████████▎    |  ETA: 0:00:08[39m[K
-[34m   # parameters solved: 1901[39m[K
-[34m       # paths tracked: 9505[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  76%|███████████████▏    |  ETA: 0:00:08[39m[K
+[34m   # parameters solved: 1893[39m[K
+[34m       # paths tracked: 9465[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  77%|███████████████▍    |  ETA: 0:00:08[39m[K
-[34m   # parameters solved: 1923[39m[K
-[34m       # paths tracked: 9615[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  77%|███████████████▎    |  ETA: 0:00:08[39m[K
+[34m   # parameters solved: 1913[39m[K
+[34m       # paths tracked: 9565[39m[K[A[A
+
+[K[A[K[A[32mSolving for 2500 parameters...  78%|███████████████▌    |  ETA: 0:00:08[39m[K
+[34m   # parameters solved: 1938[39m[K
+[34m       # paths tracked: 9690[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  78%|███████████████▋    |  ETA: 0:00:07[39m[K
-[34m   # parameters solved: 1948[39m[K
-[34m       # paths tracked: 9740[39m[K[A[A
-
-[K[A[K[A[32mSolving for 2500 parameters...  79%|███████████████▊    |  ETA: 0:00:07[39m[K
-[34m   # parameters solved: 1968[39m[K
-[34m       # paths tracked: 9840[39m[K[A[A
+[34m   # parameters solved: 1957[39m[K
+[34m       # paths tracked: 9785[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  79%|███████████████▉    |  ETA: 0:00:07[39m[K
-[34m   # parameters solved: 1987[39m[K
-[34m       # paths tracked: 9935[39m[K[A[A
+[34m   # parameters solved: 1981[39m[K
+[34m       # paths tracked: 9905[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  80%|████████████████▏   |  ETA: 0:00:07[39m[K
-[34m   # parameters solved: 2008[39m[K
-[34m       # paths tracked: 10040[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  80%|████████████████    |  ETA: 0:00:07[39m[K
+[34m   # parameters solved: 2001[39m[K
+[34m       # paths tracked: 10005[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  81%|████████████████▎   |  ETA: 0:00:06[39m[K
-[34m   # parameters solved: 2033[39m[K
-[34m       # paths tracked: 10165[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  81%|████████████████▏   |  ETA: 0:00:06[39m[K
+[34m   # parameters solved: 2019[39m[K
+[34m       # paths tracked: 10095[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  82%|████████████████▍   |  ETA: 0:00:06[39m[K
-[34m   # parameters solved: 2053[39m[K
-[34m       # paths tracked: 10265[39m[K[A[A
+[34m   # parameters solved: 2040[39m[K
+[34m       # paths tracked: 10200[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  83%|████████████████▋   |  ETA: 0:00:06[39m[K
-[34m   # parameters solved: 2074[39m[K
-[34m       # paths tracked: 10370[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  83%|████████████████▌   |  ETA: 0:00:06[39m[K
+[34m   # parameters solved: 2065[39m[K
+[34m       # paths tracked: 10325[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  84%|████████████████▊   |  ETA: 0:00:05[39m[K
-[34m   # parameters solved: 2099[39m[K
-[34m       # paths tracked: 10495[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  83%|████████████████▊   |  ETA: 0:00:06[39m[K
+[34m   # parameters solved: 2087[39m[K
+[34m       # paths tracked: 10435[39m[K[A[A
+
+[K[A[K[A[32mSolving for 2500 parameters...  84%|████████████████▉   |  ETA: 0:00:05[39m[K
+[34m   # parameters solved: 2107[39m[K
+[34m       # paths tracked: 10535[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  85%|█████████████████   |  ETA: 0:00:05[39m[K
-[34m   # parameters solved: 2125[39m[K
-[34m       # paths tracked: 10625[39m[K[A[A
+[34m   # parameters solved: 2131[39m[K
+[34m       # paths tracked: 10655[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  86%|█████████████████▏  |  ETA: 0:00:05[39m[K
-[34m   # parameters solved: 2146[39m[K
-[34m       # paths tracked: 10730[39m[K[A[A
+[34m   # parameters solved: 2148[39m[K
+[34m       # paths tracked: 10740[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  87%|█████████████████▍  |  ETA: 0:00:04[39m[K
-[34m   # parameters solved: 2170[39m[K
-[34m       # paths tracked: 10850[39m[K[A[A
+[34m   # parameters solved: 2173[39m[K
+[34m       # paths tracked: 10865[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  88%|█████████████████▌  |  ETA: 0:00:04[39m[K
-[34m   # parameters solved: 2194[39m[K
-[34m       # paths tracked: 10970[39m[K[A[A
+[34m   # parameters solved: 2195[39m[K
+[34m       # paths tracked: 10975[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  89%|█████████████████▊  |  ETA: 0:00:04[39m[K
-[34m   # parameters solved: 2217[39m[K
-[34m       # paths tracked: 11085[39m[K[A[A
+[34m   # parameters solved: 2221[39m[K
+[34m       # paths tracked: 11105[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  89%|█████████████████▉  |  ETA: 0:00:04[39m[K
-[34m   # parameters solved: 2237[39m[K
-[34m       # paths tracked: 11185[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  90%|██████████████████  |  ETA: 0:00:03[39m[K
+[34m   # parameters solved: 2248[39m[K
+[34m       # paths tracked: 11240[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  90%|██████████████████▏ |  ETA: 0:00:03[39m[K
-[34m   # parameters solved: 2259[39m[K
-[34m       # paths tracked: 11295[39m[K[A[A
-
-[K[A[K[A[32mSolving for 2500 parameters...  91%|██████████████████▎ |  ETA: 0:00:03[39m[K
-[34m   # parameters solved: 2280[39m[K
-[34m       # paths tracked: 11400[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  91%|██████████████████▏ |  ETA: 0:00:03[39m[K
+[34m   # parameters solved: 2265[39m[K
+[34m       # paths tracked: 11325[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  92%|██████████████████▍ |  ETA: 0:00:03[39m[K
-[34m   # parameters solved: 2302[39m[K
-[34m       # paths tracked: 11510[39m[K[A[A
+[34m   # parameters solved: 2290[39m[K
+[34m       # paths tracked: 11450[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  93%|██████████████████▋ |  ETA: 0:00:02[39m[K
-[34m   # parameters solved: 2322[39m[K
-[34m       # paths tracked: 11610[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  93%|██████████████████▌ |  ETA: 0:00:02[39m[K
+[34m   # parameters solved: 2317[39m[K
+[34m       # paths tracked: 11585[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  94%|██████████████████▊ |  ETA: 0:00:02[39m[K
-[34m   # parameters solved: 2343[39m[K
-[34m       # paths tracked: 11715[39m[K[A[A
+[34m   # parameters solved: 2342[39m[K
+[34m       # paths tracked: 11710[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  95%|███████████████████ |  ETA: 0:00:02[39m[K
-[34m   # parameters solved: 2368[39m[K
-[34m       # paths tracked: 11840[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  95%|██████████████████▉ |  ETA: 0:00:02[39m[K
+[34m   # parameters solved: 2365[39m[K
+[34m       # paths tracked: 11825[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  96%|███████████████████▏|  ETA: 0:00:01[39m[K
-[34m   # parameters solved: 2395[39m[K
-[34m       # paths tracked: 11975[39m[K[A[A
+[34m   # parameters solved: 2390[39m[K
+[34m       # paths tracked: 11950[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  97%|███████████████████▍|  ETA: 0:00:01[39m[K
-[34m   # parameters solved: 2423[39m[K
-[34m       # paths tracked: 12115[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  96%|███████████████████▎|  ETA: 0:00:01[39m[K
+[34m   # parameters solved: 2412[39m[K
+[34m       # paths tracked: 12060[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  98%|███████████████████▋|  ETA: 0:00:01[39m[K
-[34m   # parameters solved: 2452[39m[K
-[34m       # paths tracked: 12260[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  98%|███████████████████▌|  ETA: 0:00:01[39m[K
+[34m   # parameters solved: 2439[39m[K
+[34m       # paths tracked: 12195[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters...  99%|███████████████████▊|  ETA: 0:00:00[39m[K
-[34m   # parameters solved: 2473[39m[K
-[34m       # paths tracked: 12365[39m[K[A[A
+[34m   # parameters solved: 2466[39m[K
+[34m       # paths tracked: 12330[39m[K[A[A
 
-[K[A[K[A[32mSolving for 2500 parameters...  99%|████████████████████|  ETA: 0:00:00[39m[K
-[34m   # parameters solved: 2496[39m[K
-[34m       # paths tracked: 12480[39m[K[A[A
+[K[A[K[A[32mSolving for 2500 parameters...  99%|███████████████████▉|  ETA: 0:00:00[39m[K
+[34m   # parameters solved: 2485[39m[K
+[34m       # paths tracked: 12425[39m[K[A[A
 
 [K[A[K[A[32mSolving for 2500 parameters... 100%|████████████████████| Time: 0:00:33[39m[K
 [34m   # parameters solved: 2500[39m[K

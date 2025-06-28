@@ -22,21 +22,21 @@ get_Jacobian(eom)
 Obtain the symbolic Jacobian matrix of `eom`. This is the linearised left-hand side of F(u) = du/dT.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Obtain a Jacobian from a `DifferentialEquation` by first converting it into a `HarmonicEquation`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Get the Jacobian of a set of equations `eqs` with respect to the variables `vars`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/39518d2ef8c9f1f88110a9aa604a60d9762d45b2/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
