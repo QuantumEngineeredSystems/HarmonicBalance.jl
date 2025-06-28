@@ -89,6 +89,12 @@ Private = false
 Order = [:function]
 ```
 
+```@autodocs
+Modules = [Base.get_extension(HarmonicSteadyState, :HarmonicBalanceExt)]
+Private = false
+Order = [:function]
+```
+
 ```@docs
 HarmonicBalance.get_Jacobian
 ```
