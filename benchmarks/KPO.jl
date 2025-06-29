@@ -99,5 +99,22 @@ function benchmark_kpo!(SUITE)
         _classify_default!(x)
     end setup = (x = deepcopy($result)) evals = 1 seconds = 10
 
+    method = WarmUp(; thread=false)
+    result = get_steady_states(problem, method; show_progress)
+
+    Ω_range = range(0.95, 1.05, 100)
+    get_jacobian_response(result, x, Ω_range, 3; show_progress=false)
+    get_rotframe_jacobian_response(result, Ω_range, 3; show_progress=false, damping_mod=1.0)
+
+    SUITE["Linear response"]["Lab frame"]["Jacobian Response"] = @benchmarkable begin
+        get_jacobian_response($result, $x, $(Ω_range), 3; show_progress=false)
+    end seconds = 10
+
+    SUITE["Linear response"]["Rotating frame"]["Jacobian Response"] = @benchmarkable begin
+        get_rotframe_jacobian_response(
+            $result, $x, $(Ω_range), 3; show_progress=false, damping_mod=1.0
+        )
+    end seconds = 10
+
     return nothing
 end
