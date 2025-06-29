@@ -1,5 +1,6 @@
 using HarmonicBalance, HarmonicSteadyState
 using HarmonicSteadyState: HomotopyContinuationProblem, OrderedDict
+using HarmonicSteadyState: sort_solutions, _classify_default!
 
 function benchmark_kpo!(SUITE)
     @variables ω₀ γ λ F η α ω t x(t)
@@ -42,7 +43,7 @@ function benchmark_kpo!(SUITE)
     sorting = "no_sorting"
     classify_default = false
 
-    method = WarmUp(; thread=true)
+    method = WarmUp(; thread=false)
     result = get_steady_states(problem, method; show_progress, sorting, classify_default)
 
     SUITE["Steady states"]["Homotopy Problem"]["Warm up method"] = @benchmarkable begin
@@ -55,7 +56,7 @@ function benchmark_kpo!(SUITE)
         )
     end seconds = 10
 
-    method = TotalDegree(; thread=true)
+    method = TotalDegree(; thread=false)
     result = get_steady_states(problem, method; show_progress, sorting, classify_default)
 
     SUITE["Steady states"]["Homotopy Problem"]["Total degree homotopy"] = @benchmarkable begin
@@ -68,7 +69,7 @@ function benchmark_kpo!(SUITE)
         )
     end seconds = 10
 
-    method = Polyhedral(; thread=true)
+    method = Polyhedral(; thread=false)
     result = get_steady_states(problem, method; show_progress, sorting, classify_default)
 
     SUITE["Steady states"]["Homotopy Problem"]["Polyhedral homotopy"] = @benchmarkable begin
@@ -80,6 +81,23 @@ function benchmark_kpo!(SUITE)
             classify_default=false,
         )
     end seconds = 10
+
+    solutions_not_sorted = result.solutions
+    sort_solutions(solutions_not_sorted; sorting="nearest", show_progress=false)
+    sort_solutions(solutions_not_sorted; sorting="hilbert", show_progress=false)
+
+    SUITE["Sorting"]["One dimensional"]["Nearest-neighbor sorting"] = @benchmarkable begin
+        sort_solutions($solutions_not_sorted; show_progress=false, sorting="nearest")
+    end seconds = 10
+
+    SUITE["Sorting"]["One dimensional"]["Hilbert sorting"] = @benchmarkable begin
+        sort_solutions($solutions_not_sorted; show_progress=false, sorting="hilbert")
+    end seconds = 10
+
+    _classify_default!(deepcopy(result))
+    SUITE["Classification"]["One Dimensional"]["Default classifications"] = @benchmarkable begin
+        _classify_default!(x)
+    end setup = (x = deepcopy($result)) evals = 1 seconds = 10
 
     return nothing
 end
