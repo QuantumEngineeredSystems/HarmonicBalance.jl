@@ -44,9 +44,10 @@ JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
 QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+OrdinaryDiffEqTsit5 = "b1df2697-797e-41e3-8120-5422d3b24e4a"
 SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit", "Documenter", "QuestBase"]
+test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit", "Documenter", "QuestBase", "OrdinaryDiffEqTsit5"]
