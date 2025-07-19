@@ -50,6 +50,7 @@ Polyhedral
 
 ```@docs
 get_solutions
+get_branches
 attractors
 phase_diagram
 get_single_solution
