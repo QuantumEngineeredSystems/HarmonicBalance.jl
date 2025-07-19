@@ -1,7 +1,7 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
 authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
-version = "0.15.3"
+version = "0.15.4"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
@@ -24,7 +24,7 @@ Aqua = "0.8.11"
 DocStringExtensions = "0.9.4"
 Documenter = "1.4"
 ExplicitImports = "1.6"
-HarmonicSteadyState = "0.2.1"
+HarmonicSteadyState = "0.2.1, 0.3"
 JET = "0.9.18, 0.10"
 ModelingToolkit = "9.60"
 PrecompileTools = "1.2"
