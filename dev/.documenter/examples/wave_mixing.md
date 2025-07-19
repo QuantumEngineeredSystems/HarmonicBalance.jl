@@ -18,7 +18,7 @@ Threads.nthreads() # check number of threads
 
 
 ```ansi
-10
+4
 ```
 
 
