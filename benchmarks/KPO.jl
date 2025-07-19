@@ -112,7 +112,7 @@ function benchmark_kpo!(SUITE)
 
     SUITE["Linear response"]["Rotating frame"]["Jacobian Response"] = @benchmarkable begin
         get_rotframe_jacobian_response(
-            $result, $x, $(Ω_range), 3; show_progress=false, damping_mod=1.0
+            $result, $(Ω_range), 3; show_progress=false, damping_mod=1.0
         )
     end seconds = 10
 
