@@ -77,7 +77,7 @@ p3 = plot(result; y="√(u3^2+v3^2)", legend=:best)
 plot(p1, p2, p3; layout=(1, 3), size=(900, 300), margin=5mm)
 ```
 
-![](jicvpgx.png){width=900px height=300px}
+![](lyotyow.png){width=900px height=300px}
 
 ## Three wave mixing {#Three-wave-mixing}
 
@@ -96,7 +96,7 @@ p3 = plot(result; y="√(u3^2+v3^2)", legend=:best)
 plot(p1, p2, p3; layout=(1, 3), size=(900, 300), margin=5mm)
 ```
 
-![](oomrdmu.png){width=900px height=300px}
+![](qzywspd.png){width=900px height=300px}
 
 ## Both {#Both}
 
@@ -115,7 +115,7 @@ p3 = plot(result; y="√(u3^2+v3^2)", legend=:best)
 plot(p1, p2, p3; layout=(1, 3), size=(900, 300), margin=5mm)
 ```
 
-![](lyotyow.png){width=900px height=300px}
+![](tgjilty.png){width=900px height=300px}
 
 
 ---

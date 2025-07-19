@@ -183,7 +183,7 @@ first_order_transform!(diff_eom::DifferentialEquation, time)
 Transforms a higher-order differential equation system into an equivalent first-order system by introducing additional variables. Modifies the system in place. The `time` parameter specifies the independent variable used for differentiation.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/DifferentialEquation.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/DifferentialEquation.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -280,7 +280,7 @@ Harmonic equations:
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/HarmonicEquation.jl#L128-L169" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/HarmonicEquation.jl#L128-L169" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -337,7 +337,7 @@ Harmonic equations:
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/krylov-bogoliubov.jl#L4" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/krylov-bogoliubov.jl#L4" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -519,7 +519,7 @@ A steady state result for 1000 parameter points
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/solve_homotopy.jl#L1-L61" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/solve_homotopy.jl#L1-L61" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -558,7 +558,7 @@ See[HomotopyContinuation.jl](https://www.juliahomotopycontinuation.org/guides/ma
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/methods.jl#L117-L132" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/methods.jl#L117-L132" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -589,7 +589,7 @@ The Total Degree homotopy method performs a homotopy $H(x, t) = γ t G(x) + (1-t
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/methods.jl#L15-L27" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/methods.jl#L15-L27" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -620,7 +620,7 @@ The Polyhedral homotopy method constructs a homotopy based on the polyhedral str
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/methods.jl#L64-L76" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/methods.jl#L64-L76" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -657,7 +657,42 @@ Extract solution vectors from a `Result` object based on specified filtering cri
 Filtered solution vectors matching the specified criteria
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/transform_solutions.jl#L196-L215" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/transform_solutions.jl#L196-L215" target="_blank" rel="noreferrer">source</a></Badge>
+
+</details>
+
+<details class='jldocstring custom-block' open>
+<summary><a id='HarmonicSteadyState.get_branches' href='#HarmonicSteadyState.get_branches'><span class="jlbinding">HarmonicSteadyState.get_branches</span></a> <Badge type="info" class="jlObjectType jlFunction" text="Function" /></summary>
+
+
+
+```julia
+get_branches(
+    res::Result, x::String;
+    branches=1:branch_count(res), realify=false, class=["stable"], not_class=[]
+    )
+get_solutions(res::Result; branches=1:branch_count(res), class=["stable"], not_class=[])
+```
+
+
+Extract solution vectors from a `Result` object based on specified filtering criteria given by the `class` keywords. It allows extracting a specific solution component by name `x`.
+
+**Keyword arguments**
+- `branches=1:branch_count(res)`: Range of branches to include in the output
+  
+- `realify=true`: Whether to convert complex solutions to real form
+  
+- `class=["physical", "stable"]`: Array of classification labels to include
+  
+- `not_class=[]`: Array of classification labels to exclude
+  
+
+**Returns**
+
+Filtered vector of each branch matching the specified criteria
+
+
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/transform_solutions.jl#L236-L255" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -688,7 +723,7 @@ not_class::String   :   do not count solutions in this class
 `Array{Dict,D}`: Vector of dictionaries mapping branch indices to points satisfying   the stability criteria at each parameter value
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/Result.jl#L122-L139" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/Result.jl#L122-L139" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -719,7 +754,7 @@ not_class::String   :   do not count solutions in this class
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/Result.jl#L92-L106" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/Result.jl#L92-L106" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -741,7 +776,7 @@ get_single_solution(
 Return an ordered dictionary specifying all variables and parameters of the solution in `result` on `branch` at the position `index`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/transform_solutions.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/transform_solutions.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -764,7 +799,7 @@ transform_solutions(
 Takes a `Result` object and a string `f` representing a Symbolics.jl expression. Returns an array with the values of `f` evaluated for the respective solutions. Additional substitution rules can be specified in `rules` in the format `("a" => val)` or `(a => val)`
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/transform_solutions.jl#L66" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/transform_solutions.jl#L66" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -800,7 +835,7 @@ classify_solutions!(res, "sqrt(u1^2 + v1^2) > 1.0" , "large_amplitude")
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/classification.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -822,7 +857,7 @@ get_class(
 Returns an array of booleans classifying `branch` in the solutions in `res` according to `class`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/classification.jl#L43" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L43" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -838,7 +873,7 @@ get_class(
 Returns an array of booleans classifying each branch in the solutions in `res` according to `class`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/classification.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -859,7 +894,7 @@ filter_result!(
 Removes all solution branches from `res` where NONE of the solution falls into `class`. Typically used to filter out unphysical solutions to prevent huge file sizes.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/classification.jl#L190" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L189" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -921,7 +956,7 @@ To make the 2d plot less chaotic it is required to specify the specific `branch`
 The x and y axes are taken automatically from `res`
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -953,7 +988,7 @@ Parametric plot of f[1] against f[2]
 Also callable as plot!
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/time_evolution.jl#L1-L19" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/time_evolution.jl#L1-L19" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -975,7 +1010,7 @@ plot!(
 Similar to `plot` but adds a plot onto an existing plot.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1006,7 +1041,7 @@ not_class::String   :   do not count solutions in this class
 Other kwargs are passed onto Plots.gr()
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L232" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L232" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1043,7 +1078,7 @@ not_class::String   :   do not count solutions in this class
 Other kwargs are passed onto Plots.gr()
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L301" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L301" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1065,7 +1100,7 @@ Variant of `get_steady_states` for a limit cycle problem characterised by a Hopf
 Solutions with ω_lc = 0 are labelled unphysical since this contradicts the assumption of distinct harmonic variables corresponding to distinct harmonics.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LimitCycles/gauge_fixing.jl#L106-L113" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LimitCycles/gauge_fixing.jl#L106-L113" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1086,7 +1121,7 @@ get_cycle_variables(
 Return the harmonic variables which participate in the limit cycle labelled by `ω_lc`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LimitCycles/gauge_fixing.jl#L22" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LimitCycles/gauge_fixing.jl#L22" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1103,7 +1138,7 @@ add_pairs!(eom::DifferentialEquation; ω_lc::Num, n=1)
 Add a limit cycle harmonic `ω_lc` to the system Equivalent to adding `n` pairs of harmonics ω +- ω_lc for each existing ω.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LimitCycles/gauge_fixing.jl#L9-L14" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LimitCycles/gauge_fixing.jl#L9-L14" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1142,7 +1177,7 @@ Calculate the eigenvalues of the Jacobian matrix of the harmonic equations of a 
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L124-L142" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L123-L141" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1173,7 +1208,65 @@ get_Jacobiannch to analyze
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L167-L179" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L166-L178" target="_blank" rel="noreferrer">source</a></Badge>
+
+</details>
+
+<details class='jldocstring custom-block' open>
+<summary><a id='HarmonicSteadyState.LinearResponse.get_forward_transmission_response-Tuple{HarmonicSteadyState.Result, Int64, Any, Int64, Any}' href='#HarmonicSteadyState.LinearResponse.get_forward_transmission_response-Tuple{HarmonicSteadyState.Result, Int64, Any, Int64, Any}'><span class="jlbinding">HarmonicSteadyState.LinearResponse.get_forward_transmission_response</span></a> <Badge type="info" class="jlObjectType jlMethod" text="Method" /></summary>
+
+
+
+```julia
+get_forward_transmission_response(
+    result::HarmonicSteadyState.Result,
+    op_index::Int64,
+    Ω_range,
+    branch::Int64,
+    external_damping;
+    class
+) -> Any
+
+```
+
+
+Compute the response matrix or susceptibility to a probe in the rotating frame. Observables like forward_transmission response spectrum, i.e, how much of an input signal applied at port 1 emerges at port 2, can be computed using the susceptibility. Colloquially known as S21 parameter in microwave engineering. The amplitude and phase of S21 tell you how much signal is transmitted and with what delay or phase shift:
+- If S21 ≈ 1 (or 0 dB), the system transmits all power from input to output.
+  
+- If S21 ≈ 0 (or very negative dB), very little signal is transmitted.
+  
+
+**Arguments**
+- `result::Result`: Result object containing the system&#39;s solutions
+  
+- `op_index::Int`: Index of operator in mean field equations to evaluate response for
+  
+- `Ω_range`: Range of frequencies to evaluate
+  
+- `branch::Int`: Branch number to analyze
+  
+- `class="stable"`: Class of solutions to evaluate response for
+  
+
+**Returns**
+- `χ`: Complex response matrix where rows correspond to frequencies and columns to solutions
+  
+
+**Example**
+
+```julia
+Ω_range = range(-0.2, 0.2, 500)
+external_damping=0.05
+
+S21 = get_forward_transmission_response(
+        result, 1 #=variable=#, Ω_range, 3 #=branch=#; external_damping);
+
+S21_log = 20 .* log10.(abs.(S21)) # expressed in dB
+```
+
+
+
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/input_output.jl#L88" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1207,15 +1300,13 @@ Calculate the Jacobian response spectrum for a given system. Computes the magnit
   
 - `show_progress=true`: Whether to show a progress bar
   
-- `force=false`: Force recalculation of spectrum even if already exists
-  
 
 **Returns**
 - Array{P,2}: Complex response matrix where rows correspond to frequencies and columns to solutions
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1255,7 +1346,60 @@ Calculate the rotating frame Jacobian response for a given branch. Computes the 
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L71" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L70" target="_blank" rel="noreferrer">source</a></Badge>
+
+</details>
+
+<details class='jldocstring custom-block' open>
+<summary><a id='HarmonicSteadyState.LinearResponse.get_susceptibility-Tuple{HarmonicSteadyState.Result, Int64, Any, Int64}' href='#HarmonicSteadyState.LinearResponse.get_susceptibility-Tuple{HarmonicSteadyState.Result, Int64, Any, Int64}'><span class="jlbinding">HarmonicSteadyState.LinearResponse.get_susceptibility</span></a> <Badge type="info" class="jlObjectType jlMethod" text="Method" /></summary>
+
+
+
+```julia
+get_susceptibility(
+    result::HarmonicSteadyState.Result,
+    op_index::Int64,
+    Ω_range,
+    branch::Int64;
+    class
+) -> Matrix{ComplexF64}
+
+```
+
+
+Compute the response matrix or susceptibility to a probe in the rotating frame. Observables like forward_transmission response spectrum, i.e, how much of an input signal applied at port 1 emerges at port 2, can be computed using the susceptibility.
+
+**Arguments**
+- `result::Result`: Result object containing the system&#39;s solutions
+  
+- `op_index::Int`: Index of operator in mean field equations to evaluate response for
+  
+- `Ω_range`: Range of frequencies to evaluate
+  
+- `branch::Int`: Branch number to analyze
+  
+- `class="stable"`: Class of solutions to evaluate response for
+  
+
+**Returns**
+- `χ`: Complex response matrix where rows correspond to frequencies and columns to solutions
+  
+
+**Example**
+
+```julia
+Ω_range = range(-0.2, 0.2, 500)
+
+χ = get_susceptibility(result, 1#=variable=#, Ω_range, 3 #=branch=#);
+
+κ_ext = 0.05
+S21 = 1 .- χ*κ_ext/2
+S21_log = 20 .* log10.(abs.(S21)) # expressed in dB
+```
+
+
+
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/input_output.jl#L21" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1273,21 +1417,21 @@ get_Jacobian(eom)
 Obtain the symbolic Jacobian matrix of `eom`. This is the linearised left-hand side of F(u) = du/dT.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Obtain a Jacobian from a `DifferentialEquation` by first converting it into a `HarmonicEquation`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Get the Jacobian of a set of equations `eqs` with respect to the variables `vars`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1349,7 +1493,7 @@ sweep = AdiabaticSweep(ω => ωfunc)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/types.jl#L9-L48" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/types.jl#L9-L48" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1384,7 +1528,7 @@ Return the indexes and values following stable branches along a 1D sweep. When a
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/TimeEvolution/hysteresis_sweep.jl#L15" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/TimeEvolution/hysteresis_sweep.jl#L15" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1438,7 +1582,7 @@ Plot a bifurcation diagram from a continuation sweep starting from `starting_bra
 This function creates a bifurcation diagram using [`follow_branch`](/manual/API#HarmonicSteadyState.follow_branch). The followed branch is plotted as a dashed gray line.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/time_evolution.jl#L59" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/time_evolution.jl#L59" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1473,7 +1617,7 @@ Return the indexes and values following stable branches along a 1D sweep. When a
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/TimeEvolution/hysteresis_sweep.jl#L15" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/TimeEvolution/hysteresis_sweep.jl#L15" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1492,7 +1636,7 @@ steady_state_sweep(prob::SteadyStateProblem, alg::DynamicSS; varied::Pair, kwarg
 Sweeps through a range of parameter values using a dynamic steady state solver `DynamicSS` of the `SteadyStateDiffEq.jl` package. Given a steady state problem and a parameter to vary, computes the steady state solution for each value in the sweep range. The solutions are returned as a vector where each element corresponds to the steady state found at that parameter value.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/SteadyStateDiffEqExt.jl#L12-L20" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/SteadyStateDiffEqExt.jl#L12-L20" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -1505,7 +1649,7 @@ steady_state_sweep(prob_np::NonlinearProblem, prob_ss::SteadyStateProblem,
 Performs a parameter sweep by combining nonlinear root `alg_np` and steady state solvers `alg_ss`. For each parameter value, it first attempts a direct nonlinear root solver and checks its stability. If the solution is unstable or not found, it switches to a dynamic steady state solver. This hybrid approach is much faster then only using a steady state solver.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/SteadyStateDiffEqExt.jl#L39-L47" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/SteadyStateDiffEqExt.jl#L39-L47" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1555,7 +1699,7 @@ ODEProblem(
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L128" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/ext/ModelingToolkitExt.jl#L128" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -1576,7 +1720,7 @@ ODEProblem(
 Creates an ODEProblem object used by OrdinaryDiffEqTsit5.jl from the equations in `eom` to simulate time-evolution within `timespan`. `fixed_parameters` must be a dictionary mapping parameters+variables to numbers (possible to use a solution index, e.g. solutions[x][y] for branch y of solution x). If `u0` is specified, it is used as an initial condition; otherwise the values from `fixed_parameters` are used.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/TimeEvolution/ODEProblem.jl#L3-L9" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/TimeEvolution/ODEProblem.jl#L3-L9" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1612,7 +1756,7 @@ ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L36" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/ext/ModelingToolkitExt.jl#L36" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -1642,7 +1786,7 @@ ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L82" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/ext/ModelingToolkitExt.jl#L82" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1683,7 +1827,7 @@ SteadyStateProblem(harmonic_eq, [1.0, 0.0], param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L200" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/ext/ModelingToolkitExt.jl#L200" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -1724,7 +1868,7 @@ NonlinearProblem(harmonic_eq, [1.0, 0.0], param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/ext/ModelingToolkitExt.jl#L173" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/ext/ModelingToolkitExt.jl#L173" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

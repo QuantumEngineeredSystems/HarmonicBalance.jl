@@ -22,21 +22,21 @@ get_Jacobian(eom)
 Obtain the symbolic Jacobian matrix of `eom`. This is the linearised left-hand side of F(u) = du/dT.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Obtain a Jacobian from a `DifferentialEquation` by first converting it into a `HarmonicEquation`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Get the Jacobian of a set of equations `eqs` with respect to the variables `vars`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b0564666aa8e235f5613fe6852f86617d18e8b97/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/b507a32ebb77617cb8362f1e43143e4191b96036/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -82,15 +82,13 @@ Calculate the Jacobian response spectrum for a given system. Computes the magnit
   
 - `show_progress=true`: Whether to show a progress bar
   
-- `force=false`: Force recalculation of spectrum even if already exists
-  
 
 **Returns**
 - Array{P,2}: Complex response matrix where rows correspond to frequencies and columns to solutions
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -118,7 +116,7 @@ JacobianSpectrum(res::Result; index::Int, branch::Int)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/types.jl#L21" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/types.jl#L21" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -143,7 +141,7 @@ Holds the three parameters of a Lorentzian peak, defined as A / sqrt((ω-ω0)² 
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/types.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/types.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -172,7 +170,7 @@ Holds the compiled response matrix of a system.
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/types.jl#L40" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/types.jl#L40" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -194,7 +192,7 @@ get_response(
 For `rmat` and a solution dictionary `s`, calculate the total response to a perturbative force at frequency `Ω`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L218" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L217" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -233,7 +231,7 @@ Calculate the eigenvalues of the Jacobian matrix of the harmonic equations of a 
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L124-L142" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L123-L141" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -264,7 +262,7 @@ get_Jacobiannch to analyze
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L167-L179" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L166-L178" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -304,7 +302,118 @@ Calculate the rotating frame Jacobian response for a given branch. Computes the 
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/LinearResponse/response.jl#L71" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/response.jl#L70" target="_blank" rel="noreferrer">source</a></Badge>
+
+</details>
+
+<details class='jldocstring custom-block' open>
+<summary><a id='HarmonicSteadyState.LinearResponse.get_susceptibility-manual-linear_response' href='#HarmonicSteadyState.LinearResponse.get_susceptibility-manual-linear_response'><span class="jlbinding">HarmonicSteadyState.LinearResponse.get_susceptibility</span></a> <Badge type="info" class="jlObjectType jlFunction" text="Function" /></summary>
+
+
+
+```julia
+get_susceptibility(
+    result::HarmonicSteadyState.Result,
+    op_index::Int64,
+    Ω_range,
+    branch::Int64;
+    class
+) -> Matrix{ComplexF64}
+
+```
+
+
+Compute the response matrix or susceptibility to a probe in the rotating frame. Observables like forward_transmission response spectrum, i.e, how much of an input signal applied at port 1 emerges at port 2, can be computed using the susceptibility.
+
+**Arguments**
+- `result::Result`: Result object containing the system&#39;s solutions
+  
+- `op_index::Int`: Index of operator in mean field equations to evaluate response for
+  
+- `Ω_range`: Range of frequencies to evaluate
+  
+- `branch::Int`: Branch number to analyze
+  
+- `class="stable"`: Class of solutions to evaluate response for
+  
+
+**Returns**
+- `χ`: Complex response matrix where rows correspond to frequencies and columns to solutions
+  
+
+**Example**
+
+```julia
+Ω_range = range(-0.2, 0.2, 500)
+
+χ = get_susceptibility(result, 1#=variable=#, Ω_range, 3 #=branch=#);
+
+κ_ext = 0.05
+S21 = 1 .- χ*κ_ext/2
+S21_log = 20 .* log10.(abs.(S21)) # expressed in dB
+```
+
+
+
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/input_output.jl#L21" target="_blank" rel="noreferrer">source</a></Badge>
+
+</details>
+
+<details class='jldocstring custom-block' open>
+<summary><a id='HarmonicSteadyState.LinearResponse.get_forward_transmission_response-manual-linear_response' href='#HarmonicSteadyState.LinearResponse.get_forward_transmission_response-manual-linear_response'><span class="jlbinding">HarmonicSteadyState.LinearResponse.get_forward_transmission_response</span></a> <Badge type="info" class="jlObjectType jlFunction" text="Function" /></summary>
+
+
+
+```julia
+get_forward_transmission_response(
+    result::HarmonicSteadyState.Result,
+    op_index::Int64,
+    Ω_range,
+    branch::Int64,
+    external_damping;
+    class
+) -> Any
+
+```
+
+
+Compute the response matrix or susceptibility to a probe in the rotating frame. Observables like forward_transmission response spectrum, i.e, how much of an input signal applied at port 1 emerges at port 2, can be computed using the susceptibility. Colloquially known as S21 parameter in microwave engineering. The amplitude and phase of S21 tell you how much signal is transmitted and with what delay or phase shift:
+- If S21 ≈ 1 (or 0 dB), the system transmits all power from input to output.
+  
+- If S21 ≈ 0 (or very negative dB), very little signal is transmitted.
+  
+
+**Arguments**
+- `result::Result`: Result object containing the system&#39;s solutions
+  
+- `op_index::Int`: Index of operator in mean field equations to evaluate response for
+  
+- `Ω_range`: Range of frequencies to evaluate
+  
+- `branch::Int`: Branch number to analyze
+  
+- `class="stable"`: Class of solutions to evaluate response for
+  
+
+**Returns**
+- `χ`: Complex response matrix where rows correspond to frequencies and columns to solutions
+  
+
+**Example**
+
+```julia
+Ω_range = range(-0.2, 0.2, 500)
+external_damping=0.05
+
+S21 = get_forward_transmission_response(
+        result, 1 #=variable=#, Ω_range, 3 #=branch=#; external_damping);
+
+S21_log = 20 .* log10.(abs.(S21)) # expressed in dB
+```
+
+
+
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/LinearResponse/input_output.jl#L88" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -349,7 +458,7 @@ Plot the linear response to white noise of the variable `nat_var` for [Result](/
 A Plots.jl heatmap showing the linear response magnitude across parameter and frequency space.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/linear_response.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/linear_response.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -388,7 +497,7 @@ Plot the linear response to white noise of the variable `nat_var` for [Result](/
 A Plots.jl heatmap showing the linear response magnitude across parameter and frequency space.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/linear_response.jl#L55" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/linear_response.jl#L55" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -436,7 +545,7 @@ A Plots.jl heatmap showing the response magnitude in the rotating frame.
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/linear_response.jl#L104" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/linear_response.jl#L104" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -489,7 +598,7 @@ plot_eigenvalues(result, branch=1, type=:real, projection=v->sqrt(v[1]^2+v[2]^2)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/linear_response.jl#L157" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/linear_response.jl#L157" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

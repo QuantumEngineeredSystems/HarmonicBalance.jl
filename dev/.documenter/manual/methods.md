@@ -31,7 +31,7 @@ The Total Degree homotopy method performs a homotopy $H(x, t) = γ t G(x) + (1-t
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/methods.jl#L15-L27" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/methods.jl#L15-L27" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -64,7 +64,7 @@ The Polyhedral homotopy method constructs a homotopy based on the polyhedral str
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/methods.jl#L64-L76" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/methods.jl#L64-L76" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -103,7 +103,7 @@ See[HomotopyContinuation.jl](https://www.juliahomotopycontinuation.org/guides/ma
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/src/methods.jl#L117-L132" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/methods.jl#L117-L132" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

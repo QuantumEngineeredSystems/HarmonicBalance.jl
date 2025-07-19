@@ -67,7 +67,7 @@ The obtained steady states can be plotted as a function of the driving frequency
 plot(result, "sqrt(u1^2 + v1^2)")
 ```
 
-![](uilcwxq.png){width=600px height=400px}
+![](oomrdmu.png){width=600px height=400px}
 
 If you want learn more on what you can do with HarmonicBalance.jl, check out the [tutorials](/tutorials/index#tutorials). We also have collected some [examples](/examples/index#examples) of different physical systems.
 

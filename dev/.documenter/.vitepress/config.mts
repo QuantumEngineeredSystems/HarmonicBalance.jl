@@ -31,7 +31,8 @@ const navTemp = {
 { text: 'Ab Initio Noise spectrum', link: '/examples/ab_initio_noise' },
 { text: 'Adiabatic sweep', link: '/examples/steady_state_sweep' },
 { text: 'Quantum Cumulants', link: '/examples/cumulants_KPO' },
-{ text: 'KB vs HB method', link: '/examples/harmonic_oscillator_KB_vs_HB' }]
+{ text: 'KB vs HB method', link: '/examples/harmonic_oscillator_KB_vs_HB' },
+{ text: 'Forward Transmission', link: '/examples/forward_transmission' }]
  }]
  },
 { text: 'Resources', collapsed: false, items: [
@@ -137,7 +138,8 @@ export default defineConfig({
 { text: 'Ab Initio Noise spectrum', link: '/examples/ab_initio_noise' },
 { text: 'Adiabatic sweep', link: '/examples/steady_state_sweep' },
 { text: 'Quantum Cumulants', link: '/examples/cumulants_KPO' },
-{ text: 'KB vs HB method', link: '/examples/harmonic_oscillator_KB_vs_HB' }]
+{ text: 'KB vs HB method', link: '/examples/harmonic_oscillator_KB_vs_HB' },
+{ text: 'Forward Transmission', link: '/examples/forward_transmission' }]
  }]
  },
 { text: 'Resources', collapsed: false, items: [

@@ -51,7 +51,7 @@ using Plots
 plot(result, "sqrt(u1^2 + v1^2)")
 ```
 
-![](qzywspd.png){width=600px height=400px}
+![](elxlhmu.png){width=600px height=400px}
 
 To find the fluctuation on the top of the steady state one often employs a [Bogoliubov-de Gennes analyses](https://en.wikipedia.org/wiki/Linear_dynamical_system). Here, we compute the eigenvalues $\lambda_k$ of the Jacobian matrix at the steady state. The imaginary part of the eigenvalues gives characteristic frequencies of the &quot;quasi-particle excitations&quot;. The real part gives the lifetime of these excitations.
 
@@ -96,7 +96,7 @@ plot(
 )
 ```
 
-![](tgjilty.png){width=600px height=400px}
+![](zynyotl.png){width=600px height=400px}
 
 We find a single pair of complex conjugate eigenvalues linearly changing with the driving frequency. Both real parts are negative, indicating stability.
 
@@ -106,7 +106,7 @@ As discussed in [background section on linear response](/background/stability_re
 plot_linear_response(result, x, 1, Ω_range=range(0.95, 1.05, 300), logscale=true)
 ```
 
-![](elxlhmu.png){width=600px height=400px}
+![](zbcjagv.png){width=600px height=400px}
 
 The response has a peak at $\omega_0$, irrespective of the driving frequency $\omega$. Indeed, the eigenvalues shown before where plotted in the rotating frame at the frequency of the drive $\omega$. Hence, the imaginary part of eigenvalues shows the frequency (energy) needed to excite the system at it natural frequency (The frequency its want to be excited at.)
 
@@ -116,7 +116,7 @@ Note the slight &quot;bending&quot; of the noise peak with $\omega$ - this is gi
 plot_linear_response(result, x, 1, Ω_range=range(0.95, 1.05, 300), logscale=true, order=2)
 ```
 
-![](zynyotl.png){width=600px height=400px}
+![](ojvbsab.png){width=600px height=400px}
 
 To compute the matrix without plotting you can use the functions specified at the [linear respinse manual](/manual/linear_response#linresp_man).
 
@@ -132,7 +132,7 @@ result = get_steady_states(harmonic_eq, varied, fixed)
 plot(result, x="ω", y="sqrt(u1^2 + v1^2)");
 ```
 
-![](zbcjagv.png){width=600px height=400px}
+![](ofcvpfh.png){width=600px height=400px}
 
 The amplitude is the well-known Duffing curve. Let&#39;s look at the eigenvalues of the two stable branches, 1 and 2.
 
@@ -145,7 +145,7 @@ plot(
 )
 ```
 
-![](ojvbsab.png){width=600px height=400px}
+![](jqyuogl.png){width=600px height=400px}
 
 Again every branch gives a single pair of complex conjugate eigenvalues. However, for branch 1, the characteristic frequencies due not change linearly with the driving frequency around $\omega=\omega_0$. This is a sign of steady state becoming nonlinear at large amplitudes.
 
@@ -159,7 +159,7 @@ plot(
 )
 ```
 
-![](ofcvpfh.png){width=600px height=250px}
+![](paxclrz.png){width=600px height=250px}
 
 In branch 1 the linear response to white noise shows _more than one peak_. This is a distinctly nonlinear phenomenon, indicative of the squeezing of the steady state. Branch 2 is again quasi-linear, which stems from its low amplitude.
 
@@ -189,7 +189,7 @@ squeezed = [squeeze.(eachcol(mat))[1] for mat in eigvecs]
 plot(range(0.95, 1.05, 100), squeezed, label="Squeezing of branch 1")
 ```
 
-![](jqyuogl.png){width=600px height=400px}
+![](sfmlxfy.png){width=600px height=400px}
 
 Following [Huber et al.](https://doi.org/10.1103/PhysRevX.10.021066), we may also fix $\omega = \omega_0$ and plot the linear response as a function of $F$. The response turns out to be single-valued over a large range of driving strengths. Using a log scale for the x-axis:
 
@@ -205,6 +205,6 @@ plot(
 )
 ```
 
-![](paxclrz.png){width=600px height=250px}
+![](fktfxjl.png){width=600px height=250px}
 
 We see that for low $F$, quasi-linear behaviour with a single Lorentzian response occurs, while for larger $F$, two peaks form in the noise response. The two peaks are strongly unequal in magnitude, which is an example of internal squeezing (See supplemental material of [Huber et al.](https://doi.org/10.1103/PhysRevX.10.021066)).

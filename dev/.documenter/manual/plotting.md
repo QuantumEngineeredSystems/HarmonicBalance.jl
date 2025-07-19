@@ -60,7 +60,7 @@ To make the 2d plot less chaotic it is required to specify the specific `branch`
 The x and y axes are taken automatically from `res`
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -82,7 +82,7 @@ plot!(
 Similar to `plot` but adds a plot onto an existing plot.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -117,7 +117,7 @@ not_class::String   :   do not count solutions in this class
 Other kwargs are passed onto Plots.gr()
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L232" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L232" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -158,7 +158,7 @@ not_class::String   :   do not count solutions in this class
 Other kwargs are passed onto Plots.gr()
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.2.6/ext/PlotsExt/steady_states.jl#L301" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/steady_states.jl#L301" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

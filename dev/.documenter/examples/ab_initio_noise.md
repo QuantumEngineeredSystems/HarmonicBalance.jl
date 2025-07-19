@@ -77,7 +77,7 @@ result = get_steady_states(harmonic_eq, TotalDegree(), varied, fixed)
 plot(result; y="sqrt(u1^2 + v1^2)")
 ```
 
-![](sfmlxfy.png){width=600px height=400px}
+![](xtcbojd.png){width=600px height=400px}
 
 The sidebands from for the steady states will look like
 
@@ -88,7 +88,7 @@ scatter(ωrange, sidebands2; xlab="ω", legend=false, c=2)
 scatter!(ωrange, sidebands1; xlab="ω", legend=false, c=1)
 ```
 
-![](fktfxjl.png){width=600px height=400px}
+![](mpsahvh.png){width=600px height=400px}
 
 Let us now reproduce this sidebands using a noise probe. We use the ModelingToolkit extension to define the stochastic differential equation system from the harmonic equations. The resulting system will have addtivce white noise with a noise strength $\sigma = 0.00005$ for each variable.
 
@@ -130,7 +130,7 @@ freqω, psd = outputpsd(sol)
 plot(freqω, psd; yscale=:log10, xlabel="Frequency", ylabel="Power")
 ```
 
-![](xtcbojd.png){width=600px height=400px}
+![](fmblvsd.png){width=600px height=400px}
 
 We will perform parameter sweep to generate noise spectra across the driving frequency $\omega$. For this we use the `EnsembleProblem` API from the SciML ecosystem.
 
@@ -164,7 +164,7 @@ spectrum = log10.(reduce(hcat, getindex.(sol_ensemble.u, 2)))
 heatmap(ωrange, probe, spectrum)
 ```
 
-![](mpsahvh.png){width=600px height=400px}
+![](vjhquak.png){width=600px height=400px}
 
 Remember that we don&#39;t do a continuation of the system, but rather initlized the system at each frequency $\omega$ and evolve it for a fixed time $T$. This leads to imperfections in the spectrum. However, if we plot the sidebands computed with HomotopyContinuation.jl on top of the spectrum, we find descent match.
 
@@ -174,7 +174,7 @@ scatter!(ωrange, sidebands2; xlab="ω", legend=false, c=:white, markerstrokewid
 scatter!(ωrange, sidebands1; xlab="ω", legend=false, c=:black, markerstrokewidth=0, ms=2)
 ```
 
-![](fmblvsd.png){width=600px height=400px}
+![](uefgqqt.png){width=600px height=400px}
 
 
 ---
