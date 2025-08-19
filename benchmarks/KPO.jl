@@ -48,11 +48,7 @@ function benchmark_kpo!(SUITE)
 
     SUITE["Steady states"]["Homotopy Problem"]["Warm up method"] = @benchmarkable begin
         get_steady_states(
-            $problem,
-            $method;
-            show_progress=false,
-            sorting=:none,
-            classify_default=false,
+            $problem, $method; show_progress=false, sorting=:none, classify_default=false
         )
     end seconds = 10
 
@@ -61,11 +57,7 @@ function benchmark_kpo!(SUITE)
 
     SUITE["Steady states"]["Homotopy Problem"]["Total degree homotopy"] = @benchmarkable begin
         get_steady_states(
-            $problem,
-            $method;
-            show_progress=false,
-            sorting=:none,
-            classify_default=false,
+            $problem, $method; show_progress=false, sorting=:none, classify_default=false
         )
     end seconds = 10
 
@@ -74,11 +66,7 @@ function benchmark_kpo!(SUITE)
 
     SUITE["Steady states"]["Homotopy Problem"]["Polyhedral homotopy"] = @benchmarkable begin
         get_steady_states(
-            $problem,
-            $method;
-            show_progress=false,
-            sorting=:none,
-            classify_default=false,
+            $problem, $method; show_progress=false, sorting=:none, classify_default=false
         )
     end seconds = 10
 
