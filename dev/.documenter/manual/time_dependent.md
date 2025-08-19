@@ -26,7 +26,7 @@ ODEProblem(
 Creates an ODEProblem object used by OrdinaryDiffEqTsit5.jl from the equations in `eom` to simulate time-evolution within `timespan`. `fixed_parameters` must be a dictionary mapping parameters+variables to numbers (possible to use a solution index, e.g. solutions[x][y] for branch y of solution x). If `u0` is specified, it is used as an initial condition; otherwise the values from `fixed_parameters` are used.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/TimeEvolution/ODEProblem.jl#L3-L9" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/ext/TimeEvolution/ODEProblem.jl#L3-L9" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -84,7 +84,7 @@ sweep = AdiabaticSweep(ω => ωfunc)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/types.jl#L9-L48" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/types.jl#L9-L48" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -103,7 +103,7 @@ steady_state_sweep(prob::SteadyStateProblem, alg::DynamicSS; varied::Pair, kwarg
 Sweeps through a range of parameter values using a dynamic steady state solver `DynamicSS` of the `SteadyStateDiffEq.jl` package. Given a steady state problem and a parameter to vary, computes the steady state solution for each value in the sweep range. The solutions are returned as a vector where each element corresponds to the steady state found at that parameter value.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/SteadyStateDiffEqExt.jl#L12-L20" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/ext/SteadyStateDiffEqExt.jl#L12-L20" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -116,7 +116,7 @@ steady_state_sweep(prob_np::NonlinearProblem, prob_ss::SteadyStateProblem,
 Performs a parameter sweep by combining nonlinear root `alg_np` and steady state solvers `alg_ss`. For each parameter value, it first attempts a direct nonlinear root solver and checks its stability. If the solution is unstable or not found, it switches to a dynamic steady state solver. This hybrid approach is much faster then only using a steady state solver.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/SteadyStateDiffEqExt.jl#L39-L47" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/ext/SteadyStateDiffEqExt.jl#L39-L47" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -155,7 +155,7 @@ Parametric plot of f[1] against f[2]
 Also callable as plot!
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/PlotsExt/time_evolution.jl#L1-L19" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/ext/PlotsExt/time_evolution.jl#L1-L19" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -185,7 +185,7 @@ Numerically investigate the stability of a solution `soln` of `eom` within `time
 Return `true` the solution evolves within `tol` of the initial value (interpreted as stable).
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/ext/TimeEvolution/ODEProblem.jl#L61" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/ext/TimeEvolution/ODEProblem.jl#L61" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -202,7 +202,7 @@ is_stable(
 Returns true if the solution `soln` of the Result `res` is stable. Stable solutions are real and have all Jacobian eigenvalues Re(λ) &lt;= 0. `im_tol` : an absolute threshold to distinguish real/complex numbers. `rel_tol`: Re(λ) considered &lt;=0 if real.(λ) &lt; rel_tol*abs(λmax)
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L77" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/classification.jl#L77" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

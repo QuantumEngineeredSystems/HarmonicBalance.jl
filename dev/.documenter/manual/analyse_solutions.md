@@ -37,7 +37,7 @@ Extract solution vectors from a `Result` object based on specified filtering cri
 Filtered solution vectors matching the specified criteria
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/transform_solutions.jl#L196-L215" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/transform_solutions.jl#L196-L215" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -72,7 +72,7 @@ Extract solution vectors from a `Result` object based on specified filtering cri
 Filtered vector of each branch matching the specified criteria
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/transform_solutions.jl#L236-L255" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/transform_solutions.jl#L236-L255" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -94,7 +94,7 @@ get_single_solution(
 Return an ordered dictionary specifying all variables and parameters of the solution in `result` on `branch` at the position `index`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/transform_solutions.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/transform_solutions.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -127,7 +127,7 @@ not_class::String   :   do not count solutions in this class
 `Array{Dict,D}`: Vector of dictionaries mapping branch indices to points satisfying   the stability criteria at each parameter value
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/Result.jl#L122-L139" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/Result.jl#L123-L140" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -158,7 +158,7 @@ not_class::String   :   do not count solutions in this class
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/Result.jl#L92-L106" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/Result.jl#L92-L106" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -194,7 +194,7 @@ classify_solutions!(res, "sqrt(u1^2 + v1^2) > 1.0" , "large_amplitude")
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/classification.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -216,7 +216,7 @@ get_class(
 Returns an array of booleans classifying `branch` in the solutions in `res` according to `class`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L43" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/classification.jl#L43" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -232,7 +232,7 @@ get_class(
 Returns an array of booleans classifying each branch in the solutions in `res` according to `class`.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/classification.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -253,7 +253,7 @@ filter_result!(
 Removes all solution branches from `res` where NONE of the solution falls into `class`. Typically used to filter out unphysical solutions to prevent huge file sizes.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L189" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/classification.jl#L189" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

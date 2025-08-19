@@ -47,7 +47,7 @@ HomotopyContinuationProblem(
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/Problem.jl#L8" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/Problem.jl#L8" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -61,7 +61,7 @@ get_steady_states(
     prob::HomotopyContinuationProblem,
     method::HomotopyContinuationMethod;
     show_progress=true,
-    sorting="nearest",
+    sorting=:nearest,
     classify_default=true,
     verbose=false
     )
@@ -73,7 +73,7 @@ Solves `problem` with the `method` over the ranges specified by `swept_parameter
 **Keyword arguments**
 - `show_progress`: Indicate whether a progress bar should be displayed.
   
-- `sorting`: the method used by `sort_solutions` to get continuous solutions branches.   The current options are `"hilbert"` (1D sorting along a Hilbert curve), `"nearest"`   (nearest-neighbor sorting) and `"none"`.
+- `sorting`: the method used by `sort_solutions` to get continuous solutions branches.   The current options are `:hilbert` (1D sorting along a Hilbert curve), `:nearest`   (nearest-neighbor sorting) and `:none`.
   
 - `classify_default`: If `true`, the solutions will be classified using the default   classification method.
   
@@ -119,7 +119,7 @@ A steady state result for 1000 parameter points
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/solve_homotopy.jl#L1-L61" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/solve_homotopy.jl#L1-L61" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -154,7 +154,7 @@ Stores the steady states of a HarmonicEquation.
   
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/Result.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/Result.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -194,7 +194,7 @@ classify_solutions!(res, "sqrt(u1^2 + v1^2) > 1.0" , "large_amplitude")
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/classification.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/classification.jl#L1" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -229,10 +229,10 @@ Sorts `solutions` into branches according to the specified `sorting` method.
 
 `solutions` is an n-dimensional array of `Vector{Vector}`. Each element describes a set of solutions for a given parameter set. The output is a similar array, with each solution set rearranged such that neighboring solution sets have the smallest Euclidean distance.
 
-The `sorting` keyword argument specifies the method used to get continuous solution branches. Options are `"hilbert"` (1D sorting along a Hilbert curve), `"nearest"` (nearest-neighbor sorting), and `"none"`. The `show_progress` keyword argument indicates whether a progress bar should be displayed.
+The `sorting` keyword argument specifies the method used to get continuous solution branches. Options are `:hilbert` (1D sorting along a Hilbert curve), `:nearest` (nearest-neighbor sorting), and `:none`. The `show_progress` keyword argument indicates whether a progress bar should be displayed.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.0/src/sorting.jl#L1-L13" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.3.1/src/sorting.jl#L1-L13" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
