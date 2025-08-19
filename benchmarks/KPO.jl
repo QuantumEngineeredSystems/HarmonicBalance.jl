@@ -40,7 +40,7 @@ function benchmark_kpo!(SUITE)
     end seconds = 10
 
     show_progress = false
-    sorting = "no_sorting"
+    sorting = :none
     classify_default = false
 
     method = WarmUp(; thread=false)
@@ -51,7 +51,7 @@ function benchmark_kpo!(SUITE)
             $problem,
             $method;
             show_progress=false,
-            sorting="no_sorting",
+            sorting=:none,
             classify_default=false,
         )
     end seconds = 10
@@ -64,7 +64,7 @@ function benchmark_kpo!(SUITE)
             $problem,
             $method;
             show_progress=false,
-            sorting="no_sorting",
+            sorting=:none,
             classify_default=false,
         )
     end seconds = 10
@@ -77,21 +77,21 @@ function benchmark_kpo!(SUITE)
             $problem,
             $method;
             show_progress=false,
-            sorting="no_sorting",
+            sorting=:none,
             classify_default=false,
         )
     end seconds = 10
 
     solutions_not_sorted = result.solutions
-    sort_solutions(solutions_not_sorted; sorting="nearest", show_progress=false)
-    sort_solutions(solutions_not_sorted; sorting="hilbert", show_progress=false)
+    sort_solutions(solutions_not_sorted; sorting=:nearest, show_progress=false)
+    sort_solutions(solutions_not_sorted; sorting=:hilbert, show_progress=false)
 
     SUITE["Sorting"]["One dimensional"]["Nearest-neighbor sorting"] = @benchmarkable begin
-        sort_solutions($solutions_not_sorted; show_progress=false, sorting="nearest")
+        sort_solutions($solutions_not_sorted; show_progress=false, sorting=:nearest)
     end seconds = 10
 
     SUITE["Sorting"]["One dimensional"]["Hilbert sorting"] = @benchmarkable begin
-        sort_solutions($solutions_not_sorted; show_progress=false, sorting="hilbert")
+        sort_solutions($solutions_not_sorted; show_progress=false, sorting=:hilbert)
     end seconds = 10
 
     _classify_default!(deepcopy(result))
