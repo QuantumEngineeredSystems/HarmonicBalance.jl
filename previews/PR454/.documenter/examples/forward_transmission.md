@@ -30,10 +30,10 @@ eqs_completed_RWA = complete(eqs_RWA) # Meanfield equations using QuantumCumulan
 ```
 
 \begin{align}
-\frac{d}{dt} \langle m\rangle  &= -1 i Vk \langle c\rangle ^{2} -1 i \Delta \langle m\rangle  -1 i {\Omega}d -0.5 {\gamma}m \langle m\rangle  \\
-\frac{d}{dt} \langle m^\dagger\rangle  &= 1 i \Delta \langle m^\dagger\rangle  -0.5 {\gamma}m \langle m^\dagger\rangle  + 1 i {\Omega}d + 1 i Vk \langle c^\dagger\rangle ^{2} \\
-\frac{d}{dt} \langle c\rangle  &= -0.5 {\gamma}k \langle c\rangle  + \frac{-1}{2} i \Delta \langle c\rangle  -2 i \langle m\rangle  Vk \langle c^\dagger\rangle  \\
-\frac{d}{dt} \langle c^\dagger\rangle  &= 2 i \langle m^\dagger\rangle  Vk \langle c\rangle  + \frac{1}{2} i \Delta \langle c^\dagger\rangle  -0.5 {\gamma}k \langle c^\dagger\rangle 
+\frac{d}{dt} \langle m\rangle  &= -1 i \Delta \langle m\rangle  -1 i {\Omega}d -0.5 {\gamma}m \langle m\rangle  -1 i Vk \langle c\rangle ^{2} \\
+\frac{d}{dt} \langle m^\dagger\rangle  &= 1 i \Delta \langle m^\dagger\rangle  + 1 i {\Omega}d -0.5 {\gamma}m \langle m^\dagger\rangle  + 1 i Vk \langle c^\dagger\rangle ^{2} \\
+\frac{d}{dt} \langle c\rangle  &= -0.5 {\gamma}k \langle c\rangle  -2 i Vk \langle c^\dagger\rangle  \langle m\rangle  + \frac{-1}{2} i \Delta \langle c\rangle  \\
+\frac{d}{dt} \langle c^\dagger\rangle  &= -0.5 {\gamma}k \langle c^\dagger\rangle  + \frac{1}{2} i \Delta \langle c^\dagger\rangle  + 2 i Vk \langle m^\dagger\rangle  \langle c\rangle 
 \end{align}
 
 

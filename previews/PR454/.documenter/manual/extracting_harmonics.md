@@ -59,7 +59,7 @@ Harmonic equations:
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/05e2d1453d5e1a1123e55a9edf99183a833d64bd/src/HarmonicEquation.jl#L128-L169" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/7be348d0778fb7445596875efa18ada21b1b1fb3/src/HarmonicEquation.jl#L128-L169" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -186,7 +186,7 @@ Harmonic equations:
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/05e2d1453d5e1a1123e55a9edf99183a833d64bd/src/krylov-bogoliubov.jl#L4" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/7be348d0778fb7445596875efa18ada21b1b1fb3/src/krylov-bogoliubov.jl#L4" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
