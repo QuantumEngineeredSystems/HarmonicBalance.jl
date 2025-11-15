@@ -45,9 +45,9 @@ scatter(ωrange, sidebands2; xlab="ω", legend=false, c=2)
 scatter!(ωrange, sidebands1; xlab="ω", legend=false, c=1)
 
 # Let us now reproduce this sidebands using a noise probe. We use the ModelingToolkit extension to define the stochastic differential equation system from the harmonic equations. The resulting system will have addtivce white noise with a noise strength $\sigma = 0.00005$ for each variable.
-odesystem = ODESystem(harmonic_eq)
+odesystem = System(harmonic_eq)
 noiseeqs = [0.00005, 0.00005]  # Define noise amplitude for each variable
-@mtkbuild sdesystem = SDESystem(odesystem, noiseeqs)
+@mtkcompile sdesystem = SDESystem(odesystem, noiseeqs)
 
 param = Dict(ω₀ => 1.0, γ => 0.005, λ => 0.02, α => 1.0, ω => 1.0)
 Ttr = 10_000.0
