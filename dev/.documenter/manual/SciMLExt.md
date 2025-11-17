@@ -50,7 +50,7 @@ ODEProblem(
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/6dcb94084a39fca5469873029ae4bb423e373bcb/ext/ModelingToolkitExt.jl#L128" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/a08ba71f2652052095c9bcc5f84e09e0ba9b59d7/ext/ModelingToolkitExt.jl#L128" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -86,7 +86,7 @@ ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/6dcb94084a39fca5469873029ae4bb423e373bcb/ext/ModelingToolkitExt.jl#L36" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/a08ba71f2652052095c9bcc5f84e09e0ba9b59d7/ext/ModelingToolkitExt.jl#L36" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
@@ -116,7 +116,7 @@ ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/6dcb94084a39fca5469873029ae4bb423e373bcb/ext/ModelingToolkitExt.jl#L82" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/a08ba71f2652052095c9bcc5f84e09e0ba9b59d7/ext/ModelingToolkitExt.jl#L82" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -157,7 +157,7 @@ SteadyStateProblem(harmonic_eq, [1.0, 0.0], param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/6dcb94084a39fca5469873029ae4bb423e373bcb/ext/ModelingToolkitExt.jl#L200" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/a08ba71f2652052095c9bcc5f84e09e0ba9b59d7/ext/ModelingToolkitExt.jl#L200" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -198,7 +198,7 @@ NonlinearProblem(harmonic_eq, [1.0, 0.0], param)
 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/6dcb94084a39fca5469873029ae4bb423e373bcb/ext/ModelingToolkitExt.jl#L173" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/a08ba71f2652052095c9bcc5f84e09e0ba9b59d7/ext/ModelingToolkitExt.jl#L173" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
