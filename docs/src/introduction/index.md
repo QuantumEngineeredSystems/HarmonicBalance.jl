@@ -15,7 +15,7 @@ julia> ] # `]` should be pressed
 julia> Pkg.add("HarmonicBalance")
 ```
 
-You can check which version you have installled with the command
+You can check which version you have installed with the command
 
 ```julia
 julia> ]
