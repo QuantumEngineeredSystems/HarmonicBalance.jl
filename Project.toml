@@ -1,7 +1,7 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
 authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
-version = "0.15.5"
+version = "0.16.0"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
@@ -24,9 +24,10 @@ Aqua = "0.8.11"
 DocStringExtensions = "0.9.4"
 Documenter = "1.4"
 ExplicitImports = "1.6"
-HarmonicSteadyState = "0.2.1, 0.3"
+HarmonicSteadyState = "0.4.0"
 JET = "0.9.18, 0.10"
-ModelingToolkit = "9.60"
+ModelingToolkit = "10.6.0"
+OrdinaryDiffEqTsit5 = "1.1"
 PrecompileTools = "1.2"
 QuestBase = "0.3.1"
 Random = "1.10"
@@ -42,6 +43,7 @@ Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 ExplicitImports = "7d51a73a-1435-4ff3-83d9-f097790105c7"
 JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+OrdinaryDiffEqTsit5 = "b1df2697-797e-41e3-8120-5422d3b24e4a"
 QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
@@ -49,4 +51,4 @@ Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit", "Documenter", "QuestBase"]
+test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit", "Documenter", "QuestBase", "OrdinaryDiffEqTsit5"]

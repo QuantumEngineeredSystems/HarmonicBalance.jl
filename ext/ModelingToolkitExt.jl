@@ -2,7 +2,7 @@ module ModelingToolkitExt
 
 using DocStringExtensions
 
-export ODESystem, ODEProblem, SteadyStateProblem, NonlinearProblem
+export System, ODEProblem, SteadyStateProblem, NonlinearProblem
 
 using QuestBase:
     is_rearranged, rearrange_standard, rearrange_standard!, is_rearranged_standard
@@ -14,14 +14,15 @@ using Symbolics:
     simplify, Equation, substitute, Num, @variables, expand, unwrap, arguments, wrap
 using ModelingToolkit:
     ModelingToolkit,
-    ODESystem,
+    System,
     ODEProblem,
     NonlinearProblem,
     SteadyStateProblem,
     varmap_to_vars,
     parameters,
+    unknowns,
     @parameters,
-    @mtkbuild,
+    @mtkcompile,
     @independent_variables
 
 swapsides(eq::Equation) = Equation(eq.rhs, eq.lhs)
@@ -36,7 +37,7 @@ end
 @doc """
 $(TYPEDSIGNATURES)
 
-Creates and ModelingToolkit.ODESystem from a HarmonicEquation.
+Creates and ModelingToolkit.System from a HarmonicEquation.
 
 ### Example
 ```julia
@@ -49,12 +50,12 @@ diff_eq = DifferentialEquation(
 add_harmonic!(diff_eq, x, ω) #
 harmonic_eq = get_harmonic_equations(diff_eq)
 
-sys = ODESystem(harmonic_eq)
+sys = System(harmonic_eq)
 param = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01, ω => 1.1)
 ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 ```
 """
-function ModelingToolkit.ODESystem(eom::HarmonicEquation)
+function ModelingToolkit.System(eom::HarmonicEquation)
     if !is_rearranged(eom) # check if time-derivatives of the variable are on the right hand side
         eom = rearrange_standard(eom)
     end
@@ -74,15 +75,15 @@ function ModelingToolkit.ODESystem(eom::HarmonicEquation)
     eqs = simplify.(expand.(eqs))
     eqs = substitute(eqs, Dict(zip(eom.parameters, par_names)))
 
-    # ∨ mtk v9 need @mtkbuild
-    @mtkbuild sys = ODESystem(eqs, first(slow_time_ivp), vars, par_names)
+    # ∨ mtk v10 need @mtkcompile
+    @mtkcompile sys = System(eqs, first(slow_time_ivp), vars, par_names)
     return sys
 end
 
 @doc """
 $(TYPEDSIGNATURES)
 
-Creates and ModelingToolkit.ODESystem from a DifferentialEquation.
+Creates and ModelingToolkit.System from a DifferentialEquation.
 
 ### Example
 ```julia
@@ -92,14 +93,14 @@ using ModelingToolkit
 diff_eq = DifferentialEquation(
     d(x, t, 2) + ω0^2 * x + α * x^3 + γ * d(x, t) ~ F * cos(ω * t), x
 )
-sys = ODESystem(diff_eq)
+sys = System(diff_eq)
 
 param = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01, ω => 1.1)
 
 ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 ```
 """
-function ModelingToolkit.ODESystem(diff_eq::DifferentialEquation)
+function ModelingToolkit.System(diff_eq::DifferentialEquation)
     diff_eq = deepcopy(diff_eq)
     if !is_rearranged_standard(diff_eq)
         rearrange_standard!(diff_eq)
@@ -120,7 +121,7 @@ function ModelingToolkit.ODESystem(diff_eq::DifferentialEquation)
 
     eqs = substitute(eqs, Dict(zip(param_undeclared, params)))
 
-    @mtkbuild sys = ODESystem(eqs, first(iv), vars, params)
+    @mtkcompile sys = System(eqs, first(iv), vars, params)
 
     return sys
 end
@@ -160,12 +161,13 @@ function ModelingToolkit.ODEProblem(
     in_place=true,
     kwargs...,
 )
-    sys = ODESystem(eom)
-    param = varmap_to_vars(p, parameters(sys))
+    sys = System(eom)
+    # param = varmap_to_vars(p, parameters(sys))
+    dict = merge(isempty(u0) ? Dict() : Dict(unknowns(sys) .=> u0), p)
     if !in_place # out-of-place
-        prob = ODEProblem{false}(sys, u0, tspan, param; jac=true, kwargs...)
+        prob = ODEProblem{false}(sys, dict, tspan; jac=true, kwargs...)
     else # in-place
-        prob = ODEProblem{true}(sys, u0, tspan, param; jac=true, kwargs...)
+        prob = ODEProblem{true}(sys, dict, tspan; jac=true, kwargs...)
     end # compute jacobian for performance
     return prob
 end
@@ -220,7 +222,7 @@ SteadyStateProblem(harmonic_eq, [1.0, 0.0], param)
 function ModelingToolkit.SteadyStateProblem(
     eom::HarmonicEquation, u0, p::AbstractDict; in_place=true, kwargs...
 )
-    sys = ODESystem(eom)
+    sys = System(eom)
     param = varmap_to_vars(p, parameters(sys))
     if !in_place # out-of-place
         prob = SteadyStateProblem{false}(sys, u0, param; jac=true, kwargs...)
