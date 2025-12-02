@@ -126,7 +126,7 @@ steady_state_sweep
 
 ```@docs
 ODEProblem
-ModelingToolkit.ODESystem
+ModelingToolkit.System
 ModelingToolkit.SciMLBase.SteadyStateProblem
 ModelingToolkit.SciMLBase.NonlinearProblem
 ```
