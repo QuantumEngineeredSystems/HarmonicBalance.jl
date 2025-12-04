@@ -13,7 +13,7 @@ ODEProblem(eom::Union{DifferentialEquation, HarmonicEquation},
     p::AbstractDict;
     kwargs...
 )
-ModelingToolkit.ODESystem
+ModelingToolkit.System
 ModelingToolkit.SciMLBase.SteadyStateProblem
 ModelingToolkit.SciMLBase.NonlinearProblem
 ```
