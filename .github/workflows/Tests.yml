@@ -29,7 +29,6 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - 'pre'
           - 'lts'
           - '1'
         os:
