@@ -87,7 +87,7 @@ problem_c2 = HarmonicSteadyState.HomotopyContinuationProblem(eqs_c2, param, vari
 
 ```ansi
 5 algebraic equations for steady states
-Variables: aᵣ, aᵢ, a⁺aᵣ, aaᵣ, aaᵢ
+Variables: aᵣ, aᵢ, aaᵣ, aaᵢ, a⁺aᵣ
 Parameters: Δ, U, G, κ
 
 ```
