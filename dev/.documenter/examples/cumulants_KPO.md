@@ -40,8 +40,8 @@ eqs_completed_RWA = complete(eqs_RWA)
 ```
 
 \begin{align}
-\frac{d}{dt} \langle a\rangle  &= G \mathit{i} \langle a^\dagger\rangle  + \left(  - U + \Delta \right) \mathit{i} \langle a\rangle  -0.5 \langle a\rangle  \kappa - U \mathit{i} \langle a^\dagger\rangle  \langle a\rangle ^{2} \\
-\frac{d}{dt} \langle a^\dagger\rangle  &= \left( U - \Delta \right) \mathit{i} \langle a^\dagger\rangle  - G \mathit{i} \langle a\rangle  -0.5 \langle a^\dagger\rangle  \kappa + U \mathit{i} \langle a^\dagger\rangle ^{2} \langle a\rangle 
+\frac{d}{dt} \langle a\rangle  &= \left(  - U + \Delta \right) \mathit{i} \langle a\rangle  + G \mathit{i} \langle a^\dagger\rangle  -0.5 \langle a\rangle  \kappa - U \mathit{i} \langle a\rangle ^{2} \langle a^\dagger\rangle  \\
+\frac{d}{dt} \langle a^\dagger\rangle  &=  - G \mathit{i} \langle a\rangle  + \left( U - \Delta \right) \mathit{i} \langle a^\dagger\rangle  -0.5 \langle a^\dagger\rangle  \kappa + U \mathit{i} \langle a\rangle  \langle a^\dagger\rangle ^{2}
 \end{align}
 
 

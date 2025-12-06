@@ -24,7 +24,7 @@ plot(
 
 Class selection done by passing `String` or `Vector{String}` as kwarg:
 
-```julia
+```
 class       :   only plot solutions in this class(es) ("all" --> plot everything)
 not_class   :   do not plot solutions in this class(es)
 ```
@@ -38,7 +38,7 @@ The x,y,z arguments are Strings compatible with Symbolics.jl, e.g., `y=2*sqrt(u1
 
 **1D plots**
 
-```julia
+```
 plot(res::Result; x::String, y::String, class="default", not_class=[], kwargs...)
 plot(res::Result, y::String; kwargs...) # take x automatically from Result
 ```
@@ -50,7 +50,7 @@ If a sweep in two parameters were done, i.e., `dimension(res)==2`, a one dimensi
 
 **2D plots**
 
-```julia
+```
 plot(res::Result; z::String, branch::Int64, class="physical", not_class=[], kwargs...)
 ```
 
@@ -60,7 +60,7 @@ To make the 2d plot less chaotic it is required to specify the specific `branch`
 The x and y axes are taken automatically from `res`
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.0/ext/PlotsExt/steady_states.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.1/ext/PlotsExt/steady_states.jl#L2" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -82,7 +82,7 @@ plot!(
 Similar to `plot` but adds a plot onto an existing plot.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.0/ext/PlotsExt/steady_states.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.1/ext/PlotsExt/steady_states.jl#L53" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -108,7 +108,7 @@ Plot the number of solutions in a `Result` object as a function of the parameter
 
 Class selection done by passing `String` or `Vector{String}` as kwarg:
 
-```julia
+```
 class::String       :   only count solutions in this class ("all" --> plot everything)
 not_class::String   :   do not count solutions in this class
 ```
@@ -117,7 +117,7 @@ not_class::String   :   do not count solutions in this class
 Other kwargs are passed onto Plots.gr()
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.0/ext/PlotsExt/steady_states.jl#L232" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.1/ext/PlotsExt/steady_states.jl#L232" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -149,7 +149,7 @@ Plot a three dimension line plot of a `Result` object as a function of the param
 
 Class selection done by passing `String` or `Vector{String}` as kwarg:
 
-```julia
+```
 class::String       :   only count solutions in this class ("all" --> plot everything)
 not_class::String   :   do not count solutions in this class
 ```
@@ -158,7 +158,7 @@ not_class::String   :   do not count solutions in this class
 Other kwargs are passed onto Plots.gr()
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.0/ext/PlotsExt/steady_states.jl#L301" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl/blob/v0.4.1/ext/PlotsExt/steady_states.jl#L301" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

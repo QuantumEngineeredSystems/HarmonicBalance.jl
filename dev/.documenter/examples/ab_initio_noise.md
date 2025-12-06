@@ -152,7 +152,7 @@ sol_ensemble = solve(
 
 ```ansi
 EnsembleSolution Solution of length 200 with uType:
-Tuple{Vector{Float64}, Vector{T} where T<:Union{Float32, Float64}}
+Tuple{Any, Any}
 ```
 
 

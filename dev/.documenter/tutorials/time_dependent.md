@@ -125,7 +125,7 @@ sweep = AdiabaticSweep(ω => (0.9,1.1), (0, 2e4))
 
 
 ```ansi
-AdiabaticSweep(Dict{Num, Function}(ω => TimeEvolution.var"#f#swept_function##0"{Tuple{Float64, Float64}, Float64, Int64}((0.9, 1.1), 20000.0, 0)))
+AdiabaticSweep(Dict{Num, Function}(ω => TimeEvolution.var"#f#1"{Tuple{Float64, Float64}, Float64, Int64}((0.9, 1.1), 20000.0, 0)))
 ```
 
 

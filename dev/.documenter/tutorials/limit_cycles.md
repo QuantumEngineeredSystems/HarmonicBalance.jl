@@ -84,7 +84,7 @@ result = get_limit_cycles(harmonic_eq, μ => 1:0.1:5, (), ω_lc)
 ```ansi
 A steady state result for 41 parameter points
 
-Solution branches:   93
+Solution branches:   92
    of which real:    4
    of which stable:  4
 
