@@ -1,7 +1,7 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
-authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
 version = "0.17.0"
+authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
@@ -15,13 +15,14 @@ Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 
 [weakdeps]
 ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+ModelingToolkitBase = "7771a370-6774-4173-bd38-47e70ca0b839"
+
+[sources]
+HarmonicSteadyState = {rev = "symbolicsv7", url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl"}
+QuestBase = {rev = "symbolicsv7", url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl"}
 
 [extensions]
 ModelingToolkitExt = "ModelingToolkit"
-
-[sources]
-QuestBase = {url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl", rev = "symbolicsv7"}
-HarmonicSteadyState = {url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl", rev = "symbolicsv7"}
 
 [compat]
 Aqua = "0.8.11"
@@ -31,6 +32,7 @@ ExplicitImports = "1.6"
 HarmonicSteadyState = "0.5.0"
 JET = "0.9.18, 0.10, 0.11"
 ModelingToolkit = "11"
+ModelingToolkitBase = "1.6.3"
 OrdinaryDiffEqTsit5 = "1.1"
 PrecompileTools = "1.2"
 QuestBase = "0.4.0"
