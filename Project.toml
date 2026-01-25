@@ -21,15 +21,16 @@ ModelingToolkitExt = "ModelingToolkit"
 
 [sources]
 QuestBase = {url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl", rev = "symbolicsv7"}
+HarmonicSteadyState = {url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl", rev = "symbolicsv7"}
 
 [compat]
 Aqua = "0.8.11"
 DocStringExtensions = "0.9.4"
 Documenter = "1.4"
 ExplicitImports = "1.6"
-HarmonicSteadyState = "0.4.0"
+HarmonicSteadyState = "0.5.0"
 JET = "0.9.18, 0.10, 0.11"
-ModelingToolkit = "10.6.0"
+ModelingToolkit = "11"
 OrdinaryDiffEqTsit5 = "1.1"
 PrecompileTools = "1.2"
 QuestBase = "0.4.0"
