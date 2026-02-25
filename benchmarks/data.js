@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1770734721358,
+  "lastUpdate": 1772062754966,
   "repoUrl": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
   "entries": {
     "Benchmark Results": [
@@ -286,6 +286,102 @@ window.BENCHMARK_DATA = {
           {
             "name": "Classification/One Dimensional/Default classifications",
             "value": 2139432.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=1124800\nallocs=18337\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "orjan.ameye@hotmail.com",
+            "name": "Orjan Ameye",
+            "username": "oameye"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "cbb6f3886545633ea40e342137fcd0caecc7e146",
+          "message": "Update Julia version compatibility in Project.toml (#491)",
+          "timestamp": "2026-02-25T18:45:05+01:00",
+          "tree_id": "9b28c6b16ed517cf2fc16d9444cb7a68820ea023",
+          "url": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/commit/cbb6f3886545633ea40e342137fcd0caecc7e146"
+        },
+        "date": 1772062740871,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "Construction/Krylov Equation/Order 2",
+            "value": 2176801695662,
+            "unit": "ns",
+            "extra": "gctime=1873177829\nmemory=17043355624\nallocs=482516043\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 1",
+            "value": 2009638559924,
+            "unit": "ns",
+            "extra": "gctime=1454694801\nmemory=13196335592\nallocs=384011376\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Construction/Problem/HomotopyContinuationProblem",
+            "value": 36590620,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=8331672\nallocs=234059\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Construction/Harmonic Equation/One Frequency",
+            "value": 672679476,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=50996000\nallocs=1193484\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Linear response/Rotating frame/Jacobian Response",
+            "value": 477657,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=285728\nallocs=1734\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Linear response/Lab frame/Jacobian Response",
+            "value": 2917728,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=943296\nallocs=21219\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Polyhedral homotopy",
+            "value": 452896508,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=73152064\nallocs=1664813\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Warm up method",
+            "value": 121356611,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=34730904\nallocs=819566\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Total degree homotopy",
+            "value": 280562998,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=47740144\nallocs=1104113\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Sorting/One dimensional/Hilbert sorting",
+            "value": 148093,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=208208\nallocs=3026\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Sorting/One dimensional/Nearest-neighbor sorting",
+            "value": 150973,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=208208\nallocs=3026\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
+          },
+          {
+            "name": "Classification/One Dimensional/Default classifications",
+            "value": 2539386,
             "unit": "ns",
             "extra": "gctime=0\nmemory=1124800\nallocs=18337\nparams={\"gctrial\":true,\"time_tolerance\":0.05,\"evals_set\":false,\"samples\":10000,\"evals\":1,\"gcsample\":false,\"seconds\":10,\"overhead\":0,\"memory_tolerance\":0.01}"
           }
