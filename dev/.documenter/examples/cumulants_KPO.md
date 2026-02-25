@@ -40,8 +40,8 @@ eqs_completed_RWA = complete(eqs_RWA)
 ```
 
 \begin{align}
-\frac{d}{dt} \langle a\rangle  &= -0.5 \langle a\rangle  \kappa + \left(  - U + \Delta \right) \mathit{i} \langle a\rangle  + G \mathit{i} \langle a^\dagger\rangle  - U \mathit{i} \langle a\rangle ^{2} \langle a^\dagger\rangle  \\
-\frac{d}{dt} \langle a^\dagger\rangle  &= -0.5 \kappa \langle a^\dagger\rangle  + U \mathit{i} \langle a\rangle  \langle a^\dagger\rangle ^{2} - G \mathit{i} \langle a\rangle  + \left( U - \Delta \right) \mathit{i} \langle a^\dagger\rangle 
+\frac{d}{dt} \langle a\rangle  &=  - U \mathit{i} \langle a^\dagger\rangle  \langle a\rangle ^{2} -0.5 \kappa \langle a\rangle  + G \mathit{i} \langle a^\dagger\rangle  + \left(  - U + \Delta \right) \mathit{i} \langle a\rangle  \\
+\frac{d}{dt} \langle a^\dagger\rangle  &= -0.5 \kappa \langle a^\dagger\rangle  + U \mathit{i} \langle a^\dagger\rangle ^{2} \langle a\rangle  + \left( U - \Delta \right) \mathit{i} \langle a^\dagger\rangle  - G \mathit{i} \langle a\rangle 
 \end{align}
 
 
@@ -87,7 +87,7 @@ problem_c2 = HarmonicSteadyState.HomotopyContinuationProblem(eqs_c2, param, vari
 
 ```ansi
 5 algebraic equations for steady states
-Variables: aᵣ, aᵢ, aaᵣ, aaᵢ, a⁺aᵣ
+Variables: aᵣ, aᵢ, a⁺aᵣ, aaᵣ, aaᵢ
 Parameters: Δ, U, G, κ
 
 ```
