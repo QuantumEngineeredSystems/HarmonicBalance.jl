@@ -35,7 +35,7 @@ Reexport = "1.2.2"
 SymbolicUtils = "3.25"
 Symbolics = "6.34.0"
 Test = "1.10"
-julia = "1.10"
+julia = "1.10.10, 1.11.9, 1.12.5"
 
 [extras]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
