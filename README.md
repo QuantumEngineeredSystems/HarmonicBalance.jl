@@ -86,3 +86,4 @@ SciPost Phys. Codebases 6 (2022)
 
 - [JosephsonCircuits.jl](https://github.com/kpobrien/JosephsonCircuits.jl): Models superconducting circuits using modified nodal analysis and harmonic balance with an analytic Jacobian.
 - [Manlab](https://manlab.lma.cnrs-mrs.fr/spip/): A similar package in Matlab also using continuation methods and using the Harmonic Balance method for periodic orbits.
+- [PyHarm](https://gitlab.com/drti/pyharm): An Harmonic Balance Method (HBM) based solver for mechanical nonlinear system simulations
