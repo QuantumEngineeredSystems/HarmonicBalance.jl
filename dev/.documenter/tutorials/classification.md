@@ -123,8 +123,8 @@ get_single_solution(result_2D; branch=1, index=(1, 1))
 
 ```ansi
 OrderedCollections.OrderedDict{Num, ComplexF64} with 7 entries:
-  u1 => 1.39541e-203-2.74098e-205im
-  v1 => 2.34229e-204+5.98032e-205im
+  u1 => 1.39541e-204-5.23278e-205im
+  v1 => -1.2459e-204-3.58819e-204im
   ω  => 0.99+0.0im
   λ  => 1.0e-6+0.0im
   ω₀ => 1.0+0.0im
