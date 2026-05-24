@@ -1,7 +1,7 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
-authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
 version = "0.16.0"
+authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
@@ -26,7 +26,7 @@ Documenter = "1.4"
 ExplicitImports = "1.6"
 HarmonicSteadyState = "0.4.0"
 JET = "0.9.18, 0.10"
-ModelingToolkit = "10.6.0"
+ModelingToolkit = "10.6.0, 11"
 OrdinaryDiffEqTsit5 = "1.1"
 PrecompileTools = "1.2"
 QuestBase = "0.3.1"
