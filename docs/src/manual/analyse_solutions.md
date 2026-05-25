@@ -8,6 +8,7 @@ For plotting, you can extract the solutions using the `get_solutions` function, 
 
 ```@docs; canonical=false
 get_solutions
+get_branches
 get_single_solution
 ```
 

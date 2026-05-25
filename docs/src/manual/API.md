@@ -50,6 +50,7 @@ Polyhedral
 
 ```@docs
 get_solutions
+get_branches
 attractors
 phase_diagram
 get_single_solution
@@ -125,7 +126,7 @@ steady_state_sweep
 
 ```@docs
 ODEProblem
-ModelingToolkit.ODESystem
+ModelingToolkit.System
 ModelingToolkit.SciMLBase.SteadyStateProblem
 ModelingToolkit.SciMLBase.NonlinearProblem
 ```

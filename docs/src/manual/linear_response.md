@@ -51,6 +51,8 @@ HarmonicSteadyState.LinearResponse.get_response
 eigenvalues
 eigenvectors
 HarmonicSteadyState.LinearResponse.get_rotframe_jacobian_response
+get_susceptibility
+get_forward_transmission_response
 ```
 
 ## Plotting
