@@ -15,8 +15,8 @@ end
 end
 
 @testset "extensions" begin
-    @testset "ModelingToolkit extension" begin
-        include("ModelingToolkitExt.jl")
+    @testset "ModelingToolkitBase extension" begin
+        include("ModelingToolkitBaseExt.jl")
     end
 end
 

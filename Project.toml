@@ -1,11 +1,12 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
+version = "0.17.0"
 authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
-version = "0.16.0"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
 HarmonicSteadyState = "1158f75c-a779-4b85-8bfb-8fcf6bf02ced"
+ModelingToolkitBase = "7771a370-6774-4173-bd38-47e70ca0b839"
 PrecompileTools = "aea7be01-6a6a-4083-8856-8a6e6704d82a"
 QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
@@ -13,11 +14,8 @@ Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 
-[weakdeps]
-ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
-
 [extensions]
-ModelingToolkitExt = "ModelingToolkit"
+ModelingToolkitBaseExt = "ModelingToolkitBase"
 
 [compat]
 Aqua = "0.8.11"
@@ -26,7 +24,7 @@ Documenter = "1.4"
 ExplicitImports = "1.6"
 HarmonicSteadyState = "0.5"
 JET = "0.9.18, 0.10"
-ModelingToolkit = "10.6.0"
+ModelingToolkitBase = "1"
 OrdinaryDiffEqTsit5 = "2"
 PrecompileTools = "1.2"
 QuestBase = "0.4"
@@ -42,7 +40,7 @@ Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 ExplicitImports = "7d51a73a-1435-4ff3-83d9-f097790105c7"
 JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
-ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+ModelingToolkitBase = "7771a370-6774-4173-bd38-47e70ca0b839"
 OrdinaryDiffEqTsit5 = "b1df2697-797e-41e3-8120-5422d3b24e4a"
 QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
@@ -51,4 +49,4 @@ Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkit", "Documenter", "QuestBase", "OrdinaryDiffEqTsit5"]
+test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkitBase", "Documenter", "QuestBase", "OrdinaryDiffEqTsit5"]

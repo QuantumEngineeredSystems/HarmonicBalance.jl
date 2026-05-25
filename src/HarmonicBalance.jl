@@ -42,7 +42,6 @@ using Symbolics:
     Differential,
     unwrap,
     diff2term,
-    var_from_nested_derivative,
     lower_varname
 
 using SymbolicUtils: SymbolicUtils, BasicSymbolic, isdiv
