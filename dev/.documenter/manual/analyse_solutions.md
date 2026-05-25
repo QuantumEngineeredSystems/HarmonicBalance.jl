@@ -1,7 +1,7 @@
 
 # Extracting Solutions {#Extracting-Solutions}
 
-After computing the steady-states of the harmonic equations, you&#39;ll want to extract the solutions from the [`HarmonicSteadyState.Result`](/manual/solving_harmonics#HarmonicSteadyState.Result-manual-solving_harmonics) struct.
+After computing the steady-states of the harmonic equations, you'll want to extract the solutions from the [`HarmonicSteadyState.Result`](/manual/solving_harmonics#HarmonicSteadyState.Result-manual-solving_harmonics) struct.
 
 ## Basic Solution Extraction {#Basic-Solution-Extraction}
 

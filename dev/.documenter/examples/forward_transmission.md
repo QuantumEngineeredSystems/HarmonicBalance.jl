@@ -30,10 +30,10 @@ eqs_completed_RWA = complete(eqs_RWA) # Meanfield equations using QuantumCumulan
 ```
 
 \begin{align}
-\frac{d}{dt} \langle m\rangle  &= -1 i {\Omega}d -1 i Vk \langle c\rangle ^{2} -0.5 {\gamma}m \langle m\rangle  -1 i \Delta \langle m\rangle  \\
-\frac{d}{dt} \langle m^\dagger\rangle  &= -0.5 {\gamma}m \langle m^\dagger\rangle  + 1 i \Delta \langle m^\dagger\rangle  + 1 i {\Omega}d + 1 i Vk \langle c^\dagger\rangle ^{2} \\
-\frac{d}{dt} \langle c\rangle  &= -0.5 {\gamma}k \langle c\rangle  -2 i Vk \langle c^\dagger\rangle  \langle m\rangle  + \frac{-1}{2} i \Delta \langle c\rangle  \\
-\frac{d}{dt} \langle c^\dagger\rangle  &= \frac{1}{2} i \Delta \langle c^\dagger\rangle  -0.5 {\gamma}k \langle c^\dagger\rangle  + 2 i Vk \langle c\rangle  \langle m^\dagger\rangle 
+\frac{d}{dt} \langle m\rangle  &= -1 i \Delta \langle m\rangle  -0.5 {\gamma}m \langle m\rangle  -1 i {\Omega}d -1 i \langle c\rangle ^{2} Vk \\
+\frac{d}{dt} \langle m^\dagger\rangle  &= 1 i {\Omega}d + 1 i \langle c^\dagger\rangle ^{2} Vk + 1 i \Delta \langle m^\dagger\rangle  -0.5 {\gamma}m \langle m^\dagger\rangle  \\
+\frac{d}{dt} \langle c\rangle  &= -0.5 \langle c\rangle  {\gamma}k + \frac{-1}{2} i \langle c\rangle  \Delta -2 i \langle c^\dagger\rangle  Vk \langle m\rangle  \\
+\frac{d}{dt} \langle c^\dagger\rangle  &= 2 i \langle c\rangle  Vk \langle m^\dagger\rangle  + \frac{1}{2} i \Delta \langle c^\dagger\rangle  -0.5 {\gamma}k \langle c^\dagger\rangle 
 \end{align}
 
 
@@ -65,7 +65,7 @@ Harmonic equations:
 ```
 
 
-Let&#39;s sweep the power of the drive $\Omega_d$, with $\Delta=0$, and solve for the steady state. The steady-state solutions show that the FMR mode saturates after a threshold power, followed by the coherent excitation of the parametrically induced counter-propagating modes.
+Let's sweep the power of the drive $\Omega_d$, with $\Delta=0$, and solve for the steady state. The steady-state solutions show that the FMR mode saturates after a threshold power, followed by the coherent excitation of the parametrically induced counter-propagating modes.
 
 ```julia
 drive_range = range(0, 1.8, 100)

@@ -19,4 +19,4 @@ For more context and details on the type of systems studied using the package, w
 > 
 
 
-And visiting our [group&#39;s homepage](https://www.zilberberg.uni-konstanz.de/home/index.php?id=intro).
+And visiting our [group's homepage](https://www.zilberberg.uni-konstanz.de/home/index.php?id=intro).

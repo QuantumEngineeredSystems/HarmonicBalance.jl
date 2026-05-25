@@ -15,7 +15,7 @@ $$\begin{equation}
 \frac{d\mathbf{u}(T)}{dT}  = \bar{\mathbf{F}} (\mathbf{u})\,,
 \end{equation}$$
 
-As long as the chosen harmonics constituting $\mathbf{u}(T)$ capture the system&#39;s behaviour, we may numerically evolve the new effective differential equations instead of the full problem. Since the components of $\mathbf{u}(T)$ only vary very slowly (and are constant in a steady state), this is usually _vastly_ more efficient than evolving the full problem.
+As long as the chosen harmonics constituting $\mathbf{u}(T)$ capture the system's behaviour, we may numerically evolve the new effective differential equations instead of the full problem. Since the components of $\mathbf{u}(T)$ only vary very slowly (and are constant in a steady state), this is usually _vastly_ more efficient than evolving the full problem.
 
 Here we primarily demonstrate on the parametrically driven oscillator.
 

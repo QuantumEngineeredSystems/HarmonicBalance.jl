@@ -57,7 +57,7 @@ $$\begin{aligned}
 & \ddot{x}_2 + (\omega_0^2 - \lambda \cos(2\omega t)) x_2 + \gamma \dot{x}_2 + \alpha x_2^3 -J x_1 = 0
 \end{aligned}$$
 
-where $x_1$ and $x_2$ are the two individual modes. The system is characterized by several parameters. The parameter `ω₀` represents the bare frequency of the system, which is the natural frequency at which the system oscillates in the absence of any external driving force. The parameter `ω` denotes the drive frequency, which is the frequency of an external driving force applied to the system. The parameter `λ` stands for the amplitude of the parametric drive, which modulates the natural frequency  periodically. The parameter `α` represents the nonlinearity of the system, indicating how the system&#39;s response deviates from a linear behavior. The parameter `J` signifies the coupling strength, which measures the interaction strength between different parts or modes of the system. Finally, the parameter `γ` denotes the damping, which quantifies the rate at which the system loses energy to its surroundings.
+where $x_1$ and $x_2$ are the two individual modes. The system is characterized by several parameters. The parameter `ω₀` represents the bare frequency of the system, which is the natural frequency at which the system oscillates in the absence of any external driving force. The parameter `ω` denotes the drive frequency, which is the frequency of an external driving force applied to the system. The parameter `λ` stands for the amplitude of the parametric drive, which modulates the natural frequency  periodically. The parameter `α` represents the nonlinearity of the system, indicating how the system's response deviates from a linear behavior. The parameter `J` signifies the coupling strength, which measures the interaction strength between different parts or modes of the system. Finally, the parameter `γ` denotes the damping, which quantifies the rate at which the system loses energy to its surroundings.
 
 With HarmonicBalance.jl, we can easily solve the phase diagram of the system in the limit where the modes oscillate at the frequency $\omega$:
 
@@ -135,7 +135,7 @@ plot!(
 
 These frequencies where the lobes are centered around corresponds to the normal mode frequency of the coupled system. Indeed, when resonators are strongly coupled, the system is better described in the normal mode basis. However, in addition, we also find additional bifurcation lines in the phase diagram. These bifurcation lines we would like to understand with a state-dependent perturbation.
 
-As the system, in the strongly coupled limit, is better described in the normal mode basis, let&#39;s us consider the symmetric and antisymmetric modes $x_s = (x_1 + x_2)/2$ and $x_a = (x_1 - x_2)/2$, respectively. The equations of motion in this basis are given by:
+As the system, in the strongly coupled limit, is better described in the normal mode basis, let's us consider the symmetric and antisymmetric modes $x_s = (x_1 + x_2)/2$ and $x_a = (x_1 - x_2)/2$, respectively. The equations of motion in this basis are given by:
 
 $$\begin{aligned}
 & \ddot{x}_s + (\omega_0^2 - J - \lambda \cos(2\omega t)) x_s + \gamma \dot{x}_s + \alpha (x_s^3 + 3 * x_a^2 * x_s) = 0\\

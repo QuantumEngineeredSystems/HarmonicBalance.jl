@@ -171,7 +171,7 @@ heatmap(ωrange, probe, spectrum)
 
 ![](vjhquak.png){width=600px height=400px}
 
-Remember that we don&#39;t do a continuation of the system, but rather initlized the system at each frequency $\omega$ and evolve it for a fixed time $T$. This leads to imperfections in the spectrum. However, if we plot the sidebands computed with HomotopyContinuation.jl on top of the spectrum, we find descent match.
+Remember that we don't do a continuation of the system, but rather initlized the system at each frequency $\omega$ and evolve it for a fixed time $T$. This leads to imperfections in the spectrum. However, if we plot the sidebands computed with HomotopyContinuation.jl on top of the spectrum, we find descent match.
 
 ```julia
 heatmap(ωrange, probe, spectrum)

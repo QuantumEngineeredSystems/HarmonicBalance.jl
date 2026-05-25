@@ -22,21 +22,21 @@ get_Jacobian(eom)
 Obtain the symbolic Jacobian matrix of `eom`. This is the linearised left-hand side of F(u) = du/dT.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/679e68562eb9b74786246a22b1815d95d9ca7e6d/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/4d5f049a19318510d21fc917d9312ee65abc2232/src/Jacobian.jl#L6" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Obtain a Jacobian from a `DifferentialEquation` by first converting it into a `HarmonicEquation`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/679e68562eb9b74786246a22b1815d95d9ca7e6d/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/4d5f049a19318510d21fc917d9312ee65abc2232/src/Jacobian.jl#L24" target="_blank" rel="noreferrer">source</a></Badge>
 
 
 
 Get the Jacobian of a set of equations `eqs` with respect to the variables `vars`. 
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/679e68562eb9b74786246a22b1815d95d9ca7e6d/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/blob/4d5f049a19318510d21fc917d9312ee65abc2232/src/Jacobian.jl#L33" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -72,7 +72,7 @@ get_jacobian_response(
 Calculate the Jacobian response spectrum for a given system. Computes the magnitude of the Jacobian response for stable solutions across specified frequency ranges.
 
 **Arguments**
-- `res::Result`: Result object containing the system&#39;s solutions
+- `res::Result`: Result object containing the system's solutions
   
 - `nat_var::Num`: Natural variable to evaluate in the response
   
@@ -286,7 +286,7 @@ get_rotframe_jacobian_response(
 Calculate the rotating frame Jacobian response for a given branch. Computes the rotating frame Jacobian response by evaluating eigenvalues of the numerical Jacobian and calculating the response magnitude for each frequency in the range.
 
 **Arguments**
-- `res::Result`: Result object containing the system&#39;s solutions
+- `res::Result`: Result object containing the system's solutions
   
 - `Ω_range`: Range of frequencies to evaluate
   
@@ -326,7 +326,7 @@ get_susceptibility(
 Compute the response matrix or susceptibility to a probe in the rotating frame. Observables like forward_transmission response spectrum, i.e, how much of an input signal applied at port 1 emerges at port 2, can be computed using the susceptibility.
 
 **Arguments**
-- `result::Result`: Result object containing the system&#39;s solutions
+- `result::Result`: Result object containing the system's solutions
   
 - `op_index::Int`: Index of operator in mean field equations to evaluate response for
   
@@ -384,7 +384,7 @@ Compute the response matrix or susceptibility to a probe in the rotating frame. 
   
 
 **Arguments**
-- `result::Result`: Result object containing the system&#39;s solutions
+- `result::Result`: Result object containing the system's solutions
   
 - `op_index::Int`: Index of operator in mean field equations to evaluate response for
   
@@ -571,7 +571,7 @@ plot_eigenvalues(
 Visualize the eigenvalues of the Jacobian in the rotating frame for `branch` identifier in the [Result](/manual/solving_harmonics#HarmonicSteadyState.Result-manual-solving_harmonics) `res`.
 
 **Keyword arguments**
-- `class`: Array of solution classes to include (default: [&quot;physical&quot;])
+- `class`: Array of solution classes to include (default: ["physical"])
   
 - `type`: Which part of eigenvalues to plot (`:real` or `:imag`, default: `:imag`)
   

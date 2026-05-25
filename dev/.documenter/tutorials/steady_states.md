@@ -130,7 +130,7 @@ Classes: stable, physical, Hopf
 ```
 
 
-The algorithm has found 3 solution branches in total (out of the [hypothetically admissible](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_theorem) $3^{2} = 9$). All of these are real – and therefore physically observable – for at least some values of $\omega$. Only 2 branches are stable under infinitesimal perturbations. The &quot;Classes&quot; are boolean labels classifying each solution point, which may be used to select results for plotting.
+The algorithm has found 3 solution branches in total (out of the [hypothetically admissible](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_theorem) $3^{2} = 9$). All of these are real – and therefore physically observable – for at least some values of $\omega$. Only 2 branches are stable under infinitesimal perturbations. The "Classes" are boolean labels classifying each solution point, which may be used to select results for plotting.
 
 To visualize the results, we can use the `Plots.jl` extension of HarmonicBalance. In short, the [PlotsExt.jl](/manual/plotting#plotting) code module gets loaded up conditions that Plots.jl is loaded. To know more about package extensions, you can visit the [julia documentation](https://pkgdocs.julialang.org/v1/creating-packages/#Conditional-loading-of-code-in-packages-(Extensions)).
 

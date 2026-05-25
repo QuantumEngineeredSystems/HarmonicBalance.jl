@@ -1,7 +1,7 @@
 
 # Stability and linear response {#linresp_background}
 
-The core of the harmonic balance method is expressing the system&#39;s behaviour in terms of Fourier components or _harmonics_. For an $N$-coordinate system, we _choose_ a set of $M_i$ harmonics to describe each coordinate $x_i$ :
+The core of the harmonic balance method is expressing the system's behaviour in terms of Fourier components or _harmonics_. For an $N$-coordinate system, we _choose_ a set of $M_i$ harmonics to describe each coordinate $x_i$ :
 
 $$\begin{equation}
 x_i(t) = \sum_{j=1}^{M_i} u_{i,j}  (T)  \cos(\omega_{i,j} t)+ v_{i,j} (T) \sin(\omega_{i,j} t) \:,
@@ -53,7 +53,7 @@ $$A(\Omega) \left( i \Omega  - \lambda \right)  = \boldsymbol{\xi} \cdot \mathbf
 
 We see that each eigenvalue $\lambda$ results in a linear response that is a Lorentzian centered at $\Omega = \text{Im}[\lambda]$. Effectively, the linear response matches that of a harmonic oscillator with resonance frequency $\text{Im}[\lambda]$ and damping $\text{Re}[\lambda]$.
 
-Knowing the response of the harmonic variables $\mathbf{u}(T)$, what is the corresponding behaviour of the &quot;natural&quot; variables $x_i(t)$? To find this out, we insert the perturbation back into the harmonic ansatz. Since we require real variables, let us use $\delta \mathbf{u}(T) = A(\Omega) \left( \mathbf{v} \, e^{i \Omega T} +   \mathbf{v}^* \, e^{-i \Omega T} \right)$. Plugging this into
+Knowing the response of the harmonic variables $\mathbf{u}(T)$, what is the corresponding behaviour of the "natural" variables $x_i(t)$? To find this out, we insert the perturbation back into the harmonic ansatz. Since we require real variables, let us use $\delta \mathbf{u}(T) = A(\Omega) \left( \mathbf{v} \, e^{i \Omega T} +   \mathbf{v}^* \, e^{-i \Omega T} \right)$. Plugging this into
 
 $$\begin{equation}
 \delta x_{i}(t) = \sum_{j=1}^{M_i} \delta{u}_{i,j}(t) \cos(\omega_{i,j} \,t) + \delta v_{i,j} (t) \sin(\omega_{i,j} \,t) 

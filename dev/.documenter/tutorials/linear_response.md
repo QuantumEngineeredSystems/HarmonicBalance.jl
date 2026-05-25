@@ -53,7 +53,7 @@ plot(result, "sqrt(u1^2 + v1^2)")
 
 ![](elxlhmu.png){width=600px height=400px}
 
-To find the fluctuation on the top of the steady state one often employs a [Bogoliubov-de Gennes analyses](https://en.wikipedia.org/wiki/Linear_dynamical_system). Here, we compute the eigenvalues $\lambda_k$ of the Jacobian matrix at the steady state. The imaginary part of the eigenvalues gives characteristic frequencies of the &quot;quasi-particle excitations&quot;. The real part gives the lifetime of these excitations.
+To find the fluctuation on the top of the steady state one often employs a [Bogoliubov-de Gennes analyses](https://en.wikipedia.org/wiki/Linear_dynamical_system). Here, we compute the eigenvalues $\lambda_k$ of the Jacobian matrix at the steady state. The imaginary part of the eigenvalues gives characteristic frequencies of the "quasi-particle excitations". The real part gives the lifetime of these excitations.
 
 The compute the eigenvalues of a specific branch, we can use the corresponding function:
 
@@ -110,7 +110,7 @@ plot_linear_response(result, x, 1, Ω_range=range(0.95, 1.05, 300), logscale=tru
 
 The response has a peak at $\omega_0$, irrespective of the driving frequency $\omega$. Indeed, the eigenvalues shown before where plotted in the rotating frame at the frequency of the drive $\omega$. Hence, the imaginary part of eigenvalues shows the frequency (energy) needed to excite the system at it natural frequency (The frequency its want to be excited at.)
 
-Note the slight &quot;bending&quot; of the noise peak with $\omega$ - this is given by the failure of the first-order calculation of the jacobian to capture response far-detuned from the drive frequency. One can correct this by using higher-order derivatives of the `Differentialequation` object in the jacobian calculation. For more details on this see the [thesis](https://www.doi.org/10.3929/ethz-b-000589190). We can use this corrections by setting the `order` argument in the `plot_linear_response` function:
+Note the slight "bending" of the noise peak with $\omega$ - this is given by the failure of the first-order calculation of the jacobian to capture response far-detuned from the drive frequency. One can correct this by using higher-order derivatives of the `Differentialequation` object in the jacobian calculation. For more details on this see the [thesis](https://www.doi.org/10.3929/ethz-b-000589190). We can use this corrections by setting the `order` argument in the `plot_linear_response` function:
 
 ```julia
 plot_linear_response(result, x, 1, Ω_range=range(0.95, 1.05, 300), logscale=true, order=2)
@@ -134,7 +134,7 @@ plot(result, x="ω", y="sqrt(u1^2 + v1^2)");
 
 ![](ofcvpfh.png){width=600px height=400px}
 
-The amplitude is the well-known Duffing curve. Let&#39;s look at the eigenvalues of the two stable branches, 1 and 2.
+The amplitude is the well-known Duffing curve. Let's look at the eigenvalues of the two stable branches, 1 and 2.
 
 ```julia
 plot(

@@ -35,7 +35,7 @@ $$\begin{equation}
 
 which couples all harmonics $\omega, \omega', \omega''$ such that $\omega + \omega' + \omega'' = 0$. To the lowest order, this means that the induced motion at the drive frequency generates a higher harmonic, $\omega_d \rightarrow 2\omega_d$. The frequency conversion couples the response at different frequencies and propagates through the spectrum, thus, _coupling an infinite number of harmonics_. Hence, the system is not easily solvable in Fourier space anymore!
 
-## Harmonic ansatz &amp; harmonic equations {#Harmonic-ansatz-and-harmonic-equations}
+## Harmonic ansatz & harmonic equations {#Harmonic-ansatz-and-harmonic-equations}
 
 Even though we need an infinity of Fourier components to describe our system exactly, some components are more important than others. The strategy of harmonic balance is to describe the motion of any variable $x_i(t)$ in a truncated Fourier space
 
@@ -91,7 +91,7 @@ $$\begin{equation}
  \frac{d}{dT} \begin{pmatrix} u \\ v  \end{pmatrix} = \frac{1}{8 \omega_d} \begin{pmatrix} 4 v \left(\omega_0^2-\omega_d^2 \right) + 3 \alpha \left(v^3 + u^2 v  \right) - 4 F \sin{\theta}  \\ 4 u \left(\omega_d^2-\omega_0^2 \right)  - 3 \alpha \left(u^3 + u v^2 \right) - 4 F \cos{\theta}  \end{pmatrix} \,.
 \end{equation}$$
 
-Steady states can now be found by setting the l.h.s. to zero, i.e., assuming $u(T)$ and $v(T)$ constant and neglecting any transient behaviour. This results in a set of 2 nonlinear polynomial equations of order 3, for which the maximum number of solutions set by [Bézout&#39;s theorem](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_theorem) is $3^2=9$. Depending on the parameters, the number of real solutions is known to be between 1 and 3 [[see proof](https://www.sciencedirect.com/science/article/pii/S0021782423001563?via%3Dihub)].
+Steady states can now be found by setting the l.h.s. to zero, i.e., assuming $u(T)$ and $v(T)$ constant and neglecting any transient behaviour. This results in a set of 2 nonlinear polynomial equations of order 3, for which the maximum number of solutions set by [Bézout's theorem](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_theorem) is $3^2=9$. Depending on the parameters, the number of real solutions is known to be between 1 and 3 [[see proof](https://www.sciencedirect.com/science/article/pii/S0021782423001563?via%3Dihub)].
 
 ### Sidenote: perturbative approach {#Sidenote:-perturbative-approach}
 
@@ -101,7 +101,7 @@ $$\begin{equation}
     \delta \ddot{x}(t) + \left[\omega_0^2 + \frac{3 \alpha X_0^2}{4} \right]\delta x(t) = - \frac{\alpha X_0^3}{4} \cos(3 \omega_d t + 3 \phi)\,,
 \end{equation}$$
 
-describes a simple harmonic oscillator, which is exactly soluble. Correspondingly, a response of $\delta x(t)$ at frequency $3 \omega_d$ is observed. Since this response is obtained &#39;on top of&#39; each steady state of the equations of motion, no previously-unknown solutions are generated in the process.
+describes a simple harmonic oscillator, which is exactly soluble. Correspondingly, a response of $\delta x(t)$ at frequency $3 \omega_d$ is observed. Since this response is obtained 'on top of' each steady state of the equations of motion, no previously-unknown solutions are generated in the process.
 
 ### Two-frequency ansatz {#Two-frequency-ansatz}
 

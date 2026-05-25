@@ -1,7 +1,7 @@
 
 # Limit cycles {#limit_cycles_bg}
 
-We explain how HarmonicBalance.jl uses a new technique to find limit cycles in systems of nonlinear ODEs. For a more in depth overview see Chapter 6 in [Jan Košata&#39;s PhD theses](https://www.doi.org/10.3929/ethz-b-000589190) or [del_Pino_2024](https://www.doi.org/10.1103/PhysRevResearch.6.03318).
+We explain how HarmonicBalance.jl uses a new technique to find limit cycles in systems of nonlinear ODEs. For a more in depth overview see Chapter 6 in [Jan Košata's PhD theses](https://www.doi.org/10.3929/ethz-b-000589190) or [del_Pino_2024](https://www.doi.org/10.1103/PhysRevResearch.6.03318).
 
 ## Limit cycles from a Hopf bifurcation {#Limit-cycles-from-a-Hopf-bifurcation}
 

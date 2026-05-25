@@ -144,7 +144,7 @@ Stores the steady states of a HarmonicEquation.
   
 - `problem::HarmonicSteadyState.HomotopyContinuationProblem{ParType, F} where {SolType<:Number, ParType<:Number, F<:FunctionWrappers.FunctionWrapper{Matrix{SolType}, Tuple{Vector{SolType}}}}`: The `HomotopyContinuationProblem` used to generate this.
   
-- `classes::Dict{String, Array{BitVector, D}} where D`: Maps strings such as &quot;stable&quot;, &quot;physical&quot; etc to arrays of values, classifying the solutions (see method `classify_solutions!`).
+- `classes::Dict{String, Array{BitVector, D}} where D`: Maps strings such as "stable", "physical" etc to arrays of values, classifying the solutions (see method `classify_solutions!`).
   
 - `binary_labels::Array{Int64}`: Create binary classification of the solutions, such that each solution point receives an identifier based on its permutation of stable branches (allows to distinguish between different phases, which may have the same number of stable solutions). It works by converting each bitstring `[is_stable(solution_1), is_stable(solution_2), ...,]` into unique labels.
   
@@ -163,7 +163,7 @@ Stores the steady states of a HarmonicEquation.
 
 The solutions in `Result` are accompanied by similarly-sized boolean arrays stored in the dictionary `Result.classes`. The classes can be used by the plotting functions to show/hide/label certain solutions.
 
-By default, classes &quot;physical&quot;, &quot;stable&quot; and &quot;binary_labels&quot; are created. User-defined classification is possible with `classify_solutions!`.
+By default, classes "physical", "stable" and "binary_labels" are created. User-defined classification is possible with `classify_solutions!`.
 <details class='jldocstring custom-block' open>
 <summary><a id='HarmonicSteadyState.classify_solutions!-manual-solving_harmonics' href='#HarmonicSteadyState.classify_solutions!-manual-solving_harmonics'><span class="jlbinding">HarmonicSteadyState.classify_solutions!</span></a> <Badge type="info" class="jlObjectType jlFunction" text="Function" /></summary>
 
@@ -201,11 +201,11 @@ classify_solutions!(res, "sqrt(u1^2 + v1^2) > 1.0" , "large_amplitude")
 
 ## Sorting solutions {#Sorting-solutions}
 
-Solving a steady-state problem over a range of parameters returns a solution set for each parameter. For a continuous change of parameters, each solution in a set usually also changes continuously; it is said to form a &#39;&#39;solution branch&#39;&#39;. For an example, see the three colour-coded branches for the Duffing oscillator on the [introduction page](/introduction/index#getting_started).
+Solving a steady-state problem over a range of parameters returns a solution set for each parameter. For a continuous change of parameters, each solution in a set usually also changes continuously; it is said to form a ''solution branch''. For an example, see the three colour-coded branches for the Duffing oscillator on the [introduction page](/introduction/index#getting_started).
 
-For stable states, the branches describe a system&#39;s behaviour under adiabatic parameter changes.
+For stable states, the branches describe a system's behaviour under adiabatic parameter changes.
 
-Therefore, after solving for a parameter range, we want to order each solution set such that the solutions&#39; order reflects the branches.
+Therefore, after solving for a parameter range, we want to order each solution set such that the solutions' order reflects the branches.
 
 The function `sort_solutions` goes over the the raw output of `get_steady_states` and sorts each entry such that neighboring solution sets minimize Euclidean distance.
 

@@ -5,7 +5,7 @@ In contrast to the previous tutorials, limit cycle problems feature harmonic(s) 
 
 ## Non-driven system - the van der Pol oscillator {#Non-driven-system-the-van-der-Pol-oscillator}
 
-Here we solve the equation of motion of the [van der Pol oscillator](https://en.wikipedia.org/wiki/Van_der_Pol_oscillator). This is a single-variable second-order ODE with continuous time-translation symmetry (i.e., no &#39;clock&#39; imposing a frequency and/or phase), which displays periodic solutions known as _relaxation oscillations_. For more detail, refer also to [arXiv:2308.06092](https://arxiv.org/abs/2308.06092).
+Here we solve the equation of motion of the [van der Pol oscillator](https://en.wikipedia.org/wiki/Van_der_Pol_oscillator). This is a single-variable second-order ODE with continuous time-translation symmetry (i.e., no 'clock' imposing a frequency and/or phase), which displays periodic solutions known as _relaxation oscillations_. For more detail, refer also to [arXiv:2308.06092](https://arxiv.org/abs/2308.06092).
 
 ```julia
 using HarmonicBalance, Plots
@@ -65,7 +65,7 @@ v3(T) - (10//1)*Differential(T)(u3(T))*ω_lc - Differential(T)(v3(T))*μ - (25//
 ```
 
 
-So far, $ω_{lc}$ appears as any other harmonic. However, it is not fixed by any external drive or &#39;clock&#39;, instead, it emerges out of a Hopf instability in the system. We can verify that fixing `ω_lc` and calling `get_steady_states`.
+So far, $ω_{lc}$ appears as any other harmonic. However, it is not fixed by any external drive or 'clock', instead, it emerges out of a Hopf instability in the system. We can verify that fixing `ω_lc` and calling `get_steady_states`.
 
 ```julia
 get_steady_states(harmonic_eq, μ => 1:0.1:5, ω_lc => 1.2)
