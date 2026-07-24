@@ -14,7 +14,7 @@ using OrdinaryDiffEqTsit5
 using SteadyStateDiffEq
 
 TimeEvolution = Base.get_extension(HarmonicSteadyState, :TimeEvolution)
-ModelingToolkitExt = Base.get_extension(HarmonicBalance, :ModelingToolkitExt)
+ModelingToolkitBaseExt = Base.get_extension(HarmonicBalance, :ModelingToolkitBaseExt)
 SteadyStateDiffEqExt = Base.get_extension(HarmonicSteadyState, :SteadyStateDiffEqExt)
 HarmonicBalanceExt = Base.get_extension(HarmonicSteadyState, :HarmonicBalanceExt)
 
@@ -49,17 +49,20 @@ end
 makedocs(;
     sitename="HarmonicBalance.jl",
     authors="Quest group",
-    modules=[
-        HarmonicBalance,
-        QuestBase,
-        HarmonicSteadyState,
-        TimeEvolution,
-        ModelingToolkitExt,
-        SteadyStateDiffEqExt,
-        HarmonicSteadyState.LinearResponse,
-        PlotsExt,
-        HarmonicBalanceExt,
-    ],
+    modules=filter(
+        !isnothing,
+        [
+            HarmonicBalance,
+            QuestBase,
+            HarmonicSteadyState,
+            TimeEvolution,
+            ModelingToolkitBaseExt,
+            SteadyStateDiffEqExt,
+            HarmonicSteadyState.LinearResponse,
+            PlotsExt,
+            HarmonicBalanceExt,
+        ],
+    ),
     format=DocumenterVitepress.MarkdownVitepress(;
         repo="github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
         devbranch="master",
