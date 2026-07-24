@@ -14,6 +14,10 @@ end
     include("HarmonicVariable.jl")
 end
 
+@testset "Krylov-Bogoliubov" begin
+    include("krylov.jl")
+end
+
 @testset "extensions" begin
     @testset "ModelingToolkitBase extension" begin
         include("ModelingToolkitBaseExt.jl")

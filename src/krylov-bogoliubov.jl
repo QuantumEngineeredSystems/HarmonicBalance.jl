@@ -157,7 +157,11 @@ function average(eom::HarmonicEquation, t)
     return eqs
 end
 function average(x, t)
-    term = trig_reduce(x)
+    # `simplify` collapses the Pythagorean identity cos(ωt)^2 + sin(ωt)^2 => 1 that
+    # `rearrange!` leaves in the denominator. Without it the denominator stays a
+    # function of `t`, so `get_independent` sees the whole fraction as time-dependent
+    # and returns 0, zeroing out the slow-flow equations.
+    term = Symbolics.simplify(trig_reduce(x))
     indep = get_independent(term, t)
     ft = Num(simplify_complex(Symbolics.expand(indep)))
     return Symbolics.expand(ft)
