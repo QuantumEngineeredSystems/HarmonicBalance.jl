@@ -23,7 +23,7 @@ bib = CitationBibliography(
     style=:numeric,  # default
 )
 
-using Plots
+using Plots, Latexify
 PlotsExt = Base.get_extension(HarmonicSteadyState, :PlotsExt)
 default(; fmt=:png)
 # Gotta set this environment variable when using the GR run-time on CI machines.
@@ -49,9 +49,8 @@ end
 makedocs(;
     sitename="HarmonicBalance.jl",
     authors="Quest group",
-    modules=filter(
-        !isnothing,
-        [
+    modules=Module[
+        m for m in [
             HarmonicBalance,
             QuestBase,
             HarmonicSteadyState,
@@ -61,8 +60,8 @@ makedocs(;
             HarmonicSteadyState.LinearResponse,
             PlotsExt,
             HarmonicBalanceExt,
-        ],
-    ),
+        ] if !isnothing(m)
+    ],
     format=DocumenterVitepress.MarkdownVitepress(;
         repo="github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
         devbranch="master",
