@@ -10,7 +10,7 @@ h = hm ⊗ hc  # Hilbertspace
 
 @qnumbers m::Destroy(h, 1) c::Destroy(h, 2) # Operators
 
-@rnumbers Δ Vk Ωd γm γk # Parameters
+@variables Δ::Real Vk::Real Ωd::Real γm::Real γk::Real # Parameters
 param = [Δ, Vk, Ωd, γm, γk]
 
 H_RWA_sym = (
