@@ -33,6 +33,23 @@ end
     end
 end
 
+@testset "driven parametron with nonlinear damping (benchmark system)" begin
+    # The benchmark-suite system: the η·ẋ·x² term makes the order-2 expressions
+    # large enough that, without collapsing cos²+sin² in the equation denominators
+    # first, averaging the Gₜ = Fₜ′·D₁ products runs for hours instead of seconds
+    # (this is what stalled the Benchmark Tracking CI job).
+    @variables ω₀ γ λ F η α ω t x(t)
+    natural_equation =
+        d(d(x, t), t) +
+        γ * d(x, t) +
+        (ω₀^2 - λ * cos(2 * ω * t)) * x +
+        α * x^3 +
+        η * d(x, t) * x^2
+    diff_eom = DifferentialEquation(natural_equation + F * cos(ω * t), x)
+    add_harmonic!(diff_eom, x, ω)
+    assert_nondegenerate(get_krylov_equations(diff_eom; order=2))
+end
+
 @testset "three-wave mixing (large order-2 expressions)" begin
     # The example that exposed the bug: quadratic + cubic nonlinearity driven at 2ω.
     # Its order-2 equations are large enough that a naive `simplify`-the-whole-thing

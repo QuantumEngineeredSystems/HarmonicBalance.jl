@@ -63,6 +63,15 @@ function get_krylov_equations(
     eom.equations = Symbolics.expand.(Symbolics.simplify.(eom.equations))
     #^ need it two times to get it completely simplified due to some weird bug in Symbolics.jl
 
+    # SymbolicUtils 4's `simplify` no longer collapses the Pythagorean identity
+    # cos(ωt)² + sin(ωt)² => 1 that `rearrange!` leaves in the equation denominators.
+    # Collapse it here once; otherwise the order-2 objects Fₜ, Fₜ′ and D₁ all carry
+    # trig-laden denominators and averaging their products Gₜ = Fₜ′·D₁ blows up
+    # combinatorially (hours instead of seconds).
+    eom.equations = [
+        QuestBase.reduce_denominator(Num(eq.lhs)) ~ eq.rhs for eq in eom.equations
+    ]
+
     if order == 1
         average!(eom, fast_time)
     elseif order == 2
