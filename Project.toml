@@ -33,7 +33,7 @@ Reexport = "1.2.2"
 SymbolicUtils = "4"
 Symbolics = "7"
 Test = "1.10"
-julia = "1.10.10, 1.11.9, 1.12.5"
+julia = "1.12"
 
 [extras]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
@@ -47,6 +47,10 @@ Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[sources]
+HarmonicSteadyState = {url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl", rev = "symbolicsv7-upgrade"}
+QuestBase = {url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl", rev = "symbolicsv7-upgrade"}
 
 [targets]
 test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkitBase", "Documenter", "QuestBase", "OrdinaryDiffEqTsit5"]
