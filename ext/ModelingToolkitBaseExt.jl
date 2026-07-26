@@ -10,7 +10,8 @@ using QuestBase:
 using HarmonicBalance:
     HarmonicEquation, get_variables, DifferentialEquation, get_independent_variables
 using HarmonicBalance: first_order_transform!
-using Symbolics: simplify, Equation, substitute, Num, expand, unwrap, arguments, wrap
+using Symbolics: simplify, Equation, substitute, Num, expand, arguments, wrap
+using SymbolicUtils: unwrap
 using ModelingToolkitBase:
     ModelingToolkitBase,
     System,
