@@ -7,14 +7,18 @@ end
 
 @testset "Code quality" begin
     using ExplicitImports, Aqua
-    using ModelingToolkit
-    ModelingToolkitExt = Base.get_extension(HarmonicBalance, :ModelingToolkitExt)
+    using ModelingToolkitBase
+    ModelingToolkitBaseExt = Base.get_extension(HarmonicBalance, :ModelingToolkitBaseExt)
 
     @test check_no_stale_explicit_imports(HarmonicBalance) == nothing
     @test check_all_explicit_imports_via_owners(HarmonicBalance) == nothing
     Aqua.test_ambiguities([HarmonicBalance])
-    Aqua.test_all(HarmonicBalance; persistent_tasks=false)
-    for mod in [ModelingToolkitExt]
+    Aqua.test_all(
+        HarmonicBalance;
+        persistent_tasks=false,
+        stale_deps=(; ignore=[:ModelingToolkitBase]),
+    )
+    for mod in [ModelingToolkitBaseExt]
         @test check_no_stale_explicit_imports(mod) == nothing
         @test check_all_explicit_imports_via_owners(mod) == nothing
         Aqua.test_all(

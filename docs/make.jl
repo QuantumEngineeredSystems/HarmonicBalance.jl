@@ -14,7 +14,7 @@ using OrdinaryDiffEqTsit5
 using SteadyStateDiffEq
 
 TimeEvolution = Base.get_extension(HarmonicSteadyState, :TimeEvolution)
-ModelingToolkitExt = Base.get_extension(HarmonicBalance, :ModelingToolkitExt)
+ModelingToolkitBaseExt = Base.get_extension(HarmonicBalance, :ModelingToolkitBaseExt)
 SteadyStateDiffEqExt = Base.get_extension(HarmonicSteadyState, :SteadyStateDiffEqExt)
 HarmonicBalanceExt = Base.get_extension(HarmonicSteadyState, :HarmonicBalanceExt)
 
@@ -23,7 +23,7 @@ bib = CitationBibliography(
     style=:numeric,  # default
 )
 
-using Plots
+using Plots, Latexify
 PlotsExt = Base.get_extension(HarmonicSteadyState, :PlotsExt)
 default(; fmt=:png)
 # Gotta set this environment variable when using the GR run-time on CI machines.
@@ -49,16 +49,18 @@ end
 makedocs(;
     sitename="HarmonicBalance.jl",
     authors="Quest group",
-    modules=[
-        HarmonicBalance,
-        QuestBase,
-        HarmonicSteadyState,
-        TimeEvolution,
-        ModelingToolkitExt,
-        SteadyStateDiffEqExt,
-        HarmonicSteadyState.LinearResponse,
-        PlotsExt,
-        HarmonicBalanceExt,
+    modules=Module[
+        m for m in [
+            HarmonicBalance,
+            QuestBase,
+            HarmonicSteadyState,
+            TimeEvolution,
+            ModelingToolkitBaseExt,
+            SteadyStateDiffEqExt,
+            HarmonicSteadyState.LinearResponse,
+            PlotsExt,
+            HarmonicBalanceExt,
+        ] if !isnothing(m)
     ],
     format=DocumenterVitepress.MarkdownVitepress(;
         repo="github.com/QuantumEngineeredSystems/HarmonicBalance.jl",

@@ -1,4 +1,4 @@
-module ModelingToolkitExt
+module ModelingToolkitBaseExt
 
 using DocStringExtensions
 
@@ -11,8 +11,8 @@ using HarmonicBalance:
     HarmonicEquation, get_variables, DifferentialEquation, get_independent_variables
 using HarmonicBalance: first_order_transform!
 using Symbolics: simplify, Equation, substitute, Num, expand, unwrap, arguments, wrap
-using ModelingToolkit:
-    ModelingToolkit,
+using ModelingToolkitBase:
+    ModelingToolkitBase,
     System,
     ODEProblem,
     NonlinearProblem,
@@ -36,11 +36,11 @@ end
 @doc """
 $(TYPEDSIGNATURES)
 
-Creates and ModelingToolkit.System from a HarmonicEquation.
+Creates and ModelingToolkitBase.System from a HarmonicEquation.
 
 ### Example
 ```julia
-using ModelingToolkit
+using ModelingToolkitBase
 
 @variables α ω ω0 F γ t x(t)
 diff_eq = DifferentialEquation(
@@ -54,7 +54,7 @@ param = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01, ω => 1.1)
 ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 ```
 """
-function ModelingToolkit.System(eom::HarmonicEquation)
+function ModelingToolkitBase.System(eom::HarmonicEquation)
     if !is_rearranged(eom) # check if time-derivatives of the variable are on the right hand side
         eom = rearrange_standard(eom)
     end
@@ -82,11 +82,11 @@ end
 @doc """
 $(TYPEDSIGNATURES)
 
-Creates and ModelingToolkit.System from a DifferentialEquation.
+Creates and ModelingToolkitBase.System from a DifferentialEquation.
 
 ### Example
 ```julia
-using ModelingToolkit
+using ModelingToolkitBase
 
 @variables α ω ω0 F γ t x(t)
 diff_eq = DifferentialEquation(
@@ -99,7 +99,7 @@ param = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01, ω => 1.1)
 ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 ```
 """
-function ModelingToolkit.System(diff_eq::DifferentialEquation)
+function ModelingToolkitBase.System(diff_eq::DifferentialEquation)
     diff_eq = deepcopy(diff_eq)
     if !is_rearranged_standard(diff_eq)
         rearrange_standard!(diff_eq)
@@ -128,11 +128,11 @@ end
 @doc """
 $(TYPEDSIGNATURES)
 
-Creates and ModelingToolkit.ODEProblem from a DifferentialEquation or HarmonicEquation.
+Creates and ModelingToolkitBase.ODEProblem from a DifferentialEquation or HarmonicEquation.
 
 ### Example
 ```julia
-using ModelingToolkit, StaticArrays
+using ModelingToolkitBase, StaticArrays
 
 @variables α ω ω0 F γ t x(t)
 diff_eq = DifferentialEquation(
@@ -152,7 +152,7 @@ ODEProblem(
 ```
 
 """
-function ModelingToolkit.ODEProblem(
+function ModelingToolkitBase.ODEProblem(
     eom::Union{HarmonicEquation,DifferentialEquation},
     u0,
     tspan::Tuple,
@@ -174,11 +174,11 @@ end
 @doc """
 $(TYPEDSIGNATURES)
 
-Creates and ModelingToolkit.NonlinearProblem from a HarmonicEquation.
+Creates and ModelingToolkitBase.NonlinearProblem from a HarmonicEquation.
 
 ### Example
 ```julia
-using ModelingToolkit, StaticArrays
+using ModelingToolkitBase, StaticArrays
 
 @variables α ω ω0 F γ t x(t)
 diff_eq = DifferentialEquation(
@@ -191,7 +191,7 @@ harmonic_eq = get_harmonic_equations(diff_eq)
 NonlinearProblem(harmonic_eq, [1.0, 0.0], param)
 ```
 """
-function ModelingToolkit.NonlinearProblem(
+function ModelingToolkitBase.NonlinearProblem(
     eom::HarmonicEquation, u0, p::AbstractDict; in_place=true, kwargs...
 )
     ss_prob = SteadyStateProblem(eom, u0, p::AbstractDict; in_place, kwargs...)
@@ -201,11 +201,11 @@ end
 @doc """
 $(TYPEDSIGNATURES)
 
-Creates and ModelingToolkit.SteadyStateProblem from a HarmonicEquation.
+Creates and ModelingToolkitBase.SteadyStateProblem from a HarmonicEquation.
 
 ### Example
 ```julia
-using ModelingToolkit, StaticArrays
+using ModelingToolkitBase, StaticArrays
 
 @variables α ω ω0 F γ t x(t)
 diff_eq = DifferentialEquation(
@@ -218,7 +218,7 @@ harmonic_eq = get_harmonic_equations(diff_eq)
 SteadyStateProblem(harmonic_eq, [1.0, 0.0], param)
 ```
 """
-function ModelingToolkit.SteadyStateProblem(
+function ModelingToolkitBase.SteadyStateProblem(
     eom::HarmonicEquation, u0, p::AbstractDict; in_place=true, kwargs...
 )
     sys = System(eom)

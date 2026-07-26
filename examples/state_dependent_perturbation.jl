@@ -189,7 +189,7 @@ A = map(CartesianIndices(result_ωλ_antisym.solutions)) do idx
     else
         sol = real(result_ωλ_antisym.solutions[idx][branch])
     end
-    sol
+    return sol
 end;
 heatmap(map(v -> v[1]^2 + v[2]^2, A)')
 

@@ -20,6 +20,20 @@ into an equivalent first-order system. Returns a tuple of the transformed equati
 corresponding harmonics dictionary for the new variables. Used internally by
 `first_order_transform!`.
 """
+# Symbolics 7's `Differential` carries an `order` field, so `D(D(x))` is one
+# `Differential(t, 2)(x)`; `Symbolics.var_from_nested_derivative` only counts the
+# outer wrapper. Sum the orders of any chained `Differential`s instead.
+function _var_and_order(expr)
+    e = unwrap(expr)
+    total = 0
+    while SymbolicUtils.iscall(e) && SymbolicUtils.operation(e) isa Differential
+        op = SymbolicUtils.operation(e)
+        total += hasproperty(op, :order) ? op.order : 1
+        e = first(SymbolicUtils.arguments(e))
+    end
+    return e, total
+end
+
 function ode_order_lowering(equations, iv, harmonics)
     states = unwrap.(collect(keys(harmonics)))
     eqs = unwrap.(collect(values(equations)))
@@ -30,7 +44,7 @@ function ode_order_lowering(equations, iv, harmonics)
     diff_vars = empty(harmonics)
 
     for (i, eq) in enumerate(eqs)
-        var, maxorder = var_from_nested_derivative(eq.lhs)
+        var, maxorder = _var_and_order(eq.lhs)
         maxorder > get(var_order, var, 1) && (var_order[var] = maxorder)
 
         var′ = lower_varname(var, iv, maxorder - 1)
