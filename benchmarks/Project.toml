@@ -14,6 +14,6 @@ SteadyStateDiffEq = "9672c7b4-1e72-59bd-8a11-6ac3964bc41f"
 
 [compat]
 Documenter = "1"
-HarmonicSteadyState = "0.5"
-QuestBase = "0.4.1"
+HarmonicSteadyState = "0.6"
+QuestBase = "0.5"
 julia = "1.12"

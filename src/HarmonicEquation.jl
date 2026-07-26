@@ -109,7 +109,7 @@ function fourier_transform!(eom::HarmonicEquation, time::Num)
         # find the equation belonging to this variable
         eq_idx = findfirst(
             x -> isequal(x, hvar.natural_variable),
-            collect(keys(eom.natural_equation.equations)),
+            collect(keys(QuestBase.source(eom).equations)),
         )
         eq = eom.equations[eq_idx]
         # "type" is usually "u" or "v" (harmonic) or ["a"] (zero-harmonic)
