@@ -29,7 +29,8 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - '1.12'
+          - 'lts'
+          - '1'
         os:
           - ubuntu-latest
         arch:
@@ -59,4 +60,4 @@ jobs:
           files: lcov.info
           name: codecov-umbrella
           fail_ci_if_error: false
-        if: ${{ matrix.version == '1.12' }}
+        if: ${{ matrix.version == 'lts' }}

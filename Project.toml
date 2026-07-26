@@ -1,6 +1,6 @@
 name = "HarmonicBalance"
 uuid = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
-version = "0.17.0"
+version = "0.17.1"
 authors = ["Orjan Ameye <orjan.ameye@hotmail.com>", "Jan Kosata <kosataj@phys.ethz.ch>", "Javier del Pino <jdelpino@phys.ethz.ch>"]
 
 [deps]
@@ -33,7 +33,7 @@ Reexport = "1.2.2"
 SymbolicUtils = "4"
 Symbolics = "7"
 Test = "1.10"
-julia = "1.12"
+julia = "1.10"
 
 [extras]
 Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
