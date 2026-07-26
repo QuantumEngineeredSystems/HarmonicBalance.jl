@@ -40,11 +40,10 @@ using Symbolics:
     expand_derivatives,
     get_variables,
     Differential,
-    unwrap,
     diff2term,
     lower_varname
 
-using SymbolicUtils: SymbolicUtils, BasicSymbolic, isdiv
+using SymbolicUtils: SymbolicUtils, BasicSymbolic, isdiv, unwrap
 
 # src code
 include("DifferentialEquation.jl")
