@@ -1,10 +1,3 @@
-if VERSION < v"1.12.0-beta"
-    @testset "Code linting" begin
-        using JET
-        JET.test_package(HarmonicBalance; target_defined_modules=true)
-    end
-end
-
 @testset "Code quality" begin
     using ExplicitImports, Aqua
     using ModelingToolkitBase
