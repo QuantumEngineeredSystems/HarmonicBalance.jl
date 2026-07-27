@@ -48,7 +48,7 @@ jobs:
       - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-runtest@v1
         env:
-          GROUP: ${{ matrix.group }}
+          GROUP: Core
           JULIA_NUM_THREADS: auto
       - uses: julia-actions/julia-processcoverage@v1
         with:
@@ -61,3 +61,27 @@ jobs:
           name: codecov-umbrella
           fail_ci_if_error: false
         if: ${{ matrix.version == 'lts' }}
+
+  # JET >= 0.10 requires Julia 1.12, so linting cannot run on the LTS runner.
+  jet:
+    name: JET - ubuntu-latest - x64
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions: # needed to allow julia-actions/cache to proactively delete old caches that it has created
+      actions: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: julia-actions/setup-julia@v3
+        with:
+          show-versioninfo: true
+          version: '1'
+          arch: x64
+      - uses: julia-actions/cache@v3
+      - uses: julia-actions/julia-buildpkg@v1
+      - uses: julia-actions/julia-runtest@v1
+        env:
+          GROUP: JET
+          JULIA_NUM_THREADS: auto
