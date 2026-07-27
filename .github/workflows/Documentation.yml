@@ -39,7 +39,9 @@ jobs:
           fetch-depth: 0
       - uses: julia-actions/setup-julia@v3
         with:
-          version: 'lts'
+          # Not 'lts': the docs build is 2.5x slower on 1.10 (96 min -> 234 min).
+          # The test matrix is what guards our 1.10 support.
+          version: '1'
       - uses: julia-actions/cache@v3
       - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-docdeploy@v1

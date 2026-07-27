@@ -10,7 +10,7 @@ The [`ModelingToolkit.jl`](https://github.com/SciML/ModelingToolkit.jl) (MTK) pa
 ODEProblem(eom::Union{DifferentialEquation, HarmonicEquation},
     u0,
     tspan::Tuple,
-    p::AbstractDict;
+    p;
     kwargs...
 )
 ModelingToolkit.System
