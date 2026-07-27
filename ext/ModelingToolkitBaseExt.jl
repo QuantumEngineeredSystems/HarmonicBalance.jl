@@ -18,14 +18,30 @@ using ModelingToolkitBase:
     ODEProblem,
     NonlinearProblem,
     SteadyStateProblem,
-    varmap_to_vars,
-    parameters,
     unknowns,
     @parameters,
     @mtkcompile,
     @independent_variables
 
 swapsides(eq::Equation) = Equation(eq.rhs, eq.lhs)
+
+"""
+    varmap_to_dict(p)
+
+Normalise a variable map into a `Dict`. Accepts anything holding symbolic pairs:
+a `Dict`, a `Vector` or `Tuple` of pairs, or a `NamedTuple`.
+"""
+varmap_to_dict(p::AbstractDict) = p
+varmap_to_dict(p::NamedTuple) = Dict(k => v for (k, v) in pairs(p))
+function varmap_to_dict(p)
+    applicable(iterate, p) && all(x -> x isa Pair, p) && return Dict(p)
+    throw(
+        ArgumentError(
+            "expected the parameters to be a map of symbolic variables to values, " *
+            "e.g. a Dict, or a Vector or Tuple of pairs. Got a $(typeof(p)).",
+        ),
+    )
+end
 
 function declare_parameter(var::Num)
     var_sym = Symbol(var)
@@ -131,6 +147,10 @@ $(TYPEDSIGNATURES)
 
 Creates and ModelingToolkitBase.ODEProblem from a DifferentialEquation or HarmonicEquation.
 
+The parameters `p` can be any map of symbolic variables to values: a `Dict`, or a
+`Vector` or `Tuple` of pairs. Whether the generated function is in-place is set with
+the `in_place` keyword or, equivalently, with the `ODEProblem{iip}` type parameter.
+
 ### Example
 ```julia
 using ModelingToolkitBase, StaticArrays
@@ -141,6 +161,8 @@ diff_eq = DifferentialEquation(
 )
 add_harmonic!(diff_eq, x, ω) #
 harmonic_eq = get_harmonic_equations(diff_eq)
+
+param = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01, ω => 1.1)
 
 # in place (most performant for large systems)
 ODEProblem(harmonic_eq, [1.0, 0.0], (0, 100), param)
@@ -150,6 +172,9 @@ ODEProblem(
     harmonic_eq, [1.0, 0.0], (0, 100), param;
     in_place=false, u0_constructor=x -> SVector(x...)
 )
+
+# the in-placeness can also be set with a type parameter
+ODEProblem{false}(harmonic_eq, [1.0, 0.0], (0, 100), param)
 ```
 
 """
@@ -157,13 +182,12 @@ function ModelingToolkitBase.ODEProblem(
     eom::Union{HarmonicEquation,DifferentialEquation},
     u0,
     tspan::Tuple,
-    p::AbstractDict;
+    p;
     in_place=true,
     kwargs...,
 )
     sys = System(eom)
-    # param = varmap_to_vars(p, parameters(sys))
-    dict = merge(isempty(u0) ? Dict() : Dict(unknowns(sys) .=> u0), p)
+    dict = merge(isempty(u0) ? Dict() : Dict(unknowns(sys) .=> u0), varmap_to_dict(p))
     if !in_place # out-of-place
         prob = ODEProblem{false}(sys, dict, tspan; jac=true, kwargs...)
     else # in-place
@@ -172,10 +196,20 @@ function ModelingToolkitBase.ODEProblem(
     return prob
 end
 
+function ModelingToolkitBase.ODEProblem{iip}(
+    eom::Union{HarmonicEquation,DifferentialEquation}, u0, tspan::Tuple, p; kwargs...
+) where {iip}
+    return ODEProblem(eom, u0, tspan, p; in_place=iip, kwargs...)
+end
+
 @doc """
 $(TYPEDSIGNATURES)
 
 Creates and ModelingToolkitBase.NonlinearProblem from a HarmonicEquation.
+
+The parameters `p` can be any map of symbolic variables to values: a `Dict`, or a
+`Vector` or `Tuple` of pairs. Whether the generated function is in-place is set with
+the `in_place` keyword or, equivalently, with the `NonlinearProblem{iip}` type parameter.
 
 ### Example
 ```julia
@@ -189,14 +223,22 @@ add_harmonic!(diff_eq, x, ω) #
 harmonic_eq = get_harmonic_equations(diff_eq)
 
 
+param = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01, ω => 1.1)
+
 NonlinearProblem(harmonic_eq, [1.0, 0.0], param)
 ```
 """
 function ModelingToolkitBase.NonlinearProblem(
-    eom::HarmonicEquation, u0, p::AbstractDict; in_place=true, kwargs...
+    eom::HarmonicEquation, u0, p; in_place=true, kwargs...
 )
-    ss_prob = SteadyStateProblem(eom, u0, p::AbstractDict; in_place, kwargs...)
+    ss_prob = SteadyStateProblem(eom, u0, p; in_place, kwargs...)
     return NonlinearProblem(ss_prob)
+end
+
+function ModelingToolkitBase.NonlinearProblem{iip}(
+    eom::HarmonicEquation, u0, p; kwargs...
+) where {iip}
+    return NonlinearProblem(eom, u0, p; in_place=iip, kwargs...)
 end
 
 @doc """
@@ -204,6 +246,11 @@ $(TYPEDSIGNATURES)
 
 Creates and ModelingToolkitBase.SteadyStateProblem from a HarmonicEquation.
 
+The parameters `p` can be any map of symbolic variables to values: a `Dict`, or a
+`Vector` or `Tuple` of pairs. Whether the generated function is in-place is set with
+the `in_place` keyword or, equivalently, with the `SteadyStateProblem{iip}` type
+parameter.
+
 ### Example
 ```julia
 using ModelingToolkitBase, StaticArrays
@@ -216,20 +263,28 @@ add_harmonic!(diff_eq, x, ω) #
 harmonic_eq = get_harmonic_equations(diff_eq)
 
 
+param = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01, ω => 1.1)
+
 SteadyStateProblem(harmonic_eq, [1.0, 0.0], param)
 ```
 """
 function ModelingToolkitBase.SteadyStateProblem(
-    eom::HarmonicEquation, u0, p::AbstractDict; in_place=true, kwargs...
+    eom::HarmonicEquation, u0, p; in_place=true, kwargs...
 )
     sys = System(eom)
-    param = varmap_to_vars(p, parameters(sys))
+    dict = merge(isempty(u0) ? Dict() : Dict(unknowns(sys) .=> u0), varmap_to_dict(p))
     if !in_place # out-of-place
-        prob = SteadyStateProblem{false}(sys, u0, param; jac=true, kwargs...)
+        prob = SteadyStateProblem{false}(sys, dict; jac=true, kwargs...)
     else # in-place
-        prob = SteadyStateProblem{true}(sys, u0, param; jac=true, kwargs...)
+        prob = SteadyStateProblem{true}(sys, dict; jac=true, kwargs...)
     end # compute jacobian for performance
     return prob
+end
+
+function ModelingToolkitBase.SteadyStateProblem{iip}(
+    eom::HarmonicEquation, u0, p; kwargs...
+) where {iip}
+    return SteadyStateProblem(eom, u0, p; in_place=iip, kwargs...)
 end
 
 end # module
