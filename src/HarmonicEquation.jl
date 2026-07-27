@@ -118,11 +118,16 @@ function fourier_transform!(eom::HarmonicEquation, time::Num)
         # "type" is usually "u" or "v" (harmonic) or ["a"] (zero-harmonic)
         specs = map(idxs) do i
             hvar = eom.variables[i]
-            hvar.type == "u" ? (hvar.ω, cos) :
-            hvar.type == "v" ? (hvar.ω, sin) :
-            (0, cos) # zero-harmonic: pick out the constants
+            if hvar.type == "u"
+                (hvar.ω, cos)
+            elseif hvar.type == "v"
+                (hvar.ω, sin)
+            else
+                (0, cos) # zero-harmonic: pick out the constants
+            end
         end
-        for (i, eq) in zip(idxs, QuestBase.fourier_terms(eom.equations[eq_idx], time, specs))
+        for (i, eq) in
+            zip(idxs, QuestBase.fourier_terms(eom.equations[eq_idx], time, specs))
             avg_eqs[i] = eq
         end
     end
