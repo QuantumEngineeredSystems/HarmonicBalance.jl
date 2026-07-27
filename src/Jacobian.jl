@@ -17,8 +17,29 @@ function get_Jacobian(eom::HarmonicEquation)::Matrix{Num}
     return get_Jacobian(lhs, vars)
 end
 
+"""
+$(SIGNATURES)
+
+Fill in the symbolic Jacobian of `eom`, keeping the placeholder when deriving it symbolically
+is too expensive.
+
+[`get_Jacobian`](@ref) first rearranges the system so the derivatives stand alone on one
+side, which is a symbolic linear solve. That solve grows combinatorially with the size of
+the system: a van der Pol ansatz in three harmonics never finishes it. The placeholder
+Jacobian is what tells `HarmonicSteadyState` to evaluate the Jacobian implicitly instead,
+solving the same system numerically once the parameters have values, at a constant cost per
+point. Falling back to it costs a little time per solution and buys back a build that
+terminates.
+"""
 function add_jacobian!(eom::HarmonicEquation)
-    return eom.jacobian .= get_Jacobian(eom)
+    jacobian = try
+        get_Jacobian(eom)
+    catch error
+        error isa QuestBase.BareissTooLarge || rethrow()
+        @debug "Symbolic Jacobian abandoned, it will be evaluated implicitly" error
+        return eom.jacobian
+    end
+    return eom.jacobian .= jacobian
 end
 
 " Obtain a Jacobian from a `DifferentialEquation` by first converting it into a `HarmonicEquation`. "
