@@ -35,7 +35,7 @@ varmap_to_dict(p::AbstractDict) = p
 varmap_to_dict(p::NamedTuple) = Dict(k => v for (k, v) in pairs(p))
 function varmap_to_dict(p)
     applicable(iterate, p) && all(x -> x isa Pair, p) && return Dict(p)
-    throw(
+    return throw(
         ArgumentError(
             "expected the parameters to be a map of symbolic variables to values, " *
             "e.g. a Dict, or a Vector or Tuple of pairs. Got a $(typeof(p)).",
