@@ -19,6 +19,10 @@ if GROUP in ("All", "Core")
         include("HarmonicVariable.jl")
     end
 
+    @testset "Harmonic equations" begin
+        include("HarmonicEquation.jl")
+    end
+
     @testset "Krylov-Bogoliubov" begin
         include("krylov.jl")
     end

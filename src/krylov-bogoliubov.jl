@@ -52,6 +52,9 @@ function get_krylov_equations(
     slow_time = isnothing(slow_time) ? (@variables T; T) : slow_time
     fast_time = isnothing(fast_time) ? get_independent_variables(diff_eom)[1] : fast_time
 
+    # check before rearranging: `rearrange_standard!` can hide a variable in a denominator
+    assert_averageable(diff_eom, fast_time)
+
     dEOM = deepcopy(diff_eom)
     !is_rearranged_standard(dEOM) ? rearrange_standard!(dEOM) : nothing
     eom = van_der_Pol(dEOM, fast_time)
