@@ -33,6 +33,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # DocumenterVitepress reads `git tag` to decide which base aliases
+          # (`stable`, `v0.18`, ...) this build owns, so it needs the full tag list.
+          fetch-depth: 0
       - uses: julia-actions/setup-julia@v3
         with:
           version: 'lts'

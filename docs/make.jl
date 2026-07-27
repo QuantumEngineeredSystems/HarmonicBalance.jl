@@ -83,7 +83,10 @@ makedocs(;
 )
 
 if CI
-    deploydocs(;
+    # `DocumenterVitepress.deploydocs`, not `Documenter.deploydocs`: Vitepress bakes the
+    # base URL into the site, so one build per base alias (`stable`, `v0.18`, ...) lands in
+    # `build/1`, `build/2`, ... and only this wrapper knows how to deploy each to its folder.
+    DocumenterVitepress.deploydocs(;
         repo="github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
         devbranch="master",
         target="build",
