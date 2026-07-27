@@ -103,22 +103,32 @@ end
 
 function fourier_transform!(eom::HarmonicEquation, time::Num)
     avg_eqs = Vector{Equation}(undef, length(eom.variables))
+    natural_variables = collect(keys(QuestBase.source(eom).equations))
 
-    # loop over the HarmonicVariables, each generates one equation
+    # Every harmonic of a given natural variable is projected out of the same equation,
+    # so group them and ask for all their coefficients in one go. `fourier_terms` then
+    # expands that equation once instead of once per harmonic.
+    groups = Dict{Int,Vector{Int}}()
     for (i, hvar) in enumerate(eom.variables)
-        # find the equation belonging to this variable
-        eq_idx = findfirst(
-            x -> isequal(x, hvar.natural_variable),
-            collect(keys(QuestBase.source(eom).equations)),
-        )
-        eq = eom.equations[eq_idx]
+        eq_idx = findfirst(x -> isequal(x, hvar.natural_variable), natural_variables)
+        push!(get!(groups, eq_idx, Int[]), i)
+    end
+
+    for (eq_idx, idxs) in groups
         # "type" is usually "u" or "v" (harmonic) or ["a"] (zero-harmonic)
-        if hvar.type == "u"
-            avg_eqs[i] = QuestBase.fourier_cos_term(eq, hvar.ω, time)
-        elseif hvar.type == "v"
-            avg_eqs[i] = QuestBase.fourier_sin_term(eq, hvar.ω, time)
-        elseif hvar.type == "a"
-            avg_eqs[i] = QuestBase.fourier_cos_term(eq, 0, time) # pick out the constants
+        specs = map(idxs) do i
+            hvar = eom.variables[i]
+            if hvar.type == "u"
+                (hvar.ω, cos)
+            elseif hvar.type == "v"
+                (hvar.ω, sin)
+            else
+                (0, cos) # zero-harmonic: pick out the constants
+            end
+        end
+        for (i, eq) in
+            zip(idxs, QuestBase.fourier_terms(eom.equations[eq_idx], time, specs))
+            avg_eqs[i] = eq
         end
     end
     eom.equations = avg_eqs
