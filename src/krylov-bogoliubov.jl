@@ -117,11 +117,13 @@ function van_der_Pol(eom::QuestBase.DifferentialEquation, t::Num)
 
     # keep count to label new variables
     uv_idx = 1
-    ω = first(flatten(unique(values(dEOM.harmonics))))
     nvars = get_variables(dEOM)
     nvars = nvars[(length(nvars) ÷ 2 + 1):end]
 
     for nvar in nvars # sum over natural variables
+        # each variable rotates at its own harmonic; the harmonics may be
+        # commensurate (e.g. ω and 3ω) but need not be equal
+        ω = first(dEOM.harmonics[nvar])
         rule_u, hvar_u = _create_harmonic_variable(
             nvar, ω, t, "u"; new_symbol="u" * string(uv_idx)
         )
