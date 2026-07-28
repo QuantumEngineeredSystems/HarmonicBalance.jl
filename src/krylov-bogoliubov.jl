@@ -59,9 +59,10 @@ function get_krylov_equations(
     eom = slow_flow(eom; fast_time=fast_time, slow_time=slow_time, degree=2)
 
     rearrange!(eom, d(get_variables(eom), slow_time))
-    eom.equations = Symbolics.expand.(Symbolics.simplify.(eom.equations))
-    eom.equations = Symbolics.expand.(Symbolics.simplify.(eom.equations))
-    #^ need it two times to get it completely simplified due to some weird bug in Symbolics.jl
+    # `average` works term by term, so a flat sum of products is enough. A full
+    # `Symbolics.simplify` here also cancels the fraction, but its cost explodes with the
+    # number of harmonics; `simplify_fractions` below does the cancelling instead.
+    eom.equations = Symbolics.expand.(eom.equations)
 
     if order == 1
         average!(eom, fast_time)
@@ -83,6 +84,10 @@ function get_krylov_equations(
     end
 
     change_convention!(eom, slow_time)
+    # averaging has removed the fast time, so cancelling `rearrange!`'s denominator is cheap here
+    eom.equations = [
+        Symbolics.simplify_fractions(Num(eq.lhs)) ~ eq.rhs for eq in eom.equations
+    ]
     return eom
 end
 function proper_krylov_system(diff_eom::QuestBase.DifferentialEquation, order::Int)
@@ -167,10 +172,10 @@ end
 
 function take_trig_integral(x::BasicSymbolic, ω, t)
     if isdiv(x)
+        # termwise integration leaves the denominator alone, so it goes back as is; `expand`
+        # is enough to flatten for the averaging that follows
         arg_num = Symbolics.arguments(x.num)
-        return Symbolics.simplify(
-            Symbolics.expand(sum(take_trig_integral.(arg_num, ω, t)) * ω)
-        ) / (x.den * ω)
+        return Symbolics.expand(sum(take_trig_integral.(arg_num, ω, t))) / x.den
     else
         all_terms = get_all_terms(Num(x))
         trigs = filter(z -> is_trig(z), all_terms)
