@@ -1,6 +1,7 @@
 using HarmonicBalance
 using HarmonicBalance: get_krylov_equations
-using Symbolics: Symbolics
+using QuestBase: QuestBase
+using Symbolics: Symbolics, substitute
 using Test
 
 # Regression for the Symbolics 7 slow-flow bug. `trig_reduce` linearises the
@@ -48,6 +49,43 @@ end
     diff_eom = DifferentialEquation(natural_equation + F * cos(ω * t), x)
     add_harmonic!(diff_eom, x, ω)
     assert_nondegenerate(get_krylov_equations(diff_eom; order=2))
+end
+
+@testset "commensurate frequencies (issue #251)" begin
+    # `van_der_Pol` used to pick a single frequency off the front of the harmonics
+    # dict and build the ansatz with it for *every* natural variable, so a system
+    # with x at ω and y at 3ω got y = u2*cos(ωt) + v2*sin(ωt) and the whole 3ω
+    # sector came out wrong. Each variable must rotate at its own harmonic.
+    @variables t x(t) y(t) ω0 ω F α J
+    eq1 = d(d(x, t), t) + ω0^2 * x + α * x^3 ~ F * cos(ω * t) + J * y
+    eq2 = d(d(y, t), t) + ω0^2 * y + α * y^3 ~ F * cos(ω * t) + J * x
+    diff_eom = DifferentialEquation([eq1, eq2], [x, y])
+    add_harmonic!(diff_eom, x, ω)
+    add_harmonic!(diff_eom, y, 3 * ω)
+
+    krylov_eq = get_krylov_equations(diff_eom; order=1)
+    rearranged = HarmonicBalance.rearrange_standard(get_harmonic_equations(diff_eom))
+
+    # the ansatz itself must carry the two distinct harmonics
+    @test Set(Symbolics.unwrap.(getfield.(krylov_eq.variables, :ω))) ==
+        Set(Symbolics.unwrap.([ω, ω, 3 * ω, 3 * ω]))
+
+    # KB and harmonic balance must agree up to the opposite sign convention
+    lhss = [
+        QuestBase.expand_fraction.(getfield.(eom.equations, :lhs)) for
+        eom in (krylov_eq, rearranged)
+    ]
+    symbols = unique(
+        reduce(vcat, [collect(Symbolics.get_variables(e)) for e in reduce(vcat, lhss)])
+    )
+    for _ in 1:3
+        # keep the sample away from 0 so no denominator blows up
+        subs = Dict(symbols .=> rand(length(symbols)) .+ 0.5)
+        for (k, h) in zip(lhss...)
+            residual = Symbolics.value(substitute(k, subs) + substitute(h, subs))
+            @test Float64(residual) ≈ 0.0 atol = 1e-10
+        end
+    end
 end
 
 @testset "three-wave mixing (large order-2 expressions)" begin
