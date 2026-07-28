@@ -6,8 +6,7 @@ time variable. For each harmonic of each variable, instance(s) of `HarmonicVaria
 automatically created and named.
 """
 function harmonic_ansatz(diff_eom::DifferentialEquation, time::Num)
-    !is_harmonic(diff_eom, time) &&
-        error("The differential equation is not harmonic in ", time, " !")
+    assert_averageable(diff_eom, time)
     eqs = collect(values(diff_eom.equations))
     rules, vars = Dict(), []
 
@@ -201,6 +200,35 @@ function get_harmonic_equations(
 
     jacobian == true ? add_jacobian!(eom) : nothing
     return eom
+end
+
+"""
+$(TYPEDSIGNATURES)
+
+Throw if `diff_eom` cannot be averaged: every time dependence must be harmonic in `time`
+and every equation must be polynomial in the variables and their derivatives.
+
+The second condition is the one silently violated by terms such as `sin(x)` or `exp(x)`:
+the harmonic ansatz turns them into a function of `time` which is not a finite Fourier
+series, so the Fourier projection returns nothing for them and they drop out of the
+harmonic equations without a trace.
+"""
+function assert_averageable(diff_eom::DifferentialEquation, time::Num)
+    is_harmonic(diff_eom, time) ||
+        error("The differential equation is not harmonic in ", time, " !")
+
+    bad_terms = QuestBase.nonpolynomial_terms(diff_eom)
+    isempty(bad_terms) || throw(
+        ArgumentError(
+            "The term(s) $(join(bad_terms, ", ")) are not polynomial in " *
+            "$(join(get_variables(diff_eom), ", ")) and cannot be averaged. " *
+            "Harmonic balance replaces each variable by a truncated Fourier series, which " *
+            "stays a finite Fourier series only under sums, products and non-negative " *
+            "integer powers. Expand such terms in the variables first " *
+            "(e.g. sin(x) ≈ x - x^3/6) before deriving the harmonic equations.",
+        ),
+    )
+    return nothing
 end
 
 "Rearrange `eq` to have zero on the right-hand-side."
