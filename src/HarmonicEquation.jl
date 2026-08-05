@@ -148,6 +148,12 @@ the independent variable of `diff_eom`.
 By default, all products of order > 1 of `slow_time`-derivatives are dropped, which means
 the equations are linear in the time-derivatives.
 
+`explicit_jacobian` fills in the symbolic Jacobian of the rearranged system, see
+[`add_jacobian!`](@ref). It defaults to `false`: stability analysis evaluates the Jacobian
+implicitly and never reads this field, while deriving it needs a symbolic mass-matrix
+inversion that dominates the cost of this function on larger systems. Pass
+`explicit_jacobian=true` to inspect the matrix, or call [`get_Jacobian`](@ref) on the result.
+
 # Example
 ```julia-repl
 julia> @variables t, x(t), ω0, ω, F;
@@ -181,7 +187,7 @@ function get_harmonic_equations(
     fast_time=nothing,
     slow_time=nothing,
     degree=2,
-    jacobian=true,
+    explicit_jacobian=false,
 )
     slow_time = isnothing(slow_time) ? (@variables T; T) : slow_time
     fast_time = isnothing(fast_time) ? get_independent_variables(diff_eom)[1] : fast_time
@@ -198,7 +204,7 @@ function get_harmonic_equations(
     # drop higher powers of the first-order derivatives
     eom = drop_powers(eom, d(get_variables(eom), slow_time), 2)
 
-    jacobian == true ? add_jacobian!(eom) : nothing
+    explicit_jacobian == true ? add_jacobian!(eom) : nothing
     return eom
 end
 
