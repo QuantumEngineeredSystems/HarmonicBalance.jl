@@ -23,13 +23,14 @@ $(SIGNATURES)
 Fill in the symbolic Jacobian of `eom`, keeping the placeholder when deriving it symbolically
 is too expensive.
 
+This is opt-in, for inspecting the matrix. Stability analysis does not use it: it evaluates
+the Jacobian implicitly, solving for the derivatives numerically once the parameters have
+values, which agrees with this matrix at every steady state and stays cheap on systems where
+this one does not.
+
 [`get_Jacobian`](@ref) first rearranges the system so the derivatives stand alone on one
 side, which is a symbolic linear solve. That solve grows combinatorially with the size of
-the system: a van der Pol ansatz in three harmonics never finishes it. The placeholder
-Jacobian is what tells `HarmonicSteadyState` to evaluate the Jacobian implicitly instead,
-solving the same system numerically once the parameters have values, at a constant cost per
-point. Falling back to it costs a little time per solution and buys back a build that
-terminates.
+the system: a van der Pol ansatz in three harmonics is already prohibitive.
 """
 function add_jacobian!(eom::HarmonicEquation)
     jacobian = try
