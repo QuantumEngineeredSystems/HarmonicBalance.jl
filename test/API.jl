@@ -40,6 +40,6 @@ end
     diff_eq = DifferentialEquation(eqs, [x])
 
     add_harmonic!(diff_eq, x, ω)
-    harmonic_eq = get_harmonic_equations(diff_eq; jacobian=false)
+    harmonic_eq = get_harmonic_equations(diff_eq; explicit_jacobian=false)
     @test hasnan(harmonic_eq.jacobian)
 end

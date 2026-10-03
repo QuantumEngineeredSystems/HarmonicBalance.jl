@@ -26,7 +26,7 @@ using Test
         d(x, t, 2) + ω0^2 * x + γ * d(x, t) + α * x^10 ~ F * cos(ω * t), x
     )
     add_harmonic!(diff_eq, x, ω)
-    @test length(get_harmonic_equations(diff_eq; jacobian=false).equations) == 2
+    @test length(get_harmonic_equations(diff_eq; explicit_jacobian=false).equations) == 2
 end
 
 @testset "polynomial nonlinearity x^n" begin
@@ -41,7 +41,7 @@ end
         for harmonic in harmonics
             add_harmonic!(diff_eq, x, harmonic)
         end
-        harmonic_eq = get_harmonic_equations(diff_eq; jacobian=false)
+        harmonic_eq = get_harmonic_equations(diff_eq; explicit_jacobian=false)
         vars = get_variables(harmonic_eq)
         T = get_independent_variables(harmonic_eq)[1]
         rules = Dict{Any,Any}(ω => 0, α => 1)
