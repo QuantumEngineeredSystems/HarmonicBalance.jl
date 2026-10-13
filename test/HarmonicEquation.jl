@@ -79,3 +79,23 @@ end
         @test !all(iszero, nonlinear_part(n, [0, ω]))
     end
 end
+
+@testset "phase-shifted drive and parametric pump" begin
+    @variables ω t T θ ψ F λ x(t)
+    diff_eq = DifferentialEquation(
+        d(x, t, 2) + (1 - λ * cos(2 * ω * t + ψ)) * x ~ F * cos(ω * t + θ), x
+    )
+    add_harmonic!(diff_eq, x, ω)
+    harmonic_eq = get_harmonic_equations(diff_eq; slow_time=T)
+    u, v = get_variables(harmonic_eq)
+    reference = [
+        (1 - ω^2 - λ * cos(ψ) / 2) * u + λ * sin(ψ) * v / 2 + 2 * ω * d(v, T) - F * cos(θ),
+        (1 - ω^2 + λ * cos(ψ) / 2) * v + λ * sin(ψ) * u / 2 - 2 * ω * d(u, T) + F * sin(θ),
+    ]
+    for (eq, expected) in zip(harmonic_eq.equations, reference)
+        @test isequal(
+            Symbolics.simplify(Symbolics.expand(eq.lhs - eq.rhs - expected)),
+            Symbolics.Num(0),
+        )
+    end
+end
