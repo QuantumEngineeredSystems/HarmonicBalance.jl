@@ -1,4 +1,4 @@
-name: Documenter
+name: Documentation
 
 on:
   push:
@@ -10,25 +10,43 @@ on:
     branches:
       - 'master'
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  statuses: write
+  pull-requests: read  # Required when using `push_preview=true`
+        
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  # Skip intermediate builds: always.
-  # Cancel intermediate builds: only if it is a pull request build.
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
 
+env:
+  JULIA_NUM_THREADS: auto
+
 jobs:
-  Documenter:
-    permissions:
-        contents: write
-        statuses: write
-    name: Documentation
+  # Build job
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: julia-actions/setup-julia@v2
-      - uses: julia-actions/cache@v2
+      - uses: actions/checkout@v7
+        with:
+          # DocumenterVitepress reads `git tag` to decide which base aliases
+          # (`stable`, `v0.18`, ...) this build owns, so it needs the full tag list.
+          fetch-depth: 0
+      - uses: julia-actions/setup-julia@v3
+        with:
+          version: '1.13'
+      - uses: julia-actions/cache@v3
       - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-docdeploy@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
+          JULIA_NUM_THREADS: auto
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
+          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # For authentication with SSH deploy key
+          JULIA_DEBUG: "Documenter"
+          DATADEPS_ALWAYS_ACCEPT: true
+          GKSwstype: "100" # for Plots.jl plots (if you have them)

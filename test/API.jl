@@ -1,4 +1,5 @@
 using HarmonicBalance
+using HarmonicBalance: OrderedDict
 using Test
 
 @testset "Equation{Vector}" begin
@@ -13,28 +14,6 @@ using Test
     @test eqs != (rhs ~ [F * cos(ω * t), 0])
     @test eqs == (rhs .~ [F * cos(ω * t), 0])
     @test_throws ArgumentError DifferentialEquation(rhs ~ [F * cos(ω * t), 0], [x, y])
-end
-
-@testset "get_steady_states API" begin
-    @variables ω1, t, ω, F, γ, λ, x(t), y(t)
-    eqs = [d(x, t, 2) + (ω1^2 - λ * cos(2 * ω * t)) * x + γ * d(x, t)]
-
-    diff_eq = DifferentialEquation(eqs, [x])
-
-    add_harmonic!(diff_eq, x, ω) # drive frequency, close to ω1
-
-    harmonic_eq = get_harmonic_equations(diff_eq)
-    prob = HarmonicBalance.Problem(harmonic_eq)
-
-    varied = ω => range(0.7, 1.3, 100)
-    @test_throws MethodError get_steady_states(harmonic_eq, varied)
-    @test_throws ArgumentError get_steady_states(harmonic_eq, Dict(varied))
-
-    fixed = Dict(ω1 => 1.0, γ => 0.005, λ => 0.1)
-    @test_throws MethodError get_steady_states(prob, Dict())
-    @test_throws MethodError get_steady_states(prob, varied, fixed)
-    r = get_steady_states(prob, HarmonicBalance.WarmUp(), varied, fixed)
-    # ^ throws a warning that no solutions found
 end
 
 @testset "forgot variable" begin
@@ -52,4 +31,20 @@ end
     add_harmonic!(dEOM, x, ω)
     # add_harmonic!(dEOM, y, ω)
     @test_throws ErrorException get_harmonic_equations(dEOM)
+end
+
+@testset "explicit harmonic equation Jacobian is opt-in" begin
+    using QuestBase: hasnan
+    @variables ω1, t, ω, F, γ, λ, x(t), y(t)
+    eqs = [d(x, t, 2) + (ω1^2 - λ * cos(2 * ω * t)) * x + γ * d(x, t)]
+    diff_eq = DifferentialEquation(eqs, [x])
+
+    add_harmonic!(diff_eq, x, ω)
+    @test hasnan(get_harmonic_equations(diff_eq).jacobian)
+    harmonic_eq = get_harmonic_equations(diff_eq; explicit_jacobian=false)
+    @test hasnan(harmonic_eq.jacobian)
+    explicit_eq = get_harmonic_equations(diff_eq; explicit_jacobian=true)
+    @test !hasnan(explicit_eq.jacobian)
+    @test isequal(explicit_eq.jacobian, HarmonicBalance.get_Jacobian(harmonic_eq))
+    @test_throws MethodError get_harmonic_equations(diff_eq; jacobian=true)
 end

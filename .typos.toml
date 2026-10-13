@@ -1,3 +1,4 @@
 [default.extend-words]
 # Don't correct the surname "Teh"
 multline = "multline"
+setp = "setp"
