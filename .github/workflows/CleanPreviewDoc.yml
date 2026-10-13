@@ -4,6 +4,9 @@ on:
   pull_request:
     types: [closed]
 
+permissions:
+  contents: write
+
 jobs:
   cleanup-preview-doc:
     runs-on: ubuntu-latest
