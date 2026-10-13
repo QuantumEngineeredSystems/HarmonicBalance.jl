@@ -48,7 +48,7 @@ function slow_flow!(eom::HarmonicEquation; fast_time::Num, slow_time::Num, degre
 
     # fast_time => slow_time for derivatives up to degree-1
     vars = get_variables(eom)
-    new_vars = substitute_all.(vars, fast_time => slow_time)
+    new_vars = Num[substitute_all(var, fast_time => slow_time) for var in vars]
     replace0 = map(Pair, vars, new_vars) # zeroth degree derivative is separate since Differential^0 does not work
     replace_degrees = [
         map(Pair, d(vars, fast_time, deg), d(new_vars, slow_time, deg)) for

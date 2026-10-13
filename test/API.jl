@@ -33,13 +33,18 @@ end
     @test_throws ErrorException get_harmonic_equations(dEOM)
 end
 
-@testset "harmonic equation jacobian NaN" begin
+@testset "explicit harmonic equation Jacobian is opt-in" begin
     using QuestBase: hasnan
     @variables ω1, t, ω, F, γ, λ, x(t), y(t)
     eqs = [d(x, t, 2) + (ω1^2 - λ * cos(2 * ω * t)) * x + γ * d(x, t)]
     diff_eq = DifferentialEquation(eqs, [x])
 
     add_harmonic!(diff_eq, x, ω)
+    @test hasnan(get_harmonic_equations(diff_eq).jacobian)
     harmonic_eq = get_harmonic_equations(diff_eq; explicit_jacobian=false)
     @test hasnan(harmonic_eq.jacobian)
+    explicit_eq = get_harmonic_equations(diff_eq; explicit_jacobian=true)
+    @test !hasnan(explicit_eq.jacobian)
+    @test isequal(explicit_eq.jacobian, HarmonicBalance.get_Jacobian(harmonic_eq))
+    @test_throws MethodError get_harmonic_equations(diff_eq; jacobian=true)
 end
