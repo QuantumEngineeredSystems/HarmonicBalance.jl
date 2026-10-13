@@ -1,9 +1,6 @@
 name: Reproducible experiment
 
 on:
-  push:
-    branches:
-      - Two-step-Homotopy
   pull_request:
     paths:
       - 'experiments/two_step_homotopy/**'
@@ -11,6 +8,10 @@ on:
       - 'Project.toml'
       - 'src/**'
   workflow_dispatch:
+
+concurrency:
+  group: experiment-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 defaults:
   run:
