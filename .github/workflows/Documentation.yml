@@ -39,7 +39,6 @@ jobs:
           fetch-depth: 0
       - uses: julia-actions/setup-julia@v3
         with:
-          # The test matrix is what guards our 1.10 support.
           version: '1.13'
       - uses: julia-actions/cache@v3
       - uses: julia-actions/julia-buildpkg@v1
