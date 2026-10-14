@@ -14,6 +14,14 @@ Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 
+[sources.HarmonicSteadyState]
+rev = "main"
+url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl"
+
+[sources.QuestBase]
+rev = "main"
+url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl"
+
 [extensions]
 ModelingToolkitBaseExt = "ModelingToolkitBase"
 
@@ -27,7 +35,7 @@ JET = "0.12"
 ModelingToolkitBase = "1"
 OrdinaryDiffEqTsit5 = "2"
 PrecompileTools = "1.2"
-QuestBase = "0.5.3"
+QuestBase = "0.5.3, 0.5"
 Random = "1.10"
 Reexport = "1.2.2"
 SymbolicUtils = "4"
@@ -50,7 +58,3 @@ Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
 test = ["Aqua", "JET", "SymbolicUtils", "Symbolics", "ExplicitImports", "Test", "Random", "ModelingToolkitBase", "Documenter", "QuestBase", "OrdinaryDiffEqTsit5"]
-
-[sources]
-QuestBase = {url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl", rev = "main"}
-HarmonicSteadyState = {url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl", rev = "main"}
