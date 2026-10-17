@@ -1,0 +1,33 @@
+[deps]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+ExplicitImports = "7d51a73a-1435-4ff3-83d9-f097790105c7"
+HarmonicBalance = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
+JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
+ModelingToolkitBase = "7771a370-6774-4173-bd38-47e70ca0b839"
+OrdinaryDiffEqTsit5 = "b1df2697-797e-41e3-8120-5422d3b24e4a"
+ParallelTestRunner = "d3525ed8-44d0-4b2c-a655-542cee43accc"
+QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[sources]
+HarmonicBalance = {path = "/home/oameye/Projects/HarmonicBalanceDev/HarmonicBalance.jl"}
+QuestBase = {rev = "main", url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl"}
+
+[compat]
+Aqua = "0.8.11"
+Documenter = "1.4"
+ExplicitImports = "1.6"
+JET = "0.12"
+ModelingToolkitBase = "1"
+OrdinaryDiffEqTsit5 = "2"
+ParallelTestRunner = "2"
+QuestBase = "0.5.3"
+Random = "1.10"
+SymbolicUtils = "4"
+Symbolics = "7"
+Test = "1.10"
+julia = "~1.13"

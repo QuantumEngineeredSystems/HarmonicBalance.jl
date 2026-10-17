@@ -1,6 +1,11 @@
+using HarmonicBalance
+using Test
+using Aqua
+using ExplicitImports
+# Load the extension triggers so the extensions below are checked.
+using ModelingToolkitBase: ModelingToolkitBase
+
 @testset "Code quality" begin
-    using ExplicitImports, Aqua
-    using ModelingToolkitBase
     ModelingToolkitBaseExt = Base.get_extension(HarmonicBalance, :ModelingToolkitBaseExt)
 
     @test check_no_stale_explicit_imports(HarmonicBalance) == nothing

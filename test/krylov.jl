@@ -1,6 +1,7 @@
 using HarmonicBalance
 using HarmonicBalance: get_krylov_equations
 using QuestBase: QuestBase
+using Random: Random
 using Symbolics: Symbolics, substitute
 using Test
 
@@ -78,9 +79,10 @@ end
     symbols = unique(
         reduce(vcat, [collect(Symbolics.get_variables(e)) for e in reduce(vcat, lhss)])
     )
+    rng = Random.MersenneTwister(0x8f88209c)
     for _ in 1:3
         # keep the sample away from 0 so no denominator blows up
-        subs = Dict(symbols .=> rand(length(symbols)) .+ 0.5)
+        subs = Dict(symbols .=> rand(rng, length(symbols)) .+ 0.5)
         for (k, h) in zip(lhss...)
             residual = Symbolics.value(substitute(k, subs) + substitute(h, subs))
             @test Float64(residual) ≈ 0.0 atol = 1e-10
