@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1792051078582,
+  "lastUpdate": 1792244300849,
   "repoUrl": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
   "entries": {
     "Benchmark Results": [
@@ -768,6 +768,102 @@ window.BENCHMARK_DATA = {
             "value": 118466294,
             "unit": "ns",
             "extra": "gctime=0\nmemory=33898312\nallocs=786855\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "orjan.ameye@hotmail.com",
+            "name": "Orjan Ameye",
+            "username": "oameye"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8b0c2a7479dfea3635ce47e69b8eaeee468298a7",
+          "message": "Lower derivative states canonically for ModelingToolkit conversion (#531)",
+          "timestamp": "2026-10-17T15:19:37+02:00",
+          "tree_id": "84def0c04df478df94900c36f4fe80bb6732287a",
+          "url": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/commit/8b0c2a7479dfea3635ce47e69b8eaeee468298a7"
+        },
+        "date": 1792244288946,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "Classification/One Dimensional/Default classifications",
+            "value": 1012905,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=1317168\nallocs=22498\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Harmonic Equation/One Frequency",
+            "value": 148656246,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=13682928\nallocs=256839\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 1",
+            "value": 193332991,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=18522184\nallocs=360839\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 2",
+            "value": 718447635.5,
+            "unit": "ns",
+            "extra": "gctime=32675129.5\nmemory=330180576\nallocs=6566662\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Problem/HomotopyContinuationProblem",
+            "value": 5428299,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=985192\nallocs=23991\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Linear response/Lab frame/Jacobian Response",
+            "value": 578844,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=571840\nallocs=7776\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Linear response/Rotating frame/Jacobian Response",
+            "value": 234174,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=305872\nallocs=2141\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Sorting/One dimensional/Hilbert sorting",
+            "value": 122144,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=207536\nallocs=3009\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Sorting/One dimensional/Nearest-neighbor sorting",
+            "value": 120432,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=207536\nallocs=3009\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Polyhedral homotopy",
+            "value": 329938288.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=71599328\nallocs=1609844\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Total degree homotopy",
+            "value": 209158469,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=46838560\nallocs=1068944\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Warm up method",
+            "value": 104297769.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=33895304\nallocs=786856\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
           }
         ]
       }
