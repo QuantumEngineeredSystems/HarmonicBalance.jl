@@ -99,3 +99,71 @@ end
         )
     end
 end
+
+@testset "closed-form slow flow" begin
+    # `get_harmonic_equations` writes the derivatives of the ansatz down in closed form;
+    # the result must be the very expressions the generic route produces
+    @variables t, T, x(t), y(t), ω0, ω, F, α, η, J, γ
+    D = Symbolics.Differential(t)
+    function system(eqs, vars, harmonics)
+        diff_eq = DifferentialEquation(eqs, vars)
+        for (var, ωs) in harmonics, h in ωs
+            add_harmonic!(diff_eq, var, h)
+        end
+        return diff_eq
+    end
+    cases = [
+        # zero harmonic and an even power
+        (system([d(x, t, 2) + ω0^2 * x + α * x^2 ~ F * cos(ω * t)], [x], [x => [0, ω]]), 2),
+        # only a zero harmonic: the slow flow removes the inertia `η`, a parameter still
+        (system([η * d(x, t, 2) + ω0^2 * x + α * x^3 ~ F], [x], [x => [0]]), 2),
+        # harmonics that are sums of parameters
+        (
+            system(
+                [d(x, t, 2) + γ * d(x, t) + α * x^3 ~ F * cos((ω + J) * t)],
+                [x],
+                [x => [ω + J, ω - J]],
+            ),
+            2,
+        ),
+        # a derivative above the slow-flow degree survives
+        (system([d(x, t, 3) + d(x, t, 2) + ω0^2 * x ~ F * cos(ω * t)], [x], [x => [ω]]), 2),
+        (system([d(x, t, 2) + ω0^2 * x + α * x^3 ~ 0], [x], [x => [ω, 3ω]]), 3),
+        # products of derivatives, and a derivative of a product
+        (
+            system(
+                [D(D(x)) + η * d(x, t)^2 * x + η * D(x^2) + ω0^2 * x ~ F * cos(ω * t)],
+                [x],
+                [x => [ω]],
+            ),
+            2,
+        ),
+        (
+            system(
+                [
+                    d(x, t, 2) + ω0^2 * x + α * x^3 ~ F * cos(ω * t) + J * y,
+                    d(y, t, 2) + ω0^2 * y + α * y^3 ~ J * x,
+                ],
+                [x, y],
+                [x => [ω], y => [3ω]],
+            ),
+            2,
+        ),
+    ]
+    for (diff_eq, degree) in cases
+        generic = HarmonicBalance.slow_flow(
+            HarmonicBalance.harmonic_ansatz(diff_eq, t);
+            fast_time=t,
+            slow_time=T,
+            degree=degree,
+        )
+        closed = HarmonicBalance.slow_flow_ansatz(
+            diff_eq; fast_time=t, slow_time=T, degree=degree
+        )
+        @test isequal(closed.equations, generic.equations)
+        @test isequal(
+            getfield.(closed.variables, :symbol), getfield.(generic.variables, :symbol)
+        )
+        @test isequal(closed.parameters, generic.parameters)
+    end
+end

@@ -7,8 +7,18 @@ automatically created and named.
 """
 function harmonic_ansatz(diff_eom::DifferentialEquation, time::Num)
     assert_averageable(diff_eom, time)
-    eqs = collect(values(diff_eom.equations))
-    rules, vars = Dict(), []
+    rules, vars = harmonic_variables(diff_eom, time)
+    eqs = substitute_all(collect(values(diff_eom.equations)), rules)
+    return HarmonicEquation(eqs, vars, diff_eom)
+end
+
+"""
+The harmonic variables of `diff_eom` with `time` as the time variable, and for each natural
+variable the sum of its harmonics that replaces it.
+"""
+function harmonic_variables(diff_eom::DifferentialEquation, time::Num)
+    rules = Dict{Num,Num}()
+    vars = HarmonicVariable[]
 
     # keep count to label new variables
     uv_idx = 1
@@ -39,8 +49,7 @@ function harmonic_ansatz(diff_eom::DifferentialEquation, time::Num)
 
         rules[nvar] = to_substitute # total sub rule for nvar
     end
-    eqs = substitute_all(eqs, rules)
-    return HarmonicEquation(eqs, Vector{HarmonicVariable}(vars), diff_eom)
+    return rules, vars
 end
 
 function slow_flow!(eom::HarmonicEquation; fast_time::Num, slow_time::Num, degree=2)
@@ -76,6 +85,116 @@ function slow_flow(
     new_eq = deepcopy(eom)
     slow_flow!(new_eq; fast_time=fast_time, slow_time=slow_time, degree=degree)
     return new_eq
+end
+
+"""
+$(TYPEDSIGNATURES)
+
+The harmonic ansatz of `diff_eom` followed by the slow flow, equal to
+`slow_flow(harmonic_ansatz(diff_eom, fast_time); fast_time, slow_time, degree)`.
+
+Rather than substituting the ansatz into the equations, expanding every derivative there
+and then rewriting the result, each derivative of a natural variable is written down in
+closed form and substituted once. For a harmonic `u(t) f(ωt)`, Leibniz' rule gives
+
+    dᵏ/dtᵏ [u f(ωt)] = Σⱼ binomial(k, j) u⁽ʲ⁾ ωᵏ⁻ʲ f⁽ᵏ⁻ʲ⁾(ωt),
+
+and the slow flow turns `u⁽ʲ⁾` into the `j`-th derivative of `u(T)` in the slow time for
+`j < degree` and drops it for `j == degree`.
+"""
+function slow_flow_ansatz(
+    diff_eom::DifferentialEquation; fast_time::Num, slow_time::Num, degree::Int=2
+)
+    assert_averageable(diff_eom, fast_time)
+    fast_rules, fast_vars = harmonic_variables(diff_eom, fast_time)
+    # The parameters in the order `harmonic_ansatz` finds them. The order is observable, as
+    # downstream solvers draw their generic parameters by position, so it is read off the
+    # same substituted equations; a parameter the slow flow eliminates is kept as well.
+    ansatz_eqs = substitute_all(collect(values(diff_eom.equations)), fast_rules)
+    parameters = HarmonicEquation(ansatz_eqs, fast_vars, diff_eom).parameters
+    vars = HarmonicVariable[
+        HarmonicVariable(
+            substitute_all(hvar.symbol, fast_time => slow_time),
+            hvar.name,
+            hvar.type,
+            hvar.ω,
+            hvar.natural_variable,
+        ) for hvar in fast_vars
+    ]
+    # expanding first leaves every derivative of a natural variable as `Dᵏ(x(t))`
+    eqs = expand_derivatives.(collect(values(diff_eom.equations)))
+    natural_variables = collect(keys(diff_eom.equations))
+
+    rules = Dict{Num,Num}()
+    for eq in eqs, side in (eq.lhs, eq.rhs), node in get_variables(side)
+        haskey(rules, Num(node)) && continue
+        nvar, order = derivative_of(node, natural_variables, fast_time)
+        order < 0 && continue
+        rules[Num(node)] = sum(
+            harmonic_derivative(hvar, order; fast_time, slow_time, degree) for
+            hvar in vars if isequal(hvar.natural_variable, nvar);
+            init=Num(0),
+        )
+    end
+    return HarmonicEquation(substitute_all(eqs, rules), vars, parameters, diff_eom)
+end
+
+"""
+The natural variable among `natural_variables` that `node` is a `time` derivative of, and
+the order of the derivative; order zero is the variable itself and order -1 means `node`
+is neither.
+"""
+function derivative_of(node::BasicSymbolic, natural_variables::Vector{Num}, time::Num)
+    order = 0
+    target = node
+    if Symbolics.is_derivative(node)
+        D = Symbolics.operation(node)
+        isequal(D.x, unwrap(time)) ||
+            throw(ArgumentError("The derivative $node is not with respect to $time."))
+        order = D.order
+        target = Symbolics.arguments(node)[1]
+    end
+    index = findfirst(nvar -> isequal(unwrap(nvar), target), natural_variables)
+    isnothing(index) && return Num(0), -1
+    return natural_variables[index], order
+end
+
+"""
+The `order`-th `fast_time` derivative of the contribution of `hvar` to its natural
+variable, after the slow flow of the given `degree`.
+"""
+function harmonic_derivative(
+    hvar::HarmonicVariable, order::Int; fast_time::Num, slow_time::Num, degree::Int
+)
+    hvar.type == "a" &&
+        return slow_derivative(hvar.symbol, order; fast_time, slow_time, degree)
+    f = hvar.type == "u" ? cos : sin
+    θ = hvar.ω * fast_time
+    return sum(
+        binomial(order, j) *
+        slow_derivative(hvar.symbol, j; fast_time, slow_time, degree) *
+        hvar.ω^(order - j) *
+        trig_derivative(f, order - j, θ) for j in 0:order
+    )
+end
+
+"""
+The `j`-th `fast_time` derivative of the slow variable `u`, as the slow flow leaves it:
+a `slow_time` derivative below `degree`, zero at `degree`, and untouched above.
+"""
+function slow_derivative(u::Num, j::Int; fast_time::Num, slow_time::Num, degree::Int)
+    j < degree && return d(u, slow_time, j)
+    j == degree && return Num(0)
+    return d(u, fast_time, j)
+end
+
+"The `m`-th derivative of `f(θ)` for `f` either `cos` or `sin`."
+function trig_derivative(f::Union{typeof(cos),typeof(sin)}, m::Int, θ::Num)
+    shift = mod(m + (f === sin ? 3 : 0), 4) # sin(θ) = cos(θ - π/2)
+    shift == 0 && return cos(θ)
+    shift == 1 && return -sin(θ)
+    shift == 2 && return -cos(θ)
+    return sin(θ)
 end
 
 ### Extending Symbolics.jl's simplify and substitute ###
@@ -195,10 +314,9 @@ function get_harmonic_equations(
     for pair in diff_eom.harmonics
         isempty(pair[2]) && error("No harmonics specified for the variable $(pair[1])!")
     end
-    # substitute trig functions into the differential equation
-    eom = harmonic_ansatz(diff_eom, fast_time)
-    # drop 2nd order time derivatives
-    eom = slow_flow(eom; fast_time=fast_time, slow_time=slow_time, degree=degree)
+    # substitute the harmonics into the differential equation and drop derivatives of
+    # order `degree`, the slow flow
+    eom = slow_flow_ansatz(diff_eom; fast_time, slow_time, degree)
     # perform averaging over the frequencies originally specified in dEOM
     fourier_transform!(eom, fast_time)
     # drop higher powers of the first-order derivatives
