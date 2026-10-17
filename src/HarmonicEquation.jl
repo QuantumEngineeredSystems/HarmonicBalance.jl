@@ -126,12 +126,13 @@ function slow_flow_ansatz(
     natural_variables = collect(keys(diff_eom.equations))
 
     rules = Dict{Num,Num}()
+    pieces = DerivativePieces()
     for eq in eqs, side in (eq.lhs, eq.rhs), node in get_variables(side)
         haskey(rules, Num(node)) && continue
         nvar, order = derivative_of(node, natural_variables, fast_time)
         order < 0 && continue
         rules[Num(node)] = sum(
-            harmonic_derivative(hvar, order; fast_time, slow_time, degree) for
+            harmonic_derivative(hvar, order, pieces; fast_time, slow_time, degree) for
             hvar in vars if isequal(hvar.natural_variable, nvar);
             init=Num(0),
         )
@@ -160,24 +161,52 @@ function derivative_of(node::BasicSymbolic, natural_variables::Vector{Num}, time
 end
 
 """
+The factors of the derivative terms that recur: the trig derivatives and powers of a
+frequency are shared by the `u` and `v` of every variable with that harmonic, and a slow
+derivative by every order of its variable. Building each once spares interning it again.
+"""
+struct DerivativePieces
+    trig::Dict{Tuple{Num,Int,Bool},Num}
+    powers::Dict{Tuple{Num,Int},Num}
+    slow::Dict{Tuple{Num,Int},Num}
+end
+
+function DerivativePieces()
+    return DerivativePieces(
+        Dict{Tuple{Num,Int,Bool},Num}(),
+        Dict{Tuple{Num,Int},Num}(),
+        Dict{Tuple{Num,Int},Num}(),
+    )
+end
+
+"""
 The `order`-th `fast_time` derivative of the contribution of `hvar` to its natural
 variable, after the slow flow of the given `degree`.
 """
 function harmonic_derivative(
-    hvar::HarmonicVariable, order::Int; fast_time::Num, slow_time::Num, degree::Int
+    hvar::HarmonicVariable,
+    order::Int,
+    pieces::DerivativePieces;
+    fast_time::Num,
+    slow_time::Num,
+    degree::Int,
 )
-    hvar.type == "a" &&
-        return slow_derivative(hvar.symbol, order; fast_time, slow_time, degree)
-    f = hvar.type == "u" ? cos : sin
-    θ = hvar.ω * fast_time
+    u = hvar.symbol
+    slow(j) =
+        get!(() -> slow_derivative(u, j; fast_time, slow_time, degree), pieces.slow, (u, j))
+    hvar.type == "a" && return slow(order)
+    is_cosine = hvar.type == "u"
+    ω = hvar.ω
     terms = BasicSymbolic{SymReal}[
         mul_worker(
             SymReal,
             unwrap.([
                 Num(binomial(order, j)),
-                slow_derivative(hvar.symbol, j; fast_time, slow_time, degree),
-                hvar.ω^(order - j),
-                trig_derivative(f, order - j, θ),
+                slow(j),
+                get!(() -> ω^(order - j), pieces.powers, (ω, order - j)),
+                get!(pieces.trig, (ω, order - j, is_cosine)) do
+                    return trig_derivative(is_cosine ? cos : sin, order - j, ω * fast_time)
+                end,
             ]),
         ) for j in 0:order if j != degree
     ]
