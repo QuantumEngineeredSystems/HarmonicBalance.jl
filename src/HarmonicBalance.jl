@@ -43,7 +43,8 @@ using Symbolics:
     diff2term,
     lower_varname
 
-using SymbolicUtils: SymbolicUtils, BasicSymbolic, isdiv, unwrap
+using SymbolicUtils:
+    SymbolicUtils, BasicSymbolic, SymReal, add_worker, isdiv, mul_worker, unwrap
 
 # src code
 include("DifferentialEquation.jl")

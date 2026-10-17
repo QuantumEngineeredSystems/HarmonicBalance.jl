@@ -170,12 +170,19 @@ function harmonic_derivative(
         return slow_derivative(hvar.symbol, order; fast_time, slow_time, degree)
     f = hvar.type == "u" ? cos : sin
     θ = hvar.ω * fast_time
-    return sum(
-        binomial(order, j) *
-        slow_derivative(hvar.symbol, j; fast_time, slow_time, degree) *
-        hvar.ω^(order - j) *
-        trig_derivative(f, order - j, θ) for j in 0:order
-    )
+    terms = BasicSymbolic{SymReal}[
+        mul_worker(
+            SymReal,
+            unwrap.([
+                Num(binomial(order, j)),
+                slow_derivative(hvar.symbol, j; fast_time, slow_time, degree),
+                hvar.ω^(order - j),
+                trig_derivative(f, order - j, θ),
+            ]),
+        ) for j in 0:order if j != degree
+    ]
+    isempty(terms) && return Num(0)
+    return Num(add_worker(SymReal, terms))
 end
 
 """
