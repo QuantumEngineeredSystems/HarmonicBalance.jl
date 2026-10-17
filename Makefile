@@ -12,8 +12,11 @@ changelog:
 	${JULIA} -e 'using Changelog; Changelog.generate(Changelog.CommonMark(), "CHANGELOG.md"; repo = "NonlinearOscillations/HarmonicBalance.jl")'
 
 test:
-	${JULIA} --project=test -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.update()'
-	${JULIA} --project=test test/runtests.jl
+	${JULIA} --project -e 'using Pkg; Pkg.resolve(); Pkg.test()'
+
+jet:
+	${JULIA} --project=test -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+	${JULIA} --project=test test/quality/JET.jl
 
 docs:
 	${JULIA} --project=docs -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
@@ -31,8 +34,9 @@ help:
 	@echo " - make format: format codes with JuliaFormatter"
 	@echo " - make changelog: generate changelog"
 	@echo " - make test: run the tests"
+	@echo " - make jet: run the JET analysis"
 	@echo " - make docs: instantiate and build the documentation"
 	@echo " - make vitepress: start Vitepress site of documentation"
 	@echo " - make all: run every commands in the above order"
 
-.PHONY: default setup format changelog test docs vitepress all help
+.PHONY: default setup format jet changelog test docs vitepress all help
