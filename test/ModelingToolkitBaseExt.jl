@@ -2,12 +2,13 @@ using HarmonicBalance
 using ModelingToolkitBase
 using OrdinaryDiffEqTsit5: Tsit5, solve, isinplace, ReturnCode
 using Test
+using Symbolics: Num
 
 @testset "Utilities" begin
     ModelingToolkitBaseExt = Base.get_extension(HarmonicBalance, :ModelingToolkitBaseExt)
-    @variables α
-    check = ModelingToolkitBaseExt.declare_parameter(α)
-    @test ModelingToolkitBase.PARAMETER ∈ values(check.val.metadata)
+    @variables τ q(τ) α
+    system = System(DifferentialEquation(d(q, τ) ~ α*q, q))
+    @test string.(parameters(system)) == ["α"]
 
     @testset "varmap_to_dict" begin
         @variables a b
@@ -53,12 +54,14 @@ end
         fixed = (α => 1.0, ω0 => 1.1, F => 0.01, γ => 0.01)
         param = HarmonicBalance.OrderedDict(merge(Dict(fixed), Dict(ω => 1.1)))
 
-        # MTK 11 + Symbolics 7: `System(::DifferentialEquation)` produces a System whose
-        # mtkcompile pass leaves the lowered derivative variable as a free parameter
-        # (`xˍt(t)` / `xˍtt(t)`), so ODEProblem from a raw DifferentialEquation cannot
-        # be built without supplying values for those. Reconstructing the lowering for
-        # MTK 11 is a follow-up; for now we check it errors instead of succeeding.
-        @test_broken (ODEProblem(diff_eq, [1.0, 0.0], (0, 100), param); true)
+        initial = [
+            isequal(variable, x) ? 1.0 : 0.0 for variable in unknowns(System(diff_eq))
+        ]
+        problem = ODEProblem(diff_eq, initial, (0.0, 1.0), param)
+        solution = solve(problem, Tsit5())
+        @test solution.retcode == ReturnCode.Success
+        @test all(isfinite, solution.u[end])
+        @test Set(string.(parameters(System(diff_eq)))) == Set(string.(keys(param)))
     end
 end
 
@@ -110,4 +113,49 @@ end
         @test !isinplace(SteadyStateProblem{false}(harmonic_eq, [1.0, 0.0], param))
         @test !isinplace(NonlinearProblem{false}(harmonic_eq, [1.0, 0.0], param))
     end
+end
+
+@testset "raw higher-order equations preserve their dynamics" begin
+    using Symbolics: Symbolics
+    @variables τ x(τ) y(τ) rate
+    cases = (
+        (DifferentialEquation(d(x, τ) ~ -rate*x, x), Dict(x=>1.0), Dict(rate=>1.0), exp),
+        (
+            DifferentialEquation(d(x, τ, 2) ~ -x, x),
+            Dict(x=>1.0, Symbolics.diff2term(d(x, τ))=>0.0),
+            Dict{Num,Float64}(),
+            cos,
+        ),
+        (
+            DifferentialEquation(d(x, τ, 3) ~ -d(x, τ), x),
+            Dict(
+                x=>0.0,
+                Symbolics.diff2term(d(x, τ))=>1.0,
+                Symbolics.diff2term(d(x, τ, 2))=>0.0,
+            ),
+            Dict{Num,Float64}(),
+            sin,
+        ),
+    )
+    for (equation, initial, fixed, reference) in cases
+        original = deepcopy(equation.equations)
+        system = System(equation)
+        u0 = [initial[Num(variable)] for variable in unknowns(system)]
+        problem = ODEProblem(equation, u0, (0.0, 1.0), fixed)
+        solution = solve(problem, Tsit5(); abstol=1e-10, reltol=1e-10, saveat=0.1)
+        expected = reference === exp ? exp.(-solution.t) : reference.(solution.t)
+        @test solution[x] ≈ expected atol=1e-8
+        @test isequal(equation.equations, original)
+    end
+
+    # A first-order state coupled to a second-order state tests cross-state
+    # derivative substitution and a mass matrix with different derivative orders.
+    equation = DifferentialEquation([d(x, τ, 2) ~ -x+d(y, τ), d(y, τ) ~ -y], [x, y])
+    initial = Dict(x=>0.0, Symbolics.diff2term(d(x, τ))=>0.0, y=>1.0)
+    system = System(equation)
+    u0 = [initial[Num(variable)] for variable in unknowns(system)]
+    problem = ODEProblem(equation, u0, (0.0, 1.0), Dict{Num,Float64}())
+    solution = solve(problem, Tsit5(); abstol=1e-10, reltol=1e-10, saveat=0.1)
+    @test solution[y] ≈ exp.(-solution.t) atol=1e-8
+    @test solution[x] ≈ (cos.(solution.t)-sin.(solution.t)-exp.(-solution.t))/2 atol=1e-8
 end

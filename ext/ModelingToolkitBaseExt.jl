@@ -4,8 +4,7 @@ using DocStringExtensions
 
 export System, ODEProblem, SteadyStateProblem, NonlinearProblem
 
-using QuestBase:
-    is_rearranged, rearrange_standard, rearrange_standard!, is_rearranged_standard
+using QuestBase: is_rearranged, rearrange_standard
 
 using HarmonicBalance:
     HarmonicEquation, get_variables, DifferentialEquation, get_independent_variables
@@ -45,9 +44,7 @@ end
 
 function declare_parameter(var::Num)
     var_sym = Symbol(var)
-    new_var = @parameters $var_sym
-    @eval($(var_sym) = first($new_var)) # store the variable under "name" in this namespace
-    return eval(var_sym)
+    return only(@parameters $var_sym)
 end
 
 @doc """
@@ -81,7 +78,8 @@ function ModelingToolkitBase.System(eom::HarmonicEquation)
     @assert all(isone.(length.(slow_times))) "Only one argument for the variables are allowed."
     slow_time = unique(first.(slow_times))
     @assert isone(length(slow_time)) "The argument of the variables are not the same."
-    slow_time_ivp = @eval @independent_variables $(Symbol(first(slow_time)))
+    time_name = Symbol(first(slow_time))
+    slow_time_ivp = only(@independent_variables $time_name)
 
     # we have the replace the param made with @variables with the ones made with @parameters
     par_names = declare_parameter.(eom.parameters)
@@ -92,7 +90,7 @@ function ModelingToolkitBase.System(eom::HarmonicEquation)
     eqs = substitute(eqs, Dict(zip(eom.parameters, par_names)))
 
     # ∨ mtk v10 need @mtkcompile
-    @mtkcompile sys = System(eqs, first(slow_time_ivp), vars, par_names)
+    @mtkcompile sys = System(eqs, slow_time_ivp, vars, par_names)
     return sys
 end
 
@@ -118,26 +116,22 @@ ODEProblem(sys, [1.0, 0.0], (0, 100), param)
 """
 function ModelingToolkitBase.System(diff_eq::DifferentialEquation)
     diff_eq = deepcopy(diff_eq)
-    if !is_rearranged_standard(diff_eq)
-        rearrange_standard!(diff_eq)
-    end
-
     times = get_independent_variables(diff_eq)
     @assert isone(length(times)) "Only one independent variable allowed."
-    iv = first(@eval @independent_variables $(Symbol(first(times))))
-
-    first_order_transform!(diff_eq, iv)
+    first_order_transform!(diff_eq, only(times))
+    time_name = Symbol(only(times))
+    iv = only(@independent_variables $time_name)
 
     eqs = collect(values(diff_eq.equations))
     vars = get_variables(diff_eq)
 
-    diff_eq_sym = collect(Iterators.flatten(get_variables.(eqs)))
+    diff_eq_sym = collect(Iterators.flatten(get_variables.(getfield.(eqs, :rhs))))
     param_undeclared = setdiff(setdiff(wrap.(diff_eq_sym), vars), iv)
     params = declare_parameter.(param_undeclared)
 
     eqs = substitute(eqs, Dict(zip(param_undeclared, params)))
 
-    @mtkcompile sys = System(eqs, first(iv), vars, params)
+    @mtkcompile sys = System(eqs, iv, vars, params)
 
     return sys
 end
@@ -150,6 +144,8 @@ Creates and ModelingToolkitBase.ODEProblem from a DifferentialEquation or Harmon
 The parameters `p` can be any map of symbolic variables to values: a `Dict`, or a
 `Vector` or `Tuple` of pairs. Whether the generated function is in-place is set with
 the `in_place` keyword or, equivalently, with the `ODEProblem{iip}` type parameter.
+The entries of `u0` follow `unknowns(System(eom))`; a raw higher-order system includes
+the lowered derivative states in that order.
 
 ### Example
 ```julia
