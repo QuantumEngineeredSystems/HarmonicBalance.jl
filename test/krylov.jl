@@ -2,7 +2,7 @@ using HarmonicBalance
 using HarmonicBalance: get_krylov_equations
 using QuestBase: QuestBase
 using Random: Random
-using Symbolics: Symbolics, substitute
+using Symbolics: Symbolics, Num, substitute
 using Test
 
 # Regression for the Symbolics 7 slow-flow bug. `trig_reduce` linearises the
@@ -71,7 +71,7 @@ end
     @test Set(Symbolics.unwrap.(getfield.(krylov_eq.variables, :ω))) ==
         Set(Symbolics.unwrap.([ω, ω, 3 * ω, 3 * ω]))
 
-    # KB and harmonic balance must agree up to the opposite sign convention
+    # to first order, KB and harmonic balance give the same slow flow
     lhss = [
         QuestBase.expand_fraction.(getfield.(eom.equations, :lhs)) for
         eom in (krylov_eq, rearranged)
@@ -84,7 +84,7 @@ end
         # keep the sample away from 0 so no denominator blows up
         subs = Dict(symbols .=> rand(rng, length(symbols)) .+ 0.5)
         for (k, h) in zip(lhss...)
-            residual = Symbolics.value(substitute(k, subs) + substitute(h, subs))
+            residual = Symbolics.value(substitute(k, subs) - substitute(h, subs))
             @test Float64(residual) ≈ 0.0 atol = 1e-10
         end
     end
@@ -101,4 +101,36 @@ end
     )
     add_harmonic!(diff_eom, x, ω)
     assert_nondegenerate(get_krylov_equations(diff_eom; order=2))
+end
+
+@testset "arbitrary order: detuned harmonic oscillator" begin
+    # The ansatz rotates at ω while the oscillator rotates at ω₀ = √(ω² + δ), so the
+    # exact slow flow turns (u, v) at the rate ω₀ - ω. Averaging to order N must give
+    # its Taylor series in δ to that order, a rate times v in du/dT and minus it in dv/dT.
+    @variables t x(t) δ ω
+    diff_eom = DifferentialEquation(d(x, t, 2) + (ω^2 + δ) * x ~ 0, x)
+    add_harmonic!(diff_eom, x, ω)
+    taylor = [1 // 2, -1 // 8, 1 // 16, -5 // 128]
+    @testset "order $order" for order in 1:4
+        eom = get_krylov_equations(diff_eom; order)
+        u, v = get_variables(eom)
+        rate = sum(taylor[n] * δ^n / ω^(2n - 1) for n in 1:order)
+        expected = [rate * v, -rate * u]
+        # exact rational arithmetic, any wrong coefficient leaves a nonzero residual
+        point = Dict(δ => 3 // 7, ω => 5 // 3, u => 2 // 1, v => -1 // 3)
+        for (eq, e) in zip(eom.equations, expected)
+            @test Symbolics.value(substitute(eq.lhs - e, point)) == 0
+        end
+    end
+end
+
+@testset "arbitrary order: purely oscillating field averages to zero" begin
+    # h(x) cos(ωt) is the derivative of a periodic function, a near-identity change of
+    # variables removes it at every order
+    @variables X1 X2 ω τ
+    field = Num[(X1^2 + X2) * cos(ω * τ), (X1 * X2 - X2^3) * cos(ω * τ)]
+    @testset "order $order" for order in 1:4
+        averaged = HarmonicBalance.lie_transform_average(field, Num[X1, X2], τ, order)
+        @test all(g -> isequal(Symbolics.expand(g), 0), averaged)
+    end
 end
