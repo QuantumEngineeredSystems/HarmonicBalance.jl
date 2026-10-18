@@ -15,7 +15,7 @@ Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [sources]
 HarmonicBalance = {path = ".."}
-QuestBase = {rev = "main", url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl"}
+QuestBase = {rev = "refactor/harmonic-kind", url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl"}
 
 [compat]
 Aqua = "0.8.11"
