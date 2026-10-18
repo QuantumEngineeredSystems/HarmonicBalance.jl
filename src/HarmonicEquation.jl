@@ -28,18 +28,18 @@ function harmonic_variables(diff_eom::DifferentialEquation, time::Num)
         to_substitute = Num(0) # combine all the substitution rules for var
         for ω in diff_eom.harmonics[nvar]
             if !isequal(ω, 0) # nonzero harmonic - create u,v
-                rule_u, hvar_u = _create_harmonic_variable(
-                    nvar, ω, time, "u"; new_symbol="u" * string(uv_idx)
+                rule_u, hvar_u = create_harmonic_variable(
+                    nvar, ω, time, CosineQuadrature; new_symbol="u" * string(uv_idx)
                 )
-                rule_v, hvar_v = _create_harmonic_variable(
-                    nvar, ω, time, "v"; new_symbol="v" * string(uv_idx)
+                rule_v, hvar_v = create_harmonic_variable(
+                    nvar, ω, time, SineQuadrature; new_symbol="v" * string(uv_idx)
                 )
                 rule = rule_u + rule_v
                 uv_idx += 1
                 push!(vars, hvar_u, hvar_v)
             else # zero harmonic - create a
-                rule, hvar = _create_harmonic_variable(
-                    nvar, ω, time, "a"; new_symbol="a" * string(a_idx)
+                rule, hvar = create_harmonic_variable(
+                    nvar, ω, time, ZeroHarmonic; new_symbol="a" * string(a_idx)
                 )
                 a_idx += 1
                 push!(vars, hvar)
@@ -116,7 +116,7 @@ function slow_flow_ansatz(
         HarmonicVariable(
             substitute_all(hvar.symbol, fast_time => slow_time),
             hvar.name,
-            hvar.type,
+            hvar.kind,
             hvar.ω,
             hvar.natural_variable,
         ) for hvar in fast_vars
@@ -194,8 +194,8 @@ function harmonic_derivative(
     u = hvar.symbol
     slow(j) =
         get!(() -> slow_derivative(u, j; fast_time, slow_time, degree), pieces.slow, (u, j))
-    hvar.type == "a" && return slow(order)
-    is_cosine = hvar.type == "u"
+    hvar.kind == ZeroHarmonic && return slow(order)
+    is_cosine = hvar.kind == CosineQuadrature
     ω = hvar.ω
     terms = BasicSymbolic{SymReal}[
         mul_worker(
@@ -269,12 +269,11 @@ function fourier_transform!(eom::HarmonicEquation, time::Num)
     end
 
     for (eq_idx, idxs) in groups
-        # "type" is usually "u" or "v" (harmonic) or ["a"] (zero-harmonic)
         specs = map(idxs) do i
             hvar = eom.variables[i]
-            if hvar.type == "u"
+            if hvar.kind == CosineQuadrature
                 (hvar.ω, cos)
-            elseif hvar.type == "v"
+            elseif hvar.kind == SineQuadrature
                 (hvar.ω, sin)
             else
                 (0, cos) # zero-harmonic: pick out the constants

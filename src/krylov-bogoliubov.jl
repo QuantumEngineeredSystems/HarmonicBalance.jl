@@ -74,7 +74,7 @@ function get_krylov_equations(
         Fₜ = Num.(getfield.(eom.equations, :lhs))
         F₀ = Num.(getfield.(average(eom, fast_time), :lhs))
         Fₜ′ = Symbolics.substitute(
-            get_Jacobian(eom), Dict(zip(_remove_brackets.(vars_symb), vars_symb))
+            get_Jacobian(eom), Dict(zip(remove_brackets.(vars_symb), vars_symb))
         )
 
         Ḋ₁ = trig_reduce.(Fₜ - F₀)
@@ -107,7 +107,7 @@ end
 
 function change_convention!(eom::HarmonicEquation, slow_time)
     eqs = eom.equations
-    vars = filter(u -> u.type == "v", eom.variables)
+    vars = filter(u -> u.kind == SineQuadrature, eom.variables)
     convention = Dict(v.symbol => -v.symbol for v in vars)
 
     eom.equations = expand_derivatives.(substitute_all(eqs, convention))
@@ -132,11 +132,11 @@ function van_der_Pol(eom::QuestBase.DifferentialEquation, t::Num)
         # each variable rotates at its own harmonic; the harmonics may be
         # commensurate (e.g. ω and 3ω) but need not be equal
         ω = first(dEOM.harmonics[nvar])
-        rule_u, hvar_u = _create_harmonic_variable(
-            nvar, ω, t, "u"; new_symbol="u" * string(uv_idx)
+        rule_u, hvar_u = create_harmonic_variable(
+            nvar, ω, t, CosineQuadrature; new_symbol="u" * string(uv_idx)
         )
-        rule_v, hvar_v = _create_harmonic_variable(
-            nvar, ω, t, "v"; new_symbol="v" * string(uv_idx)
+        rule_v, hvar_v = create_harmonic_variable(
+            nvar, ω, t, SineQuadrature; new_symbol="v" * string(uv_idx)
         )
         rule = rule_u - rule_v
         # ~ this is a choice, we use u*cos(ωt) + v*sin(ωt) as the ansatz, but later impose this by using `change_convention!`
