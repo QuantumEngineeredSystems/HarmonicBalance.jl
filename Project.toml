@@ -19,7 +19,7 @@ rev = "refactor/harmonic-kind"
 url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl"
 
 [sources.QuestBase]
-rev = "refactor/harmonic-kind"
+rev = "main"
 url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl"
 
 [extensions]
