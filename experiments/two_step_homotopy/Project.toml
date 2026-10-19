@@ -1,0 +1,22 @@
+[deps]
+QuestBase = "7e80f742-43d6-403d-a9ea-981410111d43"
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+HarmonicBalance = "e13b9ff6-59c3-11ec-14b1-f3d2cc6c135e"
+HomotopyContinuation = "f213a82b-91d6-5c5d-acf7-10f1c761b327"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+QuestBase = "0.5.3"
+BenchmarkTools = "1"
+HarmonicBalance = "0.18"
+HomotopyContinuation = "2"
+LinearAlgebra = "1.13"
+Symbolics = "7"
+Test = "1"
+julia = "~1.13"
+
+[sources]
+HarmonicBalance = {path = "../.."}
+QuestBase = {url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl", rev = "main"}
