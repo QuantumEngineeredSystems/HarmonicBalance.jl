@@ -11,8 +11,8 @@ This is the linearised left-hand side of F(u) = du/dT.
 """
 function get_Jacobian(eom::HarmonicEquation)::Matrix{Num}
     rearr = !is_rearranged(eom) ? rearrange_standard(eom) : eom
-    lhs = _remove_brackets(rearr)
-    vars = Num[_remove_brackets(var) for var in eom.variables]
+    lhs = remove_brackets(rearr)
+    vars = Num[remove_brackets(var) for var in eom.variables]
 
     return get_Jacobian(lhs, vars)
 end
