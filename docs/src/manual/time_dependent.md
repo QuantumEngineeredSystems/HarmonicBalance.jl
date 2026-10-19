@@ -20,11 +20,3 @@ steady_state_sweep
 ```@docs; canonical=false
 plot(::OrdinaryDiffEqTsit5.ODESolution, ::Any, ::HarmonicEquation)
 ```
-
-## Miscellaneous
-
-Using a time-dependent simulation can verify solution stability in cases where the Jacobian is too expensive to compute.
-
-```@docs; canonical=false
-HarmonicSteadyState.is_stable
-```

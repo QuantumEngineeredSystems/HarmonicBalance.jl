@@ -33,5 +33,5 @@ QuestBase = "0.6"
 
 [sources]
 QuestBase = {url = "https://github.com/QuantumEngineeredSystems/QuestBase.jl", rev = "main"}
-HarmonicSteadyState = {url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl", rev = "refactor/harmonic-kind"}
+HarmonicSteadyState = {url = "https://github.com/QuantumEngineeredSystems/HarmonicSteadyState.jl", rev = "main"}
 HarmonicBalance = {path = ".."}
