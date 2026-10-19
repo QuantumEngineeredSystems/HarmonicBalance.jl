@@ -146,18 +146,19 @@ the order of the derivative; order zero is the variable itself and order -1 mean
 is neither.
 """
 function derivative_of(node::BasicSymbolic, natural_variables::Vector{Num}, time::Num)
-    order = 0
-    target = node
-    if Symbolics.is_derivative(node)
-        D = Symbolics.operation(node)
-        isequal(D.x, unwrap(time)) ||
-            throw(ArgumentError("The derivative $node is not with respect to $time."))
-        order = D.order
-        target = Symbolics.arguments(node)[1]
-    end
+    target, order = differentiated(node, time)
     index = findfirst(nvar -> isequal(unwrap(nvar), target), natural_variables)
     isnothing(index) && return Num(0), -1
     return natural_variables[index], order
+end
+
+"The expression `node` is a `time` derivative of, and the order; `node` itself at order zero."
+function differentiated(node::BasicSymbolic, time::Num)
+    Symbolics.is_derivative(node) || return node, 0
+    D = Symbolics.operation(node)
+    isequal(D.x, unwrap(time)) ||
+        throw(ArgumentError("The derivative $node is not with respect to $time."))
+    return Symbolics.arguments(node)[1], D.order
 end
 
 """
