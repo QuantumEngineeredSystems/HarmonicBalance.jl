@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1792399090047,
+  "lastUpdate": 1792401416042,
   "repoUrl": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
   "entries": {
     "Benchmark Results": [
@@ -960,6 +960,108 @@ window.BENCHMARK_DATA = {
             "value": 74684448,
             "unit": "ns",
             "extra": "gctime=0\nmemory=33845360\nallocs=786214\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "orjan.ameye@hotmail.com",
+            "name": "Orjan Ameye",
+            "username": "oameye"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6ab22159a4f956694ce302dab951216a2cb31adf",
+          "message": "Average to arbitrary order by Hori-Deprit Lie transforms (#540)\n\n* Average to arbitrary order by Hori-Deprit Lie transforms\n\nget_krylov_equations now accepts any order. The slow flow is computed by\nDeprit's triangle on the Fourier coefficients of the van der Pol field,\nheld as sparse Laurent polynomials with packed exponents, so the\nrecursion only multiplies, adds and differentiates polynomials. Orders 1\nand 2 coincide with the classical Krylov-Bogoliubov expansion.\n\nThe v quadratures are now reflected consistently. The previous\nconvention change was a no-op, so v carried the wrong sign relative to\nthe printed ansatz; the first-order flow now equals that of\nget_harmonic_equations.\n\n* Test the averaged flow against the full ODE\n\nTwo oscillators at ω and 3ω: halving the coupling strength must divide\nthe Floquet error of order N by 2^(N+1) and the fixed-point error by\n2^N, with and without damping. The undamped orbit is even in time, and\nthe damped one fixes the sign of v1. Benchmark order 3 of the parametron.\n\n* Format\n\n* Assign the differentiated variable once, so no closure boxes it\n\nCloses #482.",
+          "timestamp": "2026-10-19T10:52:38+02:00",
+          "tree_id": "6e8b770edd5fd2e2572b94b980f1d70d1ed76467",
+          "url": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/commit/6ab22159a4f956694ce302dab951216a2cb31adf"
+        },
+        "date": 1792401408723,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "Classification/One Dimensional/Default classifications",
+            "value": 1277249,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=1317168\nallocs=22498\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Harmonic Equation/One Frequency",
+            "value": 888395,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=285376\nallocs=5343\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 1",
+            "value": 75136492,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=1691312\nallocs=35306\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 2",
+            "value": 86002907.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=2330736\nallocs=45385\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 3",
+            "value": 126811570,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=5639016\nallocs=78939\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Problem/HomotopyContinuationProblem",
+            "value": 7440511,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=926936\nallocs=23017\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Linear response/Lab frame/Jacobian Response",
+            "value": 792071,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=571840\nallocs=7776\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Linear response/Rotating frame/Jacobian Response",
+            "value": 295519,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=305872\nallocs=2141\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Sorting/One dimensional/Hilbert sorting",
+            "value": 141584,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=207856\nallocs=3017\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Sorting/One dimensional/Nearest-neighbor sorting",
+            "value": 140812,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=207856\nallocs=3017\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Polyhedral homotopy",
+            "value": 417844097.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=71549480\nallocs=1609193\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Total degree homotopy",
+            "value": 268963679,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=46788728\nallocs=1068293\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Warm up method",
+            "value": 132260918.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=33847712\nallocs=786205\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
           }
         ]
       }
