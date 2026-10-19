@@ -32,7 +32,7 @@ function frequency_terms(ν::Num)
                 atom *= Num(factor)
             end
         end
-        coefficient, atom
+        return coefficient, atom
     end
 end
 
@@ -107,20 +107,22 @@ function atom_index!(table::AtomTable, atom::Num)
         is_variable = any(v -> isequal(v, atom), table.variables)
         is_variable ||
             !any(v -> QuestBase.occurs_in(v, atom), table.variables) ||
-            throw(ArgumentError("The factor $atom is not polynomial in the slow variables."))
+            throw(
+                ArgumentError("The factor $atom is not polynomial in the slow variables.")
+            )
         push!(table.expressions, atom)
-        length(table.expressions)
+        return length(table.expressions)
     end
 end
 
 function inverse_index!(table::AtomTable, denominator::Num)
     return get!(table.inverses, denominator) do
         any(v -> QuestBase.occurs_in(v, denominator), table.variables) && throw(
-            ArgumentError("The denominator $denominator depends on the slow variables."),
+            ArgumentError("The denominator $denominator depends on the slow variables.")
         )
         push!(table.expressions, 1 / denominator)
         table.denominators[length(table.expressions)] = denominator
-        length(table.expressions)
+        return length(table.expressions)
     end
 end
 
@@ -201,7 +203,9 @@ function exponent(m::PackedMonomial, atom::Int)
 end
 
 function unpack(m::PackedMonomial{W}, natoms::Int) where {W}
-    return SparseMonomial([i => exponent(m, i) for i in 1:natoms if !iszero(exponent(m, i))])
+    return SparseMonomial([
+        i => exponent(m, i) for i in 1:natoms if !iszero(exponent(m, i))
+    ])
 end
 
 function monomial_product(a::PackedMonomial{W}, b::PackedMonomial{W}) where {W}
@@ -529,7 +533,7 @@ function homological_generator(
             inverse, inverted = inverses[key]
             generator.cosines[key] = times_monomial(s, inverted, inverse)
         end
-        generator
+        return generator
     end
     return SpectralField(components, variable_atoms, true)
 end
@@ -569,7 +573,9 @@ function lie_transform_average(
     reflected::Vector{Bool}=fill(false, length(variables)),
 )
     series = [fourier_series(component, t) for component in field]
-    return lie_transform_average(series, variables, order, reflected, coefficient_type(series))
+    return lie_transform_average(
+        series, variables, order, reflected, coefficient_type(series)
+    )
 end
 
 function lie_transform_average(
@@ -603,7 +609,13 @@ end
 
 function average_packed(
     ::Val{W},
-    input::Vector{Vector{Tuple{FrequencyKey,Vector{Tuple{SparseMonomial,C}},Vector{Tuple{SparseMonomial,C}}}}},
+    input::Vector{
+        Vector{
+            Tuple{
+                FrequencyKey,Vector{Tuple{SparseMonomial,C}},Vector{Tuple{SparseMonomial,C}}
+            },
+        },
+    },
     sparse_inverses::Dict{FrequencyKey,Tuple{C,SparseMonomial}},
     basis::FrequencyBasis,
     atoms::AtomTable,
@@ -621,7 +633,7 @@ function average_packed(
             isempty(cosine) || add!(coefficient!(spectrum.cosines, key), P(cosine), one(C))
             isempty(sine) || add!(coefficient!(spectrum.sines, key), P(sine), one(C))
         end
-        spectrum
+        return spectrum
     end
     # only the diagonals before the last one enter Lie derivatives
     first_order = SpectralField(components, variable_atoms, order > 1)
@@ -662,7 +674,7 @@ function average_packed(
         for n in 1:order
             add!(averaged, averages[n][i], inv(C(factorial(n))) * (reflected[i] ? -1 : 1))
         end
-        fraction(reflect!(averaged, reflected_atoms), atoms)
+        return fraction(reflect!(averaged, reflected_atoms), atoms)
     end
 end
 
@@ -673,7 +685,7 @@ floating-point constant.
 function coefficient_type(series::Vector{Vector{FourierComponent}})
     exact = all(series) do components
         all(components) do c
-            constants_are_rational(c.cosine) && constants_are_rational(c.sine)
+            return constants_are_rational(c.cosine) && constants_are_rational(c.sine)
         end
     end
     return exact ? Rational{Int} : Float64
@@ -682,8 +694,8 @@ end
 function constants_are_rational(x::Num)
     return all(QuestBase.expanded_terms(unwrap(x))) do term
         all(term.factors) do factor
-            !SymbolicUtils.isconst(factor) ||
-                SymbolicUtils.unwrap_const(factor) isa Union{Integer,Rational}
+            return !SymbolicUtils.isconst(factor) ||
+                   SymbolicUtils.unwrap_const(factor) isa Union{Integer,Rational}
         end
     end
 end

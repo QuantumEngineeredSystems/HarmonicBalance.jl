@@ -128,7 +128,7 @@ end
     # h(x) cos(ωt) is the derivative of a periodic function, a near-identity change of
     # variables removes it at every order
     @variables X1 X2 ω τ
-    field = Num[(X1^2 + X2) * cos(ω * τ), (X1 * X2 - X2^3) * cos(ω * τ)]
+    field = Num[(X1 ^ 2 + X2) * cos(ω * τ), (X1 * X2 - X2 ^ 3) * cos(ω * τ)]
     @testset "order $order" for order in 1:4
         averaged = HarmonicBalance.lie_transform_average(field, Num[X1, X2], τ, order)
         @test all(g -> isequal(Symbolics.expand(g), 0), averaged)

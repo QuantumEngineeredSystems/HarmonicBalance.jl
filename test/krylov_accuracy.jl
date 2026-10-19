@@ -29,7 +29,7 @@ function jacobian(f, z; δ=1e-7)
     columns = map(eachindex(z)) do j
         e = zeros(length(z))
         e[j] = δ
-        (f(z .+ e) .- f(z .- e)) ./ (2δ)
+        return (f(z .+ e) .- f(z .- e)) ./ (2δ)
     end
     return reduce(hcat, columns)
 end
@@ -67,18 +67,20 @@ function errors(ε, g)
         J₂ => 0.7ε,
         γ => g * ε,
     )
-    γv, ω₁v, ω₂v, Fv, α₁v, α₂v, J₁v, J₂v = (parameters[s] for s in (γ, ω₁, ω₂, F, α₁, α₂, J₁, J₂))
+    γv, ω₁v, ω₂v, Fv, α₁v, α₂v, J₁v, J₂v = (
+        parameters[s] for s in (γ, ω₁, ω₂, F, α₁, α₂, J₁, J₂)
+    )
     field(z, τ) = [
         z[2],
-        -γv * z[2] - ω₁v^2 * z[1] - α₁v * z[1]^3 - 3J₁v * z[1]^2 * z[3] - J₂v * z[3]^2 * z[1] +
-        Fv * cos(τ),
+        -γv * z[2] - ω₁v^2 * z[1] - α₁v * z[1]^3 - 3J₁v * z[1]^2 * z[3] -
+        J₂v * z[3]^2 * z[1] + Fv * cos(τ),
         z[4],
         -γv * z[4] - ω₂v^2 * z[3] - α₂v * z[3]^3 - J₁v * z[1]^3 - J₂v * z[1]^2 * z[3],
     ]
     period, steps = 2π, 2000
     flows = map(averaged) do eom
         lhs = [substitute(Num(eq.lhs), parameters) for eq in eom.equations]
-        Symbolics.build_function(lhs, get_variables(eom); expression=Val(false))[1]
+        return Symbolics.build_function(lhs, get_variables(eom); expression=Val(false))[1]
     end
 
     # the orbit starts where the first-order flow rests: x(0) = u₁, ẋ(0) = ω v₁, ...
@@ -91,7 +93,8 @@ function errors(ε, g)
     z, h = orbit, period / steps
     for k in 0:(steps - 1)
         τ = k * h
-        amplitudes .+= (2 / steps) .* [z[1] * cos(τ), z[1] * sin(τ), z[3] * cos(3τ), z[3] * sin(3τ)]
+        amplitudes .+=
+            (2 / steps) .* [z[1] * cos(τ), z[1] * sin(τ), z[3] * cos(3τ), z[3] * sin(3τ)]
         z = rk4(field, z, τ, h, 1)
     end
 
@@ -99,7 +102,7 @@ function errors(ε, g)
         fixed_point = newton(flow, amplitudes)
         approximate = exp.(eigvals(jacobian(flow, fixed_point)) .* period)
         floquet = maximum(minimum(abs.(μ .- approximate)) for μ in multipliers)
-        (floquet, maximum(abs.(fixed_point .- amplitudes)), amplitudes)
+        return (floquet, maximum(abs.(fixed_point .- amplitudes)), amplitudes)
     end
 end
 
