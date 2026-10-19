@@ -1,16 +1,23 @@
-get_harmonic(var::HarmonicVariable) = var.ω
-get_harmonics(eom::HarmonicEquation) = get_harmonic.(eom.variables)
-
 """
 $(TYPEDSIGNATURES)
 
 Apply the Krylov-Bogoliubov averaging method to a specific `order` to obtain a set of ODEs (the slow-flow equations) governing the harmonics of `diff_eom`.
 
+The van der Pol transformation turns `diff_eom` into `du/dT = f(u, t)`, with `f` periodic
+in the fast time `t`. A near-identity change of variables then removes the time dependence
+order by order, leaving the autonomous slow flow `Σₙ gₙ / n!`. Each order solves a
+homological equation `∂ₜWₙ = gₙ - Kₙ` for the generator `Wₙ` of the Lie transform, where
+`Kₙ` collects the lower orders through Deprit's recursion (Hori-Deprit averaging):
+`gₙ` is the average of `Kₙ` and `Wₙ` the zero-mean antiderivative of its oscillating part.
+Both are read off the Fourier series of `Kₙ` in `t`.
+
+The first two orders coincide with the classical Krylov-Bogoliubov expansion. Higher orders
+may differ from other averaging schemes by a near-identity change of the slow variables,
+under which steady states and their stability are unchanged.
+
 The harmonics evolve in `slow_time`, the oscillating terms themselves in `fast_time`.
 If no input is used, a variable T is defined for `slow_time` and `fast_time` is taken as the independent variable
 of `diff_eom`.
-
-Krylov-Bogoliubov averaging method can be applied up to `order = 2`.
 
 # Example
 ```julia-repl
@@ -27,17 +34,16 @@ julia> harmonic_eom = get_krylov_equations(diff_eom, order = 1)
 
 A set of 2 harmonic equations
 Variables: u1(T), v1(T)
-Parameters: ω, F, ω0
+Parameters: ω, ω0, F
 
 Harmonic ansatz:
-xˍt(t) =
 x(t) = u1(T)*cos(ωt) + v1(T)*sin(ωt)
 
 Harmonic equations:
 
-((1//2)*(ω^2)*v1(T) - (1//2)*(ω0^2)*v1(T)) / ω ~ Differential(T)(u1(T))
+(-(1//2)*v1(T)*(ω^2) + (1//2)*v1(T)*(ω0^2)) / ω ~ Differential(T, 1)(u1(T))
 
-((1//2)*(ω0^2)*u1(T) - (1//2)*F - (1//2)*(ω^2)*u1(T)) / ω ~ Differential(T)(v1(T))
+((1//2)*F + (1//2)*u1(T)*(ω^2) - (1//2)*u1(T)*(ω0^2)) / ω ~ Differential(T, 1)(v1(T))
 ```
 
 """
@@ -62,56 +68,21 @@ function get_krylov_equations(
     eom = slow_flow(eom; fast_time=fast_time, slow_time=slow_time, degree=2)
 
     rearrange!(eom, d(get_variables(eom), slow_time))
-    # `average` works term by term, so a flat sum of products is enough. A full
-    # `Symbolics.simplify` here also cancels the fraction, but its cost explodes with the
-    # number of harmonics; `simplify_fractions` below does the cancelling instead.
-    eom.equations = Symbolics.expand.(eom.equations)
-
-    if order == 1
-        average!(eom, fast_time)
-    elseif order == 2
-        vars_symb = get_variables(eom)
-        Fₜ = Num.(getfield.(eom.equations, :lhs))
-        F₀ = Num.(getfield.(average(eom, fast_time), :lhs))
-        Fₜ′ = Symbolics.substitute(
-            get_Jacobian(eom), Dict(zip(remove_brackets.(vars_symb), vars_symb))
-        )
-
-        Ḋ₁ = trig_reduce.(Fₜ - F₀)
-        D₁ = take_trig_integral.(Ḋ₁, get_harmonics(eom), fast_time)
-        D₁ = D₁ - average.(D₁, fast_time)
-
-        Gₜ = Fₜ′ * D₁ # trig_reduce.(Fₜ′ * D₁)
-        G₀ = average.(Gₜ, fast_time)
-        eom.equations = F₀ + G₀ .~ getfield.(eom.equations, :rhs)
-    end
-
-    change_convention!(eom, slow_time)
-    # averaging has removed the fast time, so cancelling `rearrange!`'s denominator is cheap here
-    eom.equations = [
-        Symbolics.simplify_fractions(Num(eq.lhs)) ~ eq.rhs for eq in eom.equations
-    ]
+    field = Num[eq.lhs for eq in eom.equations]
+    # the ansatz u cos(ωt) - v sin(ωt) of `van_der_Pol` turns into u cos(ωt) + v sin(ωt)
+    reflected = [hvar.kind == SineQuadrature for hvar in eom.variables]
+    averaged = lie_transform_average(field, get_variables(eom), fast_time, order; reflected)
+    eom.equations = averaged .~ getfield.(eom.equations, :rhs)
     return eom
 end
 function proper_krylov_system(diff_eom::QuestBase.DifferentialEquation, order::Int)
     order < 1 && error("The order of the Krylov-Bogoliubov method must be at least 1!")
-    order > 2 && error("Krylov-Bogoliubov implementation only supports up to second order!")
     harmonics = values(diff_eom.harmonics)
     all(isempty.(harmonics)) && error("No harmonics specified!")
     any(isempty.(harmonics)) &&
         error("Krylov-Bogoliubov method needs all variables to have a single harmonic!")
     any(length.(harmonics) .> 1) &&
         error("Krylov-Bogoliubov method only supports a single harmonic!")
-    return nothing
-end
-
-function change_convention!(eom::HarmonicEquation, slow_time)
-    eqs = eom.equations
-    vars = filter(u -> u.kind == SineQuadrature, eom.variables)
-    convention = Dict(v.symbol => -v.symbol for v in vars)
-
-    eom.equations = expand_derivatives.(substitute_all(eqs, convention))
-    rearrange!(eom, d(get_variables(eom), slow_time))
     return nothing
 end
 
@@ -139,7 +110,7 @@ function van_der_Pol(eom::QuestBase.DifferentialEquation, t::Num)
             nvar, ω, t, SineQuadrature; new_symbol="v" * string(uv_idx)
         )
         rule = rule_u - rule_v
-        # ~ this is a choice, we use u*cos(ωt) + v*sin(ωt) as the ansatz, but later impose this by using `change_convention!`
+        # the ansatz is u cos(ωt) - v sin(ωt); averaging reflects v back to u cos(ωt) + v sin(ωt)
         rules[nvar] = rule
 
         D = Differential(t)
@@ -153,50 +124,3 @@ function van_der_Pol(eom::QuestBase.DifferentialEquation, t::Num)
     eqs = expand_derivatives.(substitute_all(eqs, rules))
     return HarmonicEquation(eqs, Vector{HarmonicVariable}(vars), eom)
 end
-
-function average!(eom::HarmonicEquation, t)
-    return eom.equations = average(eom, t)
-end
-function average(eom::HarmonicEquation, t)
-    eqs = similar(eom.equations)
-    for (i, eq) in pairs(eom.equations)
-        lhs = average(Num(eq.lhs), t)
-        rhs = average(Num(eq.rhs), t)
-        eqs[i] = lhs ~ rhs
-    end
-    return eqs
-end
-function average(x, t)
-    term = trig_reduce(x)
-    indep = get_independent(term, t)
-    ft = Num(simplify_complex(Symbolics.expand(indep)))
-    return Symbolics.expand(ft)
-end
-
-function take_trig_integral(x::BasicSymbolic, ω, t)
-    if isdiv(x)
-        # termwise integration leaves the denominator alone, so it goes back as is; `expand`
-        # is enough to flatten for the averaging that follows
-        arg_num = Symbolics.arguments(x.num)
-        return Symbolics.expand(sum(take_trig_integral.(arg_num, ω, t))) / x.den
-    else
-        all_terms = get_all_terms(Num(x))
-        trigs = filter(z -> is_trig(z), all_terms)
-        D = Differential(t)
-
-        rules = []
-        for trig in trigs
-            arg = first(Symbolics.arguments(trig.val))
-            type = Symbolics.operation(trig.val)
-
-            term = Num((type == cos ? sin(arg) : -cos(arg)) / expand_derivatives(D(arg)))
-            append!(rules, [trig => term])
-        end
-
-        return Symbolics.substitute(x, Dict(rules))
-    end
-end
-take_trig_integral(x::Num, ω, t) = take_trig_integral(Symbolics.expand(unwrap(x)), ω, t)
-
-export first_order_transform!,
-    is_rearranged_standard, rearrange_standard!, get_equations, get_krylov_equations

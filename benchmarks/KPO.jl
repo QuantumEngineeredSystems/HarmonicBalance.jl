@@ -30,6 +30,9 @@ function benchmark_kpo!(SUITE)
     SUITE["Construction"]["Krylov Equation"]["Order 2"] = @benchmarkable begin
         get_krylov_equations($diff_eq; order=2)
     end seconds = 10
+    SUITE["Construction"]["Krylov Equation"]["Order 3"] = @benchmarkable begin
+        get_krylov_equations($diff_eq; order=3)
+    end seconds = 10
 
     fixed = OrderedDict(ω₀ => 1.0, γ => 1e-2, λ => 5e-2, F => 1e-3, α => 1.0, η => 0.3)
     varied = OrderedDict(ω => range(0.9, 1.1, 100))

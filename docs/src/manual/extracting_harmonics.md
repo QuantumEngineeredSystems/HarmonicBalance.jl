@@ -39,6 +39,8 @@ get_krylov_equations
 
 The primary advantage of the Krylov-Bogoliubov method lies in its ability to delve deeper into high-frequency components, allowing a more comprehensive understanding of fast dynamical behaviors. By leveraging this technique, one can obtain higher-order approximations that shed light on intricate system dynamics.
 
+Any `order` is supported. The averaging is carried out as a Lie transform (Hori-Deprit averaging), which reduces to the classical Krylov-Bogoliubov expansion at orders 1 and 2. To first order, the slow flow coincides with the harmonic equations of [`get_harmonic_equations`](@ref) for the same ansatz $x = u \cos(\omega t) + v \sin(\omega t)$.
+
 However, it's essential to note a limitation: this method cannot handle multiple harmonics within a single variable, unlike some other high-frequency expansion methods.
 
 For further information and a detailed understanding of this method, refer to [Krylov-Bogoliubov averaging method on Wikipedia](https://en.wikipedia.org/wiki/Krylov%E2%80%93Bogoliubov_averaging_method).

@@ -22,16 +22,13 @@ using QuestBase:
     is_rearranged_standard,
     QuestBase,
     d,
-    get_all_terms,
     rearrange!,
     substitute_all,
-    trig_reduce,
-    get_independent,
-    simplify_complex,
-    is_trig,
     is_harmonic,
     rearrange_standard,
-    rearrange_standard!
+    rearrange_standard!,
+    fourier_series,
+    FourierComponent
 
 using QuestBase: QuestBase, is_harmonic, substitute_all, drop_powers, d
 
@@ -46,13 +43,13 @@ using Symbolics:
     diff2term,
     lower_varname
 
-using SymbolicUtils:
-    SymbolicUtils, BasicSymbolic, SymReal, add_worker, isdiv, mul_worker, unwrap
+using SymbolicUtils: SymbolicUtils, BasicSymbolic, SymReal, add_worker, mul_worker, unwrap
 
 # src code
 include("DifferentialEquation.jl")
 include("Jacobian.jl")
 include("HarmonicEquation.jl")
+include("lie_transform.jl")
 include("krylov-bogoliubov.jl")
 
 using Reexport: @reexport
