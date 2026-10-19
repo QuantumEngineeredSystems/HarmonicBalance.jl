@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1792401416042,
+  "lastUpdate": 1792403259240,
   "repoUrl": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl",
   "entries": {
     "Benchmark Results": [
@@ -1062,6 +1062,108 @@ window.BENCHMARK_DATA = {
             "value": 132260918.5,
             "unit": "ns",
             "extra": "gctime=0\nmemory=33847712\nallocs=786205\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "orjan.ameye@hotmail.com",
+            "name": "Orjan Ameye",
+            "username": "oameye"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2f75607630677f509f42d5f92ab81a65fdc56a20",
+          "message": "Source HarmonicSteadyState from main and drop the time-domain stability section (#541)\n\nHarmonicSteadyState.jl#171 is merged, so the paired branch is no longer\nneeded. The manual section documented the time-domain is_stable, which\nHarmonicSteadyState.jl#164 removes; the Jacobian classification gives\nlinear stability exactly.",
+          "timestamp": "2026-10-19T11:39:05+02:00",
+          "tree_id": "7081bbe36f031ad2bffd885f64f0b5bbbb0e8500",
+          "url": "https://github.com/QuantumEngineeredSystems/HarmonicBalance.jl/commit/2f75607630677f509f42d5f92ab81a65fdc56a20"
+        },
+        "date": 1792403250866,
+        "tool": "julia",
+        "benches": [
+          {
+            "name": "Classification/One Dimensional/Default classifications",
+            "value": 1281370.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=1317168\nallocs=22498\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Harmonic Equation/One Frequency",
+            "value": 805276.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=284288\nallocs=5342\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 1",
+            "value": 70556940,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=1691344\nallocs=35306\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 2",
+            "value": 85024103,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=2330704\nallocs=45385\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Krylov Equation/Order 3",
+            "value": 124650581,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=5639224\nallocs=78939\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Construction/Problem/HomotopyContinuationProblem",
+            "value": 6740906.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=926936\nallocs=23017\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Linear response/Lab frame/Jacobian Response",
+            "value": 537026.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=531584\nallocs=6478\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Linear response/Rotating frame/Jacobian Response",
+            "value": 238541,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=295888\nallocs=1789\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Sorting/One dimensional/Hilbert sorting",
+            "value": 151519,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=207856\nallocs=3017\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Sorting/One dimensional/Nearest-neighbor sorting",
+            "value": 150031.5,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=207856\nallocs=3017\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Polyhedral homotopy",
+            "value": 419221177,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=71549496\nallocs=1609193\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Total degree homotopy",
+            "value": 268709870,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=46788728\nallocs=1068293\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
+          },
+          {
+            "name": "Steady states/Homotopy Problem/Warm up method",
+            "value": 160637896,
+            "unit": "ns",
+            "extra": "gctime=0\nmemory=33843984\nallocs=786110\nparams={\"evals\":1,\"evals_set\":false,\"gcsample\":false,\"gctrial\":true,\"memory_tolerance\":0.01,\"overhead\":0,\"samples\":10000,\"seconds\":10,\"time_tolerance\":0.05}"
           }
         ]
       }
