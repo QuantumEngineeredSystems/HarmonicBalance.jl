@@ -303,6 +303,15 @@ the independent variable of `diff_eom`.
 By default, all products of order > 1 of `slow_time`-derivatives are dropped, which means
 the equations are linear in the time-derivatives.
 
+`degree` is the order of the first `slow_time` derivative that is dropped. The default
+`degree=2` gives the slow flow, first order in `slow_time`. With `degree=3` the second
+derivatives of the harmonic variables are kept, so that linearising around a steady state
+gives the quadratic eigenvalue problem of Hill's method. HarmonicSteadyState.jl then decides
+stability and linear response from it, which stays correct when an eigenvalue is comparable
+to a harmonic frequency, as it typically is for ansätze of several harmonics. The steady
+states themselves do not depend on `degree`. Time evolution of the harmonic equations needs
+the default `degree=2`.
+
 `explicit_jacobian` fills in the symbolic Jacobian of the rearranged system, see
 [`add_jacobian!`](@ref). It defaults to `false`: stability analysis evaluates the Jacobian
 implicitly and never reads this field, while deriving it needs a symbolic mass-matrix
