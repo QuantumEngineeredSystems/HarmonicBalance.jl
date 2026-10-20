@@ -66,6 +66,16 @@ Note the slight "bending" of the noise peak with $\omega$ - this is given by the
 plot_linear_response(result, x, 1, Ω_range=range(0.95, 1.05, 300), logscale=true, order=2)
 ```
 
+The bending stems from the slow flow, which drops the second slow-time derivatives of the harmonic variables. Keeping them, `degree=3`, places the eigenvalues at the Floquet exponents of the orbit, so the inexpensive Lorentzian spectrum loses the bending as well. The steady states are unchanged:
+
+```@example linresp
+harmonic_eq_exact = get_harmonic_equations(diff_eq; degree=3)
+result_exact = get_steady_states(harmonic_eq_exact, varied, fixed)
+plot_linear_response(result_exact, x, 1, Ω_range=range(0.95, 1.05, 300), logscale=true)
+```
+
+For a single harmonic close to resonance, as here, both give the same stability. With several harmonics they need not, see the [background](@ref linresp_background).
+
 To compute the matrix without plotting you can use the functions specified at the [linear respinse manual](@ref linresp_man).
 
 ## Nonlinear regime
