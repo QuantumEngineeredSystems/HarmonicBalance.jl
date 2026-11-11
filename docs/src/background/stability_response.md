@@ -48,6 +48,24 @@ The linearised system is exactly solvable for $\delta \mathbf{u}(T)$ given an in
 
 The dynamical behaviour near the steady states is thus governed by $e^{ \lambda_r T}$: if $\mathrm{Re}(\lambda_r)<0$ for all $\lambda_r$, the state $\mathbf{u}_0$ is stable. Conversely, if $\mathrm{Re}(\lambda_r)>0$ for at least one $\lambda_r$, the state is unstable - perturbations such as noise or a small applied drive will force the system away from $\mathbf{u}_0$.
 
+### Beyond the slow flow
+
+The harmonic equations above are first order in $T$ because the slow flow drops the second derivatives $\ddot{\mathbf{u}}$. Hence the eigenvalues of $J$ are accurate only when $|\lambda_r| \ll \omega_{i,j}$. This holds for a single harmonic near resonance. With several harmonics it generically fails, because an ansatz $[\omega, 3\omega]$ also describes perturbations that oscillate at frequencies of order $\omega$ in the rotating frame. The slow flow then misjudges the stability, and adding harmonics does not cure it.
+
+Keeping the second derivatives, `get_harmonic_equations(diff_eq; degree=3)`, the linearised equations read
+
+```math
+\begin{equation}
+J_2 \, \delta\ddot{\mathbf{u}} + J_1 \, \delta\dot{\mathbf{u}} + J_0 \, \delta\mathbf{u} = 0 \,,
+\end{equation}
+```
+
+and the ansatz $\delta\mathbf{u} \propto e^{\lambda T}$ gives the quadratic eigenvalue problem $\left(\lambda^2 J_2 + \lambda J_1 + J_0\right)\mathbf{v} = 0$. This is Hill's method restricted to the harmonics of the ansatz, and its eigenvalues converge to the Floquet exponents of the periodic orbit as harmonics are added. The slow flow is recovered for $J_2 = 0$, with $J = -J_1^{-1} J_0$.
+
+The quadratic problem has $2n$ eigenvalues for $n$ harmonic variables, whereas a natural equation of order $m$ has only $m$ Floquet exponents. The remaining eigenvalues are copies of these, shifted along the imaginary axis by the spacing $\Delta$ of the frequencies $\pm\omega_{i,j}$ of the ansatz. Only the copy nearest the real axis is resolved by all harmonics. The others reach past the highest harmonic, so their real parts can be wrong, to the point of a spurious instability. We therefore keep one eigenvalue per Floquet exponent, in order of $|\mathrm{Im}\,\lambda|$. Notwithstanding, a mode on the edge of the strip, $|\mathrm{Im}\,\lambda| \approx \Delta/2$, appears as a conjugate pair that represents a single exponent. Only its member with $\mathrm{Im}\,\lambda > 0$ is kept. A symmetry-breaking instability of an orbit computed with odd harmonics only appears in exactly this way.
+
+HarmonicSteadyState.jl applies this whenever the harmonic equations keep $\ddot{\mathbf{u}}$: the stability classes, the eigenvalues and the linear response below all use the same Floquet exponents.
+
 ## Linear response
 
 The response of a stable steady state to an additional oscillatory force, caused by weak probes or noise, is often of interest. It can be calculated by solving for the perturbation $\delta \mathbf{u}(T)$ in the presence of an additional drive term.
@@ -128,6 +146,6 @@ The above solution applies to every eigenvalue $\lambda$ of the Jacobian. It is 
 
 _Sidenote:_ As $J$ a real matrix, there is an eigenvalue $\lambda_r^*$ for each $\lambda_r$. The maximum number of peaks in the linear response is thus equal to the dimensionality of $\mathbf{u}(T)$.
 
-The linear response of the system in the state $\mathbf{u}_0$ is thus fully specified by the complex eigenvalues and eigenvectors of $J(\mathbf{u}_0)$. In HarmonicBalance.jl, the module [LinearResponse](@ref linresp_man) creates a set of plottable [`Lorentzian`](@ref HarmonicSteadyState.LinearResponse.Lorentzian) objects to represent this.
+The linear response of the system in the state $\mathbf{u}_0$ is thus fully specified by the complex eigenvalues and eigenvectors of $J(\mathbf{u}_0)$. With the second derivatives kept, the same construction uses the Floquet exponents of the quadratic problem and the $\delta\mathbf{u}$ part of their eigenvectors. Each exponent then contributes Lorentzians at every harmonic, which reproduces the response of its discarded copies. In HarmonicBalance.jl, the module [LinearResponse](@ref linresp_man) creates a set of plottable [`Lorentzian`](@ref HarmonicSteadyState.LinearResponse.Lorentzian) objects to represent this.
 
 [Check out this example](@ref linresp_ex) of the linear response module of HarmonicBalance.jl

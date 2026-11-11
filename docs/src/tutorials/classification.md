@@ -27,8 +27,8 @@ result_2D = get_steady_states(harmonic_eq, varied, fixed)
 By default the steady states of the system are classified by four different catogaries:
 
 * `physical`: Solutions that are physical, i.e., all variables are purely real.
-* `stable`: Solutions that are stable, i.e., all eigenvalues of the Jacobian have negative real parts.
-* `Hopf`: Solutions that are physical and have exactly two Jacobian eigenvalues with positive real parts, which are complex conjugates of each other. The class can help to identify regions where a limit cycle is present due to a [Hopf bifurcation](https://en.wikipedia.org/wiki/Hopf_bifurcation). See also the tutorial on [limit cycles](@ref limit_cycles).
+* `stable`: Solutions that are stable, i.e., all eigenvalues of the [`stability_spectrum`](@ref HarmonicSteadyState.stability_spectrum) have negative real parts. These are the eigenvalues of the Jacobian of the slow flow, or the Floquet exponents if the harmonic equations keep the second slow-time derivatives, see the [background](@ref linresp_background).
+* `Hopf`: Solutions that are physical and have exactly two eigenvalues with positive real parts, which are complex conjugates of each other. The class can help to identify regions where a limit cycle is present due to a [Hopf bifurcation](https://en.wikipedia.org/wiki/Hopf_bifurcation). See also the tutorial on [limit cycles](@ref limit_cycles).
 * `binary_labels`: each region in the parameter sweep receives an identifier based on its permutation of stable branches. This allows to distinguish between different phases, which may have the same number of stable solutions.
 
 We can plot the number of stable solutions in the sweep using the `phase_diagram` function
